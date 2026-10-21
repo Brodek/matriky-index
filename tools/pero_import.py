@@ -70,6 +70,17 @@ BOOKS = {
                           "40–46 = sn. 23–29, sn. 30 závěrečná doložka; OCR snímky 15–31; soubor = snímek",
                     url="https://zayt.org/collections/jewish-control-registers-1780-1911/noz-372", prefix="noz372",
                     delitel=1),
+    "noz-726": dict(archiv="zayt", nazev="Přistoupim, židovská kontrolní matrika NOZ (NA inv. 726)", farnost="Přistoupim",
+                    roky="1803–1840",
+                    obsah="N 1816–1840 s opisy N 1803, 1805, 1808, O 1826–1838, Z 1819–1839, rejstříky; OCR snímky 2–20 "
+                          "(1 a 21 desky); soubor = snímek, obrázek oříznutý na knihu",
+                    url="https://zayt.org/collections/jewish-control-registers-1780-1911/noz-726", prefix="noz726",
+                    delitel=1),
+    "noz-727": dict(archiv="zayt", nazev="Přistoupim, židovská kontrolní matrika NOZ (NA inv. 727)", farnost="Přistoupim",
+                    roky="1840–1858", obsah="N 1841–1858 s rejstříkem, O 1840–1853, Z 1843–1853; OCR snímky 2–13 (1 a 14 "
+                                            "desky); soubor = snímek, obrázek oříznutý na knihu",
+                    url="https://zayt.org/collections/jewish-control-registers-1780-1911/noz-727", prefix="noz727",
+                    delitel=1),
 }
 EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "dnesice-01": (["dnesice-01"], "c1785e53-4a1c-40f7-a924-7d219217bf15", "Kurrent (German, Czech)", "2026-10-19"),
@@ -88,6 +99,8 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
                                    "Kurrent (German, Czech)", "2026-10-21"),
     "zidovske-o235-o2434-otocene": (["o-235", "o-2434"], "00b4fec1-aa87-4774-92ec-bd38077992e2", "Kurrent (German, Czech)",
                                     "2026-10-21"),
+    "pristoupim-noz726-noz727": (["noz-726", "noz-727"], "3ffd9a97-1756-472a-bc3f-84333d8b10fc", "Kurrent (German, Czech)",
+                                 "2026-10-21"),
 }
 
 
