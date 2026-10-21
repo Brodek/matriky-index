@@ -18,7 +18,8 @@ knihy/<archiv>/<kniha>/
   precteno.tsv    zápisy přečtené očima (formát níže)
 knihy/testy/      pokusná OCR (výřezy)
 tools/
-  hledej.py       volné hledání slova v textu všech knih (Levenshtein na začátku slova)
+  hledej.py       volné hledání slova ve všech knihách (precteno, OCR s opravami; Levenshtein na začátku slova)
+  opravy.py       přidání opravy strojového čtení do opravy.tsv
   pero_import.py  převod exportu z PERO do knihy/…
   scan/           stahování skenů: pfl.py, pf64.py (Porta fontium), ebget.py (eBadatelna SOA Praha), da2.py,
                   dasearch.py (DigiArchiv SOA Třeboň), zget.py + rzip.py (VČA Zámrsk), zayt.py, books.py, bfilter.py
@@ -42,6 +43,25 @@ v knize není. Zásah se ověřuje na skenu (snímek a strana jsou ve výpisu).
 2. Export: `https://pero-ocr.fit.vutbr.cz/document/download_document_pages/<dokument>` (u velkých knih server vrací 504 –
    pak stránky složit v prohlížeči jako `<kniha>.pagexml.zip`). Plný export uložit na Google Disk.
 3. Doplnit knihu do `BOOKS` a `EXPORTS` v `tools/pero_import.py` a spustit `python tools/pero_import.py <export.zip>`.
+
+## Vrstvy a opravy
+
+Původní data se nepřepisují, opravy a výklady se přidávají zvlášť:
+
+1. `ocr-pero.tsv` – strojový text, nemění se (při lepším OCR se vymění celý).
+2. `opravy.tsv` – opravy strojového čtení: co je na skenu opravdu napsáno (PERO „Plohar“, napsáno „Ploczar“). Oprava je
+   ukotvená obdélníkem řádku na skenu, ne jeho číslem, takže přežije nové OCR. Přidává se nástrojem:
+
+       python tools/opravy.py <kniha> <snímek+strana> <řádek> "<jak četl PERO>" "<co je napsáno>" --kdo "agent 2026-10-21"
+
+   Sloupce: snimek, soubor, strana, x, y, sirka, vyska (obdélník řádku), puvodne (prázdné = celý řádek), spravne, kdo,
+   jistota.
+3. `precteno.tsv` – celé zápisy přečtené očima, doslovně, i s chybami písaře.
+4. Výklad (kdo osoba ve skutečnosti je, např. v zápisu „Františka Červená“, ve skutečnosti Barbora Jímalová) do indexu
+   nepatří – index drží, co je napsáno; výklad je v rodokmenu (ve sloupci `odkaz` se na něj dá odkázat).
+
+`tools/hledej.py` prohledává `precteno.tsv` (zásah označen „[očima]“) a strojový text s použitými opravami („[opraveno]“;
+hledá se i v původním znění).
 
 ## precteno.tsv – zápisy přečtené očima
 

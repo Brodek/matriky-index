@@ -1,4 +1,5 @@
-"""Searches the machine OCR text of all indexed books (knihy/**/ocr-pero.tsv) for a word, tolerating OCR errors.
+"""Searches all indexed books for a word, tolerating OCR errors: entries read by eye (precteno.tsv) and the machine OCR
+text (ocr-pero.tsv) with corrections from opravy.tsv applied (the original OCR text is searched too).
 
     python tools/hledej.py <slovo> [--maxd 2] [--kniha KNIHA] [--kontext 1] [--skip REGEX]
 
@@ -12,6 +13,8 @@ import re
 import sys
 import unicodedata
 from pathlib import Path
+
+from opravy import apply, read_tsv
 
 REPO = Path(__file__).resolve().parent.parent
 csv.field_size_limit(10_000_000)
@@ -43,25 +46,35 @@ def main():
     target = norm(args.slovo)
     skip = re.compile(args.skip) if args.skip else None
     hits = 0
-    for path in sorted(REPO.glob("knihy/*/*/ocr-pero.tsv")):
-        book = path.parent.name
+    def found(text):
+        words = [w for w in re.split(r"[^a-z]+", norm(text)) if len(w) >= len(target) - 1]
+        return next((w for w in words if not (skip and skip.match(w)) and lev(w[: len(target)], target) <= args.maxd),
+                    None)
+
+    for folder in sorted(p for p in REPO.glob("knihy/*/*") if p.is_dir()):
+        book = folder.name
         if args.kniha and book != args.kniha:
             continue
-        with open(path, encoding="utf-8", newline="") as f:
-            rows = list(csv.DictReader(f, delimiter="\t"))
+        where = f"{folder.parent.name}/{book}"
+        for row in read_tsv(folder / "precteno.tsv"):
+            text = " | ".join(row.get(k, "") for k in ("datum", "typ", "obec", "osoby", "ostatni"))
+            match = found(text)
+            if match:
+                hits += 1
+                print(f"{where} snímek {row['snimek']} [očima] [{match}] {text}")
+        rows = apply(read_tsv(folder / "ocr-pero.tsv"), read_tsv(folder / "opravy.tsv"))
         pages = {}
         for row in rows:
             pages.setdefault((row["soubor"], row["strana"]), []).append(row)
         for (image, side), lines in pages.items():
             for i, row in enumerate(lines):
-                words = [w for w in re.split(r"[^a-z]+", norm(row["text"])) if len(w) >= len(target) - 1]
-                match = next((w for w in words
-                              if not (skip and skip.match(w)) and lev(w[: len(target)], target) <= args.maxd), None)
+                match = found(row["text"]) or (found(row["text_ocr"]) if "text_ocr" in row else None)
                 if not match:
                     continue
                 hits += 1
                 around = " / ".join(r["text"] for r in lines[max(0, i - args.kontext): i + args.kontext + 1])
-                print(f"{path.parent.parent.name}/{book} snímek {row['snimek']}{side} ř.{row['radek']} [{match}] {around}")
+                fixed = " [opraveno]" if "text_ocr" in row else ""
+                print(f"{where} snímek {row['snimek']}{side} ř.{row['radek']}{fixed} [{match}] {around}")
     print(f"{hits} zásahů", file=sys.stderr)
 
 
