@@ -18,7 +18,7 @@ from xml.etree import ElementTree
 REPO = Path(__file__).resolve().parent.parent
 PF = "https://www.portafontium.eu/register/soap-pn/"
 
-# prefix: the part of the image file name before "_<number>"; snimek: file number -> snímek on the portal.
+# prefix: the part of the image file name before "_<number>"; delitel: file number // delitel = snímek on the portal.
 BOOKS = {
     "dnesice-01": dict(archiv="portafontium", nazev="Dnešice 01", farnost="Dnešice", roky="1685–1735",
                        obsah="N 1685–1735 (snímky 3–151), O 1685–1735 (152–192), Z 1685–1735 (193–247, neOCRováno)",
@@ -51,7 +51,22 @@ BOOKS = {
                         url=PF + "maly-bor-04", prefix="maly-bor-04"),
     "6568": dict(archiv="soapraha", nazev="Kněževes 03 (eBadatelna 6568)", farnost="Kněževes", roky="1735–1810",
                  obsah="OCR snímky 84–125 (O 1761–1810); soubor = číslo snímku v eBadatelně",
-                 url="https://ebadatelna.soapraha.cz/d/6568/", prefix=""),
+                 url="https://ebadatelna.soapraha.cz/d/6568/", prefix="", delitel=1),
+    "o-235": dict(archiv="zayt", nazev="Hrochův Týnec, židovská kontrolní matrika O (NA HBMa inv. 235)",
+                  farnost="Hrochův Týnec", roky="1839–1889",
+                  obsah="OCR snímky 24–38 (O asi 1846–1856); soubor = snímek; zápisy jsou psané svisle, OCR je z obrázků "
+                        "otočených o 90° po směru hodinových ručiček (soubor -r)",
+                  url="https://zayt.org/collections/jewish-control-registers-1780-1911/o-235", prefix="o235", delitel=1),
+    "o-2434": dict(archiv="zayt", nazev="Zájezdec, židovská matrika O (NA HBMa inv. 2434)", farnost="Zájezdec",
+                   roky="1839, 1841–1868",
+                   obsah="OCR snímky 22–34; soubor = snímek; zápisy jsou psané svisle, OCR je z obrázků otočených o 90° "
+                         "po směru hodinových ručiček (soubor -r)",
+                   url="https://zayt.org/collections/jewish-registers-1784-1949/o-2434", prefix="o2434", delitel=1),
+    "noz-372": dict(archiv="zayt", nazev="Kostelec nad Černými lesy, židovská kontrolní matrika NOZ (NA HBMa inv. 372)",
+                    farnost="Kostelec nad Černými lesy", roky="1840–1862",
+                    obsah="N 1840–1854, O 1840–1862, Z 1840–1862 s rejstříky; OCR snímky 15–31; soubor = snímek",
+                    url="https://zayt.org/collections/jewish-control-registers-1780-1911/noz-372", prefix="noz372",
+                    delitel=1),
 }
 EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "dnesice-01": (["dnesice-01"], "c1785e53-4a1c-40f7-a924-7d219217bf15", "Kurrent (German, Czech)", "2026-10-19"),
@@ -66,6 +81,10 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "maly-bor-03": (["maly-bor-03"], "d6e5e828-1460-4523-8ec1-891a6cad4f26", "Czech Handwritten", "2026-10-21"),
     "maly-bor-04": (["maly-bor-04"], "949bb837-fa4e-4144-a503-65ae049bcf1f", "Czech Handwritten", "2026-10-21"),
     "knezeves-03": (["6568"], "fda952f8-d802-487f-b70a-c278de37df0a", "Czech Handwritten", "2026-10-21"),
+    "zidovske-o235-o2434-noz372": (["noz-372"], "17f0a0e2-56cb-476e-beb1-667191362e2a",
+                                   "Kurrent (German, Czech)", "2026-10-21"),
+    "zidovske-o235-o2434-otocene": (["o-235", "o-2434"], "00b4fec1-aa87-4774-92ec-bd38077992e2", "Kurrent (German, Czech)",
+                                    "2026-10-21"),
 }
 
 
@@ -123,7 +142,7 @@ def snimek(key, image):
     n = file_number(image)
     if n is None:
         return ""
-    return str(n) if key == "6568" else str(n // 10)
+    return str(n // BOOKS[key].get("delitel", 10))
 
 
 def write_book(key, export_stem, rows, page_rows, pero_doc, model, date):
