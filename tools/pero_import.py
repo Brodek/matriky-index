@@ -47,7 +47,7 @@ BOOKS = {
                         obsah="N 1704–1726 (snímky 3–69), O (70–85), Z (86–100)", url=PF + "maly-bor-03",
                         prefix="maly-bor-03"),
     "maly-bor-04": dict(archiv="portafontium", nazev="Malý Bor 04", farnost="Malý Bor", roky="1727–1744",
-                        obsah="N 1727–1744 (snímky 3–78, mezi nimi listy x), O (79–93), Z (94–118)",
+                        obsah="N 1727–1744 (snímky 3–78, mezi nimi listy x; na snímku 72 i oddaní 1728), O (79–93, od 9/1735), Z (94–118)",
                         url=PF + "maly-bor-04", prefix="maly-bor-04"),
     "6568": dict(archiv="soapraha", nazev="Kněževes 03 (eBadatelna 6568)", farnost="Kněževes", roky="1735–1810",
                  obsah="OCR snímky 84–125 (O 1761–1810); soubor = číslo snímku v eBadatelně",
