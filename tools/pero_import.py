@@ -81,6 +81,12 @@ BOOKS = {
                                             "desky); soubor = snímek, obrázek oříznutý na knihu",
                     url="https://zayt.org/collections/jewish-control-registers-1780-1911/noz-727", prefix="noz727",
                     delitel=1),
+    "familianti-83": dict(archiv="zayt", nazev="Familiantská kniha Kouřimský kraj HBF IX/IX (Řimovice, Sázava, Kostelec "
+                                                "nad Černými lesy)", farnost="panství Kostelec nad Černými lesy",
+                          roky="1811–1848", obsah="OCR snímky 21–70 = panství Kostelec nad Černými lesy od fol. 43 (snímek "
+                                                  "30 = fol. 60); soubor = snímek",
+                          url="https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/83", prefix="fam83",
+                          delitel=1),
 }
 EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "dnesice-01": (["dnesice-01"], "c1785e53-4a1c-40f7-a924-7d219217bf15", "Kurrent (German, Czech)", "2026-10-19"),
@@ -101,6 +107,8 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
                                     "2026-10-21"),
     "pristoupim-noz726-noz727": (["noz-726", "noz-727"], "3ffd9a97-1756-472a-bc3f-84333d8b10fc", "Kurrent (German, Czech)",
                                  "2026-10-21"),
+    "familianti-83-kostelec": (["familianti-83"], "8c28db92-6852-49c1-8a02-d9dcb650a12b", "Kurrent (German, Czech)",
+                               "2026-10-21"),
 }
 
 
