@@ -43,6 +43,9 @@ BOOKS = {
     "maly-bor-05": dict(archiv="portafontium", nazev="Malý Bor 05", farnost="Malý Bor", roky="1745–1763",
                         obsah="N 1745–1763 (snímky 3–99), O (100–141), Z (142–176); navíc soubor 1205-o",
                         url=PF + "maly-bor-05", prefix="maly-bor-05"),
+    "maly-bor-04": dict(archiv="portafontium", nazev="Malý Bor 04", farnost="Malý Bor", roky="1727–1744",
+                        obsah="N 1727–1744 (snímky 3–78, mezi nimi listy x), O (79–93), Z (94–118)",
+                        url=PF + "maly-bor-04", prefix="maly-bor-04"),
     "6568": dict(archiv="soapraha", nazev="Kněževes 03 (eBadatelna 6568)", farnost="Kněževes", roky="1735–1810",
                  obsah="OCR snímky 84–125 (O 1761–1810); soubor = číslo snímku v eBadatelně",
                  url="https://ebadatelna.soapraha.cz/d/6568/", prefix=""),
@@ -57,6 +60,7 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "velky-bor-08-11": (["velky-bor-08", "velky-bor-11"], "f61096eb-8434-4bf0-8567-7e488a5ad40a", "Czech Handwritten",
                         "2026-10-21"),
     "maly-bor-05": (["maly-bor-05"], "414ba723-3991-4f8a-b1a5-5c2b4e63bf4a", "Czech Handwritten", "2026-10-21"),
+    "maly-bor-04": (["maly-bor-04"], "949bb837-fa4e-4144-a503-65ae049bcf1f", "Czech Handwritten", "2026-10-21"),
     "knezeves-03": (["6568"], "fda952f8-d802-487f-b70a-c278de37df0a", "Czech Handwritten", "2026-10-21"),
 }
 
