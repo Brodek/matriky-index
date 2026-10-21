@@ -9,6 +9,7 @@ Book metadata comes from BOOKS below; a book is written only when its pages are 
 """
 import argparse
 import csv
+import json
 import re
 import sys
 import zipfile
@@ -64,7 +65,9 @@ BOOKS = {
                    url="https://zayt.org/collections/jewish-registers-1784-1949/o-2434", prefix="o2434", delitel=1),
     "noz-372": dict(archiv="zayt", nazev="Kostelec nad Černými lesy, židovská kontrolní matrika NOZ (NA HBMa inv. 372)",
                     farnost="Kostelec nad Černými lesy", roky="1840–1862",
-                    obsah="N 1840–1854, O 1840–1862, Z 1840–1862 s rejstříky; OCR snímky 15–31; soubor = snímek",
+                    obsah="N 1840–1862 fol. 1–10 (fol. 9 = sn. 11, fol. 10 = sn. 12), O 1840–1862 fol. 17–19 = sn. 13–15 "
+                          "(posty 1–19), Z 1840–1862 fol. 24–30 = sn. 16–22, společný rejstřík N+O+Z (folio/post) pag. "
+                          "40–46 = sn. 23–29, sn. 30 závěrečná doložka; OCR snímky 15–31; soubor = snímek",
                     url="https://zayt.org/collections/jewish-control-registers-1780-1911/noz-372", prefix="noz372",
                     delitel=1),
 }
@@ -162,12 +165,14 @@ def write_book(key, export_stem, rows, page_rows, pero_doc, model, date):
         w = csv.writer(f, delimiter="\t", lineterminator="\n")
         w.writerow(["snimek", "soubor", "sirka_obrazku", "vyska_obrazku", "radku"])
         w.writerows(page_rows)
-    yaml = [f"archiv: {meta['archiv']}", f"kniha: {key}", f"nazev: {meta['nazev']}", f"farnost: {meta['farnost']}",
-            f"roky: '{meta['roky']}'", f"obsah: {meta['obsah']}", f"url: {meta['url']}",
-            "ocr:", "- nastroj: PERO OCR (pero-ocr.fit.vutbr.cz)", f"  dokument: {pero_doc}", f"  model: {model}",
-            f"  datum: '{date}'", f"  export: {export_stem} (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)",
+    q = lambda value: json.dumps(value, ensure_ascii=False)  # a JSON string is a valid YAML scalar, colons included
+    yaml = [f"archiv: {q(meta['archiv'])}", f"kniha: {q(key)}", f"nazev: {q(meta['nazev'])}", f"farnost: {q(meta['farnost'])}",
+            f"roky: {q(meta['roky'])}", f"obsah: {q(meta['obsah'])}", f"url: {q(meta['url'])}",
+            "ocr:", f"- nastroj: {q('PERO OCR (pero-ocr.fit.vutbr.cz)')}", f"  dokument: {q(pero_doc)}", f"  model: {q(model)}",
+            f"  datum: {q(date)}",
+            f"  export: {q(export_stem + ' (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)')}",
             f"  stranek: {len(page_rows)}", f"  radku: {len(rows)}",
-            "  poznamka: souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"]
+            f"  poznamka: {q('souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný')}"]
     (out / "kniha.yaml").write_text("\n".join(yaml) + "\n", encoding="utf-8")
     print(f"{meta['archiv']}/{key}: {len(page_rows)} stran, {len(rows)} řádků")
 
