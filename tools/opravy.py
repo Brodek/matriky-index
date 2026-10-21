@@ -61,6 +61,7 @@ def apply(rows, corrections):
 
 
 def main():
+    sys.stdout.reconfigure(encoding="utf-8")  # the Windows console defaults to cp1252
     parser = argparse.ArgumentParser()
     parser.add_argument("kniha")
     parser.add_argument("snimek", help="snímek a strana, např. 24L")

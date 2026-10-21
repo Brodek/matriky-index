@@ -36,6 +36,7 @@ def lev(a, b):
 
 
 def main():
+    sys.stdout.reconfigure(encoding="utf-8")  # the Windows console defaults to cp1252
     parser = argparse.ArgumentParser()
     parser.add_argument("slovo")
     parser.add_argument("--maxd", type=int, default=2)

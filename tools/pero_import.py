@@ -50,6 +50,9 @@ BOOKS = {
     "maly-bor-04": dict(archiv="portafontium", nazev="Malý Bor 04", farnost="Malý Bor", roky="1727–1744",
                         obsah="N 1727–1744 (snímky 3–78, mezi nimi listy x; na snímku 72 i oddaní 1728), O (79–93, od 9/1735), Z (94–118)",
                         url=PF + "maly-bor-04", prefix="maly-bor-04"),
+    "kvasnovice-02": dict(archiv="portafontium", nazev="Kvasňovice 02", farnost="Kvasňovice", roky="1766–1793",
+                          obsah="N 1766–1793 (snímky 3–138, 240–244), Z (139–203, snímek 177 chybí), O (204–239); latinsky",
+                          url=PF + "kvasnovice-02", prefix="kvasnovice-02"),
     "6568": dict(archiv="soapraha", nazev="Kněževes 03 (eBadatelna 6568)", farnost="Kněževes", roky="1735–1810",
                  obsah="OCR snímky 84–125 (O 1761–1810); soubor = číslo snímku v eBadatelně",
                  url="https://ebadatelna.soapraha.cz/d/6568/", prefix="", delitel=1),
@@ -109,6 +112,7 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
                                  "2026-10-21"),
     "familianti-83-kostelec": (["familianti-83"], "8c28db92-6852-49c1-8a02-d9dcb650a12b", "Kurrent (German, Czech)",
                                "2026-10-21"),
+    "kvasnovice-02": (["kvasnovice-02"], "039c275f-e042-487c-af86-180ece6ab7e1", "Czech Handwritten", "2026-10-21"),
 }
 
 
@@ -199,6 +203,7 @@ def write_book(key, export_stem, rows, page_rows, pero_doc, model, date):
 
 
 def main():
+    sys.stdout.reconfigure(encoding="utf-8")  # the Windows console defaults to cp1252
     parser = argparse.ArgumentParser()
     parser.add_argument("export", type=Path)
     args = parser.parse_args()
