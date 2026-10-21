@@ -1,0 +1,16 @@
+archiv: "portafontium"
+kniha: "kvasnovice-01"
+nazev: "Kvasňovice 01"
+farnost: "Kvasňovice"
+roky: "1738–1765"
+obsah: "N 1738–1765 (snímky 3–62), Z (62–105), O 1738–1765 (106–127); česky, od asi 1763 latinsky"
+url: "https://www.portafontium.eu/register/soap-pn/kvasnovice-01"
+ocr:
+- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "5c1a99a8-9ce5-4a29-b55e-e421741e0f61"
+  model: "Kurrent (German, Czech)"
+  datum: "2026-10-21"
+  export: "kvasnovice-01.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  stranek: 122
+  radku: 16910
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
