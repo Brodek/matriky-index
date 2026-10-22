@@ -98,6 +98,10 @@ BOOKS = {
                   obsah="OCR snímky 4–34 (O 1839–1850; snímek 11 se nestáhl); soubor = snímek; zápisy svisle, OCR z obrázků "
                         "oříznutých na knihu a otočených o 90° po směru hodinových ručiček (soubor -r)",
                   url="https://zayt.org/collections/jewish-registers-1784-1949/o-406", prefix="o406", delitel=1),
+    "z-236": dict(archiv="zayt", nazev="Hrochův Týnec, židovská kontrolní matrika Z (NA inv. 236)", farnost="Hrochův Týnec",
+                  roky="1839–1882", obsah="OCR snímky 41–46 a 51–58 (asi 1855–1857 a 1861–1866); soubor = snímek; zápisy svisle, "
+                                          "OCR z oříznutých a otočených obrázků (soubor -r)",
+                  url="https://zayt.org/collections/jewish-control-registers-1780-1911/z-236", prefix="z236", delitel=1),
     "noz-726": dict(archiv="zayt", nazev="Přistoupim, židovská kontrolní matrika NOZ (NA inv. 726)", farnost="Přistoupim",
                     roky="1803–1840",
                     obsah="N 1816–1840 s opisy N 1803, 1805, 1808, O 1826–1838, Z 1819–1839, rejstříky; OCR snímky 2–20 "
@@ -137,6 +141,8 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
                                  "2026-10-21"),
     "hermanuv-mestec-o406-otocene": (["o-406"], "59d2c47d-c079-4cbe-af77-4f405ae9982a", "Kurrent (German, Czech)",
                                      "2026-10-22"),
+    "hrochuv-tynec-z236-otocene": (["z-236"], "ac372e5b-9763-46d4-9c58-9d48def1d0cf", "Kurrent (German, Czech)",
+                                   "2026-10-22"),
     "familianti-83-kostelec": (["familianti-83"], "8c28db92-6852-49c1-8a02-d9dcb650a12b", "Kurrent (German, Czech)",
                                "2026-10-21"),
     "kvasnovice-02": (["kvasnovice-02"], "039c275f-e042-487c-af86-180ece6ab7e1", "Czech Handwritten", "2026-10-21"),
