@@ -93,6 +93,11 @@ BOOKS = {
                           "40–46 = sn. 23–29, sn. 30 závěrečná doložka; OCR snímky 15–31; soubor = snímek",
                     url="https://zayt.org/collections/jewish-control-registers-1780-1911/noz-372", prefix="noz372",
                     delitel=1),
+    "o-406": dict(archiv="zayt", nazev="Heřmanův Městec, židovská matrika O (NA inv. 406), duplikát 1839–1850",
+                  farnost="Heřmanův Městec", roky="1839–1850",
+                  obsah="OCR snímky 4–34 (O 1839–1850; snímek 11 se nestáhl); soubor = snímek; zápisy svisle, OCR z obrázků "
+                        "oříznutých na knihu a otočených o 90° po směru hodinových ručiček (soubor -r)",
+                  url="https://zayt.org/collections/jewish-registers-1784-1949/o-406", prefix="o406", delitel=1),
     "noz-726": dict(archiv="zayt", nazev="Přistoupim, židovská kontrolní matrika NOZ (NA inv. 726)", farnost="Přistoupim",
                     roky="1803–1840",
                     obsah="N 1816–1840 s opisy N 1803, 1805, 1808, O 1826–1838, Z 1819–1839, rejstříky; OCR snímky 2–20 "
@@ -130,6 +135,8 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
                                     "2026-10-21"),
     "pristoupim-noz726-noz727": (["noz-726", "noz-727"], "3ffd9a97-1756-472a-bc3f-84333d8b10fc", "Kurrent (German, Czech)",
                                  "2026-10-21"),
+    "hermanuv-mestec-o406-otocene": (["o-406"], "59d2c47d-c079-4cbe-af77-4f405ae9982a", "Kurrent (German, Czech)",
+                                     "2026-10-22"),
     "familianti-83-kostelec": (["familianti-83"], "8c28db92-6852-49c1-8a02-d9dcb650a12b", "Kurrent (German, Czech)",
                                "2026-10-21"),
     "kvasnovice-02": (["kvasnovice-02"], "039c275f-e042-487c-af86-180ece6ab7e1", "Czech Handwritten", "2026-10-21"),
