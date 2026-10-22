@@ -63,7 +63,11 @@ def main():
             if match:
                 hits += 1
                 print(f"{where} snímek {row['snimek']} [očima] [{match}] {text}")
-        rows = apply(read_tsv(folder / "ocr-pero.tsv"), read_tsv(folder / "opravy.tsv"))
+        rows = read_tsv(folder / "ocr-pero.tsv")
+        for row in rows:  # the test crops (knihy/testy) have "vyrez" instead of "soubor" and no "strana"
+            row.setdefault("soubor", row.get("vyrez", ""))
+            row.setdefault("strana", "")
+        rows = apply(rows, read_tsv(folder / "opravy.tsv"))
         pages = {}
         for row in rows:
             pages.setdefault((row["soubor"], row["strana"]), []).append(row)
