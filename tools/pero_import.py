@@ -50,6 +50,9 @@ BOOKS = {
     "horazdovice-05": dict(archiv="portafontium", nazev="Horažďovice 05", farnost="Horažďovice", roky="1699–1747",
                            obsah="OCR jen N 1699–1747 (snímky 4–184 a 254–267); Z (185–252) a O (269–322) bez OCR",
                            url=PF + "horazdovice-05", prefix="horazdovice-05"),
+    "horazdovice-05-zo": dict(archiv="portafontium", nazev="Horažďovice 05 – zemřelí a oddaní", farnost="Horažďovice",
+                              roky="1699–1747", obsah="Z (snímky 185–252) a O (269–322); oddíl N je v horazdovice-05",
+                              url=PF + "horazdovice-05", prefix="horazdovice-05"),
     "horazdovice-05-kurrent": dict(archiv="portafontium", nazev="Horažďovice 05 (druhé OCR modelem Kurrent)",
                                    farnost="Horažďovice", roky="1737–1747",
                                    obsah="N 1737–1747 (snímky 133–184 a 254–267) znovu modelem Kurrent – česká kurzíva; "
@@ -134,6 +137,7 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "kvasnovice-05": (["kvasnovice-05"], "eb1b5565-a613-4f43-9054-284e334056b0", "Kurrent (German, Czech)", "2026-10-22"),
     "maly-bor-06": (["maly-bor-06"], "c118aa96-dcf1-4ad3-97b9-21d1454f0e54", "Czech Handwritten", "2026-10-22"),
     "horazdovice-05": (["horazdovice-05"], "fd143024-c5a7-4f8e-808b-be33654abe80", "Czech Handwritten", "2026-10-22"),
+    "horazdovice-05-zo": (["horazdovice-05-zo"], "61f588be-d923-4111-85d4-63af9d9c9101", "Czech Handwritten", "2026-10-22"),
     "horazdovice-05-kurrent": (["horazdovice-05-kurrent"], "8862a4c4-aeee-4093-9fc2-cf199db556de", "Kurrent (German, Czech)",
                                "2026-10-22"),
 }
