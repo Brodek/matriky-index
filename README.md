@@ -4,8 +4,9 @@ Co už bylo z matričních knih přečteno – strojově (PERO OCR) i očima –
 aby se stejná stránka nemusela znovu stahovat, OCRkovat ani číst, a jednou se dá zveřejnit jako index.
 
 Kromě matrik sem patří i další knihy se jmény: pozemkové (gruntovní) knihy, soupisy poddaných, familiantské knihy. Mají
-stejnou strukturu; druh knihy říká pole `druh` v `kniha.yaml` (`matrika`, `pozemková kniha`, `soupis poddaných`,
-`familianti`; chybí-li, jde o matriku).
+stejnou strukturu; druh knihy říká pole `druh` v `kniha.yaml` (`matrika`, `pozemková kniha`, `urbář`,
+`soupis poddaných`, `sčítání lidu`, `policejní přihlášky`, `familianti`; chybí-li, jde o matriku). Zápisy přečtené dřív
+při práci na rodokmenu jsou přenesené se `cetl` = „Claude (z rodokmenu …)“ a odkazem `rodokmen: <id záznamu>`.
 
 Skeny se neukládají (lze je kdykoli stáhnout z archivu). Plné exporty z PERO (PAGE XML s obrysy řádků) jsou mimo git
 na Google Disku v `Documents/Dol/rodokmen/pero-exporty/`.
