@@ -58,6 +58,11 @@ BOOKS = {
                                    obsah="N 1737–1747 (snímky 133–184 a 254–267) znovu modelem Kurrent – česká kurzíva; "
                                          "celá kniha modelem Czech Handwritten je v horazdovice-05",
                                    url=PF + "horazdovice-05", prefix="horazdovice-05"),
+    "vs-horazdovice-k1563": dict(archiv="portafontium", nazev="Vs Horažďovice K 1563 – kniha purkrechtní rychty Pačejovické",
+                                 farnost="Malý Bor, Kvasňovice (Olšany, Pačejov, Týřovice, Velešice)", roky="1726–1817",
+                                 obsah="pozemková kniha; OCR celé knihy kromě souboru 3740; soubor vs-horazdovice-k1563_NNNN, "
+                                       "snímek = NNNN/10", url="https://www.portafontium.eu/amtsbuch/soap-pn/vs-horazdovice/k1563",
+                                 prefix="vs-horazdovice-k1563", druh="pozemková kniha"),
     "maly-bor-06": dict(archiv="portafontium", nazev="Malý Bor 06", farnost="Malý Bor", roky="1764–1784",
                         obsah="N (snímky 5–95), O od 1764 (96–129), Z (130–187); latinsky", url=PF + "maly-bor-06",
                         prefix="maly-bor-06"),
@@ -150,6 +155,8 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "kvasnovice-05": (["kvasnovice-05"], "eb1b5565-a613-4f43-9054-284e334056b0", "Kurrent (German, Czech)", "2026-10-22"),
     "maly-bor-06": (["maly-bor-06"], "c118aa96-dcf1-4ad3-97b9-21d1454f0e54", "Czech Handwritten", "2026-10-22"),
     "horazdovice-05": (["horazdovice-05"], "fd143024-c5a7-4f8e-808b-be33654abe80", "Czech Handwritten", "2026-10-22"),
+    "vs-horazdovice-k1563": (["vs-horazdovice-k1563"], "d93b37ec-4ffb-4ad6-a2a6-e3d4846c54da", "Czech Handwritten",
+                             "2026-10-22"),
     "horazdovice-05-zo": (["horazdovice-05-zo"], "61f588be-d923-4111-85d4-63af9d9c9101", "Czech Handwritten", "2026-10-22"),
     "horazdovice-05-kurrent": (["horazdovice-05-kurrent"], "8862a4c4-aeee-4093-9fc2-cf199db556de", "Kurrent (German, Czech)",
                                "2026-10-22"),
@@ -231,7 +238,8 @@ def write_book(key, export_stem, rows, page_rows, pero_doc, model, date):
         w.writerow(["snimek", "soubor", "sirka_obrazku", "vyska_obrazku", "radku"])
         w.writerows(page_rows)
     q = lambda value: json.dumps(value, ensure_ascii=False)  # a JSON string is a valid YAML scalar, colons included
-    yaml = [f"archiv: {q(meta['archiv'])}", f"kniha: {q(key)}", f"nazev: {q(meta['nazev'])}", f"farnost: {q(meta['farnost'])}",
+    yaml = [f"archiv: {q(meta['archiv'])}", f"kniha: {q(key)}", f"nazev: {q(meta['nazev'])}",
+            f"druh: {q(meta.get('druh', 'matrika'))}", f"farnost: {q(meta['farnost'])}",
             f"roky: {q(meta['roky'])}", f"obsah: {q(meta['obsah'])}", f"url: {q(meta['url'])}",
             "ocr:", f"- nastroj: {q('PERO OCR (pero-ocr.fit.vutbr.cz)')}", f"  dokument: {q(pero_doc)}", f"  model: {q(model)}",
             f"  datum: {q(date)}",
