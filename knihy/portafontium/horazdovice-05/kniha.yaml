@@ -1,0 +1,16 @@
+archiv: "portafontium"
+kniha: "horazdovice-05"
+nazev: "Horažďovice 05"
+farnost: "Horažďovice"
+roky: "1699–1747"
+obsah: "OCR jen N 1699–1747 (snímky 4–184 a 254–267); Z (185–252) a O (269–322) bez OCR"
+url: "https://www.portafontium.eu/register/soap-pn/horazdovice-05"
+ocr:
+- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "fd143024-c5a7-4f8e-808b-be33654abe80"
+  model: "Czech Handwritten"
+  datum: "2026-10-22"
+  export: "horazdovice-05.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  stranek: 195
+  radku: 20189
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
