@@ -3,6 +3,10 @@
 Co už bylo z matričních knih přečteno – strojově (PERO OCR) i očima – bez vazby na konkrétní rodokmen. Slouží k tomu,
 aby se stejná stránka nemusela znovu stahovat, OCRkovat ani číst, a jednou se dá zveřejnit jako index.
 
+Kromě matrik sem patří i další knihy se jmény: pozemkové (gruntovní) knihy, soupisy poddaných, familiantské knihy. Mají
+stejnou strukturu; druh knihy říká pole `druh` v `kniha.yaml` (`matrika`, `pozemková kniha`, `soupis poddaných`,
+`familianti`; chybí-li, jde o matriku).
+
 Skeny se neukládají (lze je kdykoli stáhnout z archivu). Plné exporty z PERO (PAGE XML s obrysy řádků) jsou mimo git
 na Google Disku v `Documents/Dol/rodokmen/pero-exporty/`.
 
@@ -72,10 +76,10 @@ první řádek hlavička:
 |---|---|
 | snimek | číslo snímku na portálu a strana, např. `124R` |
 | datum | datum události, jak je čitelné (`1756-01-14`, `1757-04`, `~1723`) |
-| typ | `N` narození/křest, `O` sňatek, `Z` úmrtí/pohřeb, `J` jiné (ohlášky, atestát, rejstřík, prázdná strana) |
-| obec | obec a číslo domu (`Jetenovice 7`) |
-| osoby | hlavní osoby s rolí: `dítě: Ambrož; otec: Matěj Píhr; matka: Ludmila` (u O ženich, nevěsta a jejich rodiče) |
-| ostatni | kmotři, svědci, povolání, věk, příčina smrti – stručně |
+| typ | `N` narození/křest, `O` sňatek, `Z` úmrtí/pohřeb, `P` převod gruntu v pozemkové knize (koupě, dědictví, přiženění, odhad), `S` řádek soupisu poddaných, `J` jiné (ohlášky, atestát, rejstřík, familiant, prázdná strana) |
+| obec | obec a číslo domu (`Jetenovice 7`); u pozemkové knihy i jméno gruntu (`Velké Hydčice 3, grunt Němcovský`) |
+| osoby | hlavní osoby s rolí: `dítě: Ambrož; otec: Matěj Píhr; matka: Ludmila` (u O ženich, nevěsta a jejich rodiče; u P `prodávající: …; kupující: …; výměnkář: …`; u S `hospodář: …; manželka: …; děti: …`) |
+| ostatni | kmotři, svědci, povolání, věk, příčina smrti – stručně; u P cena, splátky, výminek, svědci |
 | jistota | `vysoká`, `střední`, `nízká`; nejisté čtení v textu značit `[?]` |
 | cetl | kdo a kdy (`agent 2026-10-21`) |
 | odkaz | volitelně odkaz na zpracovaný záznam jinde (např. v rodokmenu) |
