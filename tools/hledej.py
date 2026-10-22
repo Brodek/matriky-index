@@ -21,7 +21,7 @@ csv.field_size_limit(10_000_000)
 
 
 def norm(text):
-    text = unicodedata.normalize("NFD", text)
+    text = unicodedata.normalize("NFD", text.replace("ſ", "s").replace("ʃ", "s"))
     return "".join(c for c in text if not unicodedata.combining(c)).lower()
 
 
