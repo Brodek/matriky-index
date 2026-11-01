@@ -13,6 +13,7 @@ vlastní účet v PERO; všechno níže běží v prohlížeči přihlášeném 
 | VČA – SOA Zámrsk | na disk: `python -I tools/scan/vcakniha.py <kód> <sign> <složka> <prefix>` (celá kniha, šedotónově, 2400 px) |
 | zayt.org (Národní archiv) | na disk po stranách: `tools/scan/zayt.py`, oříznout na knihu |
 | eBadatelna SOA Praha, DigiArchiv SOA Třeboň | na disk: `tools/scan/ebget.py`, `tools/scan/da2.py` |
+| ZA Opava (digi.archives.cz) | katalog je za ochranou proti robotům: cesty ke snímkům v prohlížeči přes `tools/pero/zaopava.js`, obrázky pak na disk `tools/scan/zaopava.py` |
 
 Všechno stahování jde přes `tools/scan/slusne.py` (sdílený limit; archivy za rychlé dávky blokují IP). Ve stránce PERO
 stahuje `nahrajZUrl()` nejvýš 5 obrázků za sekundu.
