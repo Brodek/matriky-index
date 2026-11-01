@@ -11,6 +11,10 @@ při práci na rodokmenu jsou přenesené se `cetl` = „Claude (z rodokmenu …
 Skeny se neukládají (lze je kdykoli stáhnout z archivu). Plné exporty z PERO (PAGE XML s obrysy řádků) jsou mimo git
 na Google Disku v `Documents/Dol/rodokmen/pero-exporty/`.
 
+Co v indexu je (knihy, rozsah OCR, počty přečtených zápisů): [PREHLED.md](PREHLED.md), generuje `python tools/prehled.py`.
+
+Licence: nástroje MIT ([LICENSE](LICENSE)), data v `knihy/` CC BY 4.0 ([LICENSE-DATA.md](LICENSE-DATA.md)).
+
 ## Struktura
 
 ```
