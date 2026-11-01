@@ -2,9 +2,9 @@
 
 Stav k 1. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **90 knih** (matrika 51, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 6, soupis poddaných 2, urbář 1)
+- **101 knih** (matrika 62, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 6, soupis poddaných 2, urbář 1)
 - **3 156 stran** převedených strojově (PERO OCR), **422 143 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **1 511 zápisů přečtených očima**: narození 689, sňatky 250, úmrtí 352, převody gruntů 49, soupisy 25, jiné 146
+- **1 559 zápisů přečtených očima**: narození 695, sňatky 252, úmrtí 368, převody gruntů 49, soupisy 25, jiné 170
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -68,26 +68,37 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | ffcc1f51 | matrika |  |  |  | 3 (J 3) |
 | [Litomyšl N 1850–1857, sign. 1309 (kód WRH6GG3Q)](https://storage.vychodoceskearchivy.cz/matriky/W/CZ_215000010_00190_WRH6GG3Q_sign-1309.zip) | matrika |  |  |  | 9 (N 9) |
 
-## Národní archiv – židovské matriky a familianti (zayt.org) (16)
+## Národní archiv – židovské matriky a familianti (zayt.org) (27)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
-| familianti-54 | matrika |  |  |  | 5 (J 5) |
-| familianti-55 | matrika |  |  |  | 1 (J 1) |
+| familianti-54 | matrika |  |  |  | 8 (J 8) |
+| familianti-55 | matrika |  |  |  | 2 (J 2) |
 | familianti-60 | matrika |  |  |  | 2 (J 2) |
+| [Familiantská kniha Kouřimský kraj HBF IX/IIB (Chvatěruby, Církvice, Kostelec n. L., Jemniště, Jankov, Panenské Břežany, Komorní Hrádek, Kounice)](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/74) | matrika | 1811–1848 |  |  | 2 (J 2) |
 | [Familiantská kniha Kouřimský kraj HBF IX/IX (Řimovice, Sázava, Kostelec nad Černými lesy)](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/83) | matrika | 1811–1848 | 50 | 5002 | 18 (J 18) |
+| [Familiantská kniha Kouřimský kraj HBF IX/X (Škvorec, Štiřín, Střížkov, Svojšice, Čakovice, Tvoršovice, Vestec)](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/84) | matrika | 1811–1848 |  |  | 2 (J 2) |
+| [Kolín, židovská matrika N 1842–1864 (NA HBMa inv. 824)](https://zayt.org/collections/jewish-registers-1784-1949/n-824) | matrika | 1842–1864 |  |  | 2 (J 2) |
+| [Kostelec nad Černými lesy, židovská matrika N 1841–1859 (NA HBMa inv. 872)](https://zayt.org/collections/jewish-registers-1784-1949/n-872) | matrika | 1841–1859 |  |  | 11 (J 5 N 6) |
 | noz-2435 | matrika |  |  |  | 23 (J 2 Z 21) |
-| noz-2436 | matrika |  |  |  | 2 (J 2) |
+| noz-2436 | matrika |  |  |  | 6 (J 6) |
 | noz-2437 | matrika |  |  |  | 6 (J 6) |
+| [Praha-Karlín, rejstřík N, O, Z Karlín č. 1 1858–1885 (NA HBMa inv. 2937)](https://zayt.org/collections/jewish-registers-1784-1949/noz-2937) | matrika | 1858–1885 |  |  | 1 (J 1) |
 | [Kostelec nad Černými lesy, židovská kontrolní matrika NOZ (NA HBMa inv. 372)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-372) | matrika | 1840–1862 | 17 | 2842 | 27 (J 2 N 11 O 12 Z 2) |
 | [Přistoupim, židovská kontrolní matrika NOZ (NA inv. 726)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-726) | matrika | 1803–1840 | 19 | 3335 | 17 (J 3 N 8 O 2 Z 4) |
 | [Přistoupim, židovská kontrolní matrika NOZ (NA inv. 727)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-727) | matrika | 1840–1858 | 12 | 2799 | 7 (J 2 N 3 Z 2) |
 | nz-1722 | matrika |  |  |  | 43 (Z 43) |
 | [Hrochův Týnec, židovská kontrolní matrika O (NA HBMa inv. 235)](https://zayt.org/collections/jewish-control-registers-1780-1911/o-235) | matrika | 1839–1889 | 15 | 2302 | 3 (O 3) |
 | [Zájezdec, židovská matrika O (NA HBMa inv. 2434)](https://zayt.org/collections/jewish-registers-1784-1949/o-2434) | matrika | 1839, 1841–1868 | 13 | 1711 | 8 (O 8) |
+| [Praha, židovská matrika O 1881 (NA HBMa inv. 2677)](https://zayt.org/collections/jewish-registers-1784-1949/o-2677) | matrika | 1881 |  |  | 1 (O 1) |
+| [Praha-Libeň, židovská matrika O 1833–1849 (NA HBMa inv. 2745)](https://zayt.org/collections/jewish-registers-1784-1949/o-2745) | matrika | 1833–1849 |  |  | 1 (O 1) |
 | [Heřmanův Městec, židovská matrika O (NA inv. 406), duplikát 1839–1850](https://zayt.org/collections/jewish-registers-1784-1949/o-406) | matrika | 1839–1850 | 30 | 4761 |  |
+| [Hroubovice, rejstřík oddaných a zemřelých 1840–1895 (NA inv. 531)](https://zayt.org/collections/jewish-registers-1784-1949/oz-531) | matrika | 1840–1895 |  |  | 2 (J 2) |
 | z-1721 | matrika |  |  |  | 6 (Z 6) |
 | [Hrochův Týnec, židovská kontrolní matrika Z (NA inv. 236)](https://zayt.org/collections/jewish-control-registers-1780-1911/z-236) | matrika | 1839–1882 | 14 | 2011 | 14 (J 6 Z 8) |
+| [Praha-Karlín, židovská matrika Z 1869–1939 (NA HBMa inv. 2844)](https://zayt.org/collections/jewish-registers-1784-1949/z-2844) | matrika | 1869–1939 |  |  | 1 (Z 1) |
+| [Hroubovice (FÚ Luže), židovská kontrolní matrika Z (NA inv. 481)](https://zayt.org/collections/jewish-control-registers-1780-1911/z-481) | matrika | 1840–1873 |  |  | 16 (J 1 Z 15) |
+| [Kolín, židovská matrika Z 1847–1865 (NA HBMa inv. 835)](https://zayt.org/collections/jewish-registers-1784-1949/z-835) | matrika | 1847–1865 |  |  | 1 (J 1) |
 
 ## SOA Praha – eBadatelna (1)
 
