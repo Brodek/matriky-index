@@ -103,6 +103,18 @@ BOOKS = {
                   obsah="OCR snímky 4–34 (O 1839–1850; snímek 11 se nestáhl); soubor = snímek; zápisy svisle, OCR z obrázků "
                         "oříznutých na knihu a otočených o 90° po směru hodinových ručiček (soubor -r)",
                   url="https://zayt.org/collections/jewish-registers-1784-1949/o-406", prefix="o406", delitel=1),
+    "sign-1309": dict(archiv="vca", nazev="Litomyšl N 1850–1857, sign. 1309 (kód WRH6GG3Q)",
+                      farnost="Litomyšl", roky="10/1850–1857",
+                      obsah="N Litomyšl město a předměstí (Dolní a Horní předměstí, Lány, Zahájí, Záhradí); snímky 1–395; "
+                            "soubor = snímek; OCR ze šedotónových JPEG 2400 px",
+                      url="https://aron.vychodoceskearchivy.cz/apu/9340aa8e-bfe5-4c80-af51-9adf97017290", prefix="lit1309",
+                      delitel=1),
+    "sign-7492": dict(archiv="vca", nazev="Litomyšl, index Z 1864–1906, sign. 7492 (kód LRIQXP2E)", farnost="Litomyšl",
+                      roky="1864–1906",
+                      obsah="rejstřík zemřelých celé farnosti (město, předměstí i vesnice); snímky 1–229; soubor = snímek; "
+                            "OCR ze šedotónových JPEG 2400 px",
+                      url="https://aron.vychodoceskearchivy.cz/apu/06a51ee1-4891-4871-b054-cd9370536c0b", prefix="lit7492",
+                      delitel=1),
     "z-236": dict(archiv="zayt", nazev="Hrochův Týnec, židovská kontrolní matrika Z (NA inv. 236)", farnost="Hrochův Týnec",
                   roky="1839–1882", obsah="OCR snímky 41–46 a 51–58 (asi 1855–1857 a 1861–1866); soubor = snímek; zápisy svisle, "
                                           "OCR z oříznutých a otočených obrázků (soubor -r)",
