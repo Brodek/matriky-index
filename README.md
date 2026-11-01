@@ -30,9 +30,12 @@ tools/
   hledej.py       volné hledání slova ve všech knihách (precteno, OCR s opravami; Levenshtein na začátku slova)
   opravy.py       přidání opravy strojového čtení do opravy.tsv
   pero_import.py  převod exportu z PERO do knihy/…
+  prehled.py      vygeneruje PREHLED.md
+  pero/           balik.py (skeny do balíků ≤ 9,4 MB), pero.js (nahrávání a export ve stránce PERO) – viz PERO.md
   scan/           stahování skenů: pfl.py, pf64.py (Porta fontium), ebget.py (eBadatelna SOA Praha), da2.py,
-                  dasearch.py (DigiArchiv SOA Třeboň), zget.py + rzip.py (VČA Zámrsk), zayt.py, books.py, bfilter.py
-                  (zayt.org), mza.py (Acta Publica, MZA Brno), cr.py (výřez skenu); slusne.py = společný limit dotazů
+                  dasearch.py (DigiArchiv SOA Třeboň), zget.py + rzip.py (VČA Zámrsk; vcakniha.py = celá kniha pro PERO),
+                  zayt.py, books.py, bfilter.py (zayt.org), mza.py (Acta Publica, MZA Brno), cr.py (výřez skenu);
+                  slusne.py = společný limit dotazů
 ```
 
 Archivy: `portafontium` (SOA Plzeň), `soapraha` (eBadatelna, kniha = id matriky), `soatrebon`, `vca`, `zayt`, `nacr`,
@@ -52,12 +55,10 @@ v knize není. Zásah se ověřuje na skenu (snímek a strana jsou ve výpisu).
 
 ## Přidání knihy
 
-1. Stránky nahrát do PERO (Porta fontium přímo z prohlížeče; ostatní archivy stáhnout skripty z `tools/scan/` a nahrát
-   z disku), rozbor rozložení „Handwritten layout“, OCR „Kurrent (German, Czech)“ pro české zápisy, „Czech Handwritten“
-   pro latinu.
-2. Export: `https://pero-ocr.fit.vutbr.cz/document/download_document_pages/<dokument>` (u velkých knih server vrací 504 –
-   pak stránky složit v prohlížeči jako `<kniha>.pagexml.zip`). Plný export uložit na Google Disk.
-3. Doplnit knihu do `BOOKS` a `EXPORTS` v `tools/pero_import.py` a spustit `python tools/pero_import.py <export.zip>`.
+Celý postup (skeny podle archivu, nahrání do PERO, rozbor rozložení, volba modelu, export a import) je v
+[PERO.md](PERO.md). Zkráceně: skeny do PERO (Porta fontium a Acta Publica přímo z prohlížeče, ostatní z disku),
+„Handwritten layout“, OCR „Kurrent (German, Czech)“ pro kurent, „Czech Handwritten“ pro latinku, export, doplnit
+`BOOKS` a `EXPORTS` v `tools/pero_import.py` a spustit `python tools/pero_import.py <export.zip>`.
 
 ## Vrstvy a opravy
 
