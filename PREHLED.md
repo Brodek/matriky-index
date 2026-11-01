@@ -2,9 +2,9 @@
 
 Stav k 1. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **101 knih** (matrika 62, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 6, soupis poddaných 2, urbář 1)
+- **112 knih** (matrika 73, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 6, soupis poddaných 2, urbář 1)
 - **3 156 stran** převedených strojově (PERO OCR), **422 143 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **1 559 zápisů přečtených očima**: narození 695, sňatky 252, úmrtí 368, převody gruntů 49, soupisy 25, jiné 170
+- **1 589 zápisů přečtených očima**: narození 697, sňatky 263, úmrtí 375, převody gruntů 49, soupisy 25, jiné 180
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -52,7 +52,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [vs-horazdovice-k1593](https://www.portafontium.eu/amtsbuch/soap-pn/vs-horazdovice/k1593) | pozemková kniha |  |  |  | 1 (P 1) |
 | [vs-horazdovice-k1594](https://www.portafontium.eu/amtsbuch/soap-pn/vs-horazdovice/k1594) | pozemková kniha |  |  |  | 1 (P 1) |
 
-## SOA Zámrsk – Východočeské archivy (ARON) (11)
+## SOA Zámrsk – Východočeské archivy (ARON) (19)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -66,7 +66,15 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [dd69e90f](https://aron.vychodoceskearchivy.cz/apu/dd69e90f-d6e6-48dd-9f28-38b07382365a/dao/dd69e90f-d6e6-48dd-9f28-38b07382365a/file/5359bea7-0c0d-4233-ac30-efa8d806d565) | sčítání lidu |  |  |  | 1 (S 1) |
 | ff03e2c0 | matrika |  |  |  | 1 (J 1) |
 | ffcc1f51 | matrika |  |  |  | 3 (J 3) |
+| [Opočno N, Z, O 1723–1797, sign. 120-1 (kód VCACWBOV)](https://storage.vychodoceskearchivy.cz/matriky/V/CZ_215000010_00190_VCACWBOV_sign-120-1.zip) | matrika |  |  |  | 4 (O 4) |
+| [Opočno O 1784–1834 (Pohoří, Puličky, Semechnice, Trnov), sign. 120-11 (kód 5JZN4DBO)](https://storage.vychodoceskearchivy.cz/matriky/5/CZ_215000010_00190_5JZN4DBO_sign-120-11.zip) | matrika |  |  |  | 6 (O 6) |
+| [Opočno, rejstřík oddaných 1723–1797, sign. 120-15 (kód L2A5OAAQ)](https://storage.vychodoceskearchivy.cz/matriky/L/CZ_215000010_00190_L2A5OAAQ_sign-120-15.zip) | matrika |  |  |  | 2 (J 2) |
 | [Litomyšl N 1850–1857, sign. 1309 (kód WRH6GG3Q)](https://storage.vychodoceskearchivy.cz/matriky/W/CZ_215000010_00190_WRH6GG3Q_sign-1309.zip) | matrika |  |  |  | 9 (N 9) |
+| [Litomyšl O 1800–1823, sign. 1319 (kód UZIZVUY2)](https://storage.vychodoceskearchivy.cz/matriky/U/CZ_215000010_00190_UZIZVUY2_sign-1319.zip) | matrika |  |  |  | 1 (O 1) |
+| [Litomyšl Z 1820–1852, sign. 1331 (kód AZZOANBY)](https://storage.vychodoceskearchivy.cz/matriky/A/CZ_215000010_00190_AZZOANBY_sign-1331.zip) | matrika |  |  |  | 1 (Z 1) |
+| [Dobruška Z, vesnice 1806–1843, sign. 26-12 (kód 3CF3NFID)](https://storage.vychodoceskearchivy.cz/matriky/3/CZ_215000010_00190_3CF3NFID_sign-26-12.zip) | matrika |  |  |  | 6 (Z 6) |
+| [Dobruška, rejstřík narozených 1799–1806, sign. 26-13 (kód XLDDPY2A)](https://storage.vychodoceskearchivy.cz/matriky/X/CZ_215000010_00190_XLDDPY2A_sign-26-13.zip) | matrika |  |  |  | 2 (J 2) |
+| [Dobruška, rejstřík zemřelých 1806–1886, sign. 26-3860 (kód TSIIQZJO)](https://storage.vychodoceskearchivy.cz/matriky/T/CZ_215000010_00190_TSIIQZJO_sign-26-3860.zip) | matrika |  |  |  | 5 (J 5) |
 
 ## Národní archiv – židovské matriky a familianti (zayt.org) (27)
 
@@ -130,11 +138,14 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [f39c172e](https://katalog.ahmp.cz/pragapublica/permalink?xid=F39C172E189811E9A48554D00686B80C&scan=2) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Žižkov, sv. Prokop, ŽKP Z4 (1906–1915)](https://katalog.ahmp.cz/pragapublica/permalink?xid=F88B2F66CDCE438E9CBB66DA29BBF7CC) | matrika |  |  |  | 4 (J 2 Z 2) |
 
-## Moravský zemský archiv – Acta Publica (1)
+## Moravský zemský archiv – Acta Publica (4)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
 | [Hostim (Hösting) N 1821–1885, Acta Publica id 1384 (jen obec Hostim)](https://www.mza.cz/actapublica/matrika/detail/1384) | matrika |  |  |  | 3 (J 1 N 2) |
+| [Bzenec N 1775–1818, Acta Publica id 4914 (Bzenec, Domanín, Moravský Písek, Olšovec …)](https://www.mza.cz/actapublica/matrika/detail/4914) | matrika |  |  |  | 1 (N 1) |
+| [Bzenec index N 1722–1818, index O 1723–1779, index Z 1722–1777, Acta Publica id 4927](https://www.mza.cz/actapublica/matrika/detail/4927) | matrika |  |  |  | 1 (J 1) |
+| [Drahany N 1773–1819, Acta Publica id 5556 (obce Bousín, Drahany, Niva/Hartmanice, Otinoves, Rostěnice, Nebstich …)](https://www.mza.cz/actapublica/matrika/detail/5556) | matrika |  |  |  | 1 (N 1) |
 
 ## Národní archiv – pražské policejní přihlášky (konskripce) (6)
 
