@@ -15,6 +15,7 @@ import math
 import os
 import re
 import sys
+import time
 
 from PIL import Image
 
@@ -34,6 +35,19 @@ def urovne(w, h):
         w, h = (w + 1) // 2, (h + 1) // 2
 
 
+def dlazdice(url):
+    # server občas jednotlivé spojení nedokončí; při déletrvajícím výpadku přeruší další pokusy blokace ze slusne.py
+    for pokus in range(3):
+        try:
+            return slusne.urlopen(url, "obrazek", timeout=60).read()
+        except slusne.Zablokovano:
+            raise
+        except OSError:
+            if pokus == 2:
+                raise
+            time.sleep(5)
+
+
 def stahni(path, uroven, out):
     base = BASE + path
     props = slusne.urlopen(base + "/ImageProperties.xml", "stranka", timeout=60).read().decode()
@@ -46,7 +60,7 @@ def stahni(path, uroven, out):
     for y in range(cy):
         for x in range(cx):
             n = before + y * cx + x
-            tile = slusne.urlopen(f"{base}/TileGroup{n // 256}/{level}-{x}-{y}.jpg", "obrazek", timeout=60).read()
+            tile = dlazdice(f"{base}/TileGroup{n // 256}/{level}-{x}-{y}.jpg")
             img.paste(Image.open(io.BytesIO(tile)), (x * TILE, y * TILE))
     img.save(out, quality=90)
     return img.size
