@@ -6,6 +6,9 @@ import urllib.request
 
 from PIL import Image
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import slusne  # noqa: E402
+
 mid, name, out = sys.argv[1], sys.argv[2], sys.argv[3]
 cj = http.cookiejar.CookieJar()
 op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
@@ -16,9 +19,9 @@ for a in sys.argv[4:]:
     for k in range(lo, hi + 1):
         p = os.path.join(out, f"{k:04d}.jpg")
         if not os.path.exists(p):
-            op.open(f"https://ebadatelna.soapraha.cz/d/{mid}/{k}", timeout=60).read()
-            data = op.open(f"https://ebadatelna.soapraha.cz/wicket/resource/org.apache.wicket.Application/{name}__{k:03d}.jpg",
-                           timeout=120).read()
+            slusne.urlopen(f"https://ebadatelna.soapraha.cz/d/{mid}/{k}", "stranka", timeout=60, opener=op).read()
+            data = slusne.urlopen(f"https://ebadatelna.soapraha.cz/wicket/resource/org.apache.wicket.Application/{name}__{k:03d}.jpg",
+                                  "obrazek", timeout=120, opener=op).read()
             if data[:2] != b"\xff\xd8":
                 print(k, "not an image")
                 continue

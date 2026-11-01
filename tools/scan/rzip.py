@@ -5,12 +5,15 @@ import sys
 import urllib.request
 import zipfile
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import slusne  # noqa: E402
+
 
 class RangeFile(io.RawIOBase):
     def __init__(self, url):
         self.url, self.pos = url, 0
         req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "Mozilla/5.0"})
-        self.size = int(urllib.request.urlopen(req, timeout=60).headers["Content-Length"])
+        self.size = int(slusne.urlopen(req, "stranka", timeout=60).headers["Content-Length"])
 
     def seekable(self):
         return True
@@ -32,7 +35,7 @@ class RangeFile(io.RawIOBase):
             return b""
         end = min(self.pos + n, self.size) - 1
         req = urllib.request.Request(self.url, headers={"User-Agent": "Mozilla/5.0", "Range": f"bytes={self.pos}-{end}"})
-        data = urllib.request.urlopen(req, timeout=120).read()
+        data = slusne.urlopen(req, "obrazek", timeout=120).read()
         self.pos += len(data)
         return data
 

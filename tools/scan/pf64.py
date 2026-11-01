@@ -1,6 +1,8 @@
 """pf64.py <book> <outdir> <width> <a-b|n> ... — Porta fontium vs-horazdovice amtsbuch (soap-pn_20033-vs-horazdovice_kNNNN_XXXX)."""
 import os, sys, urllib.request
 from concurrent.futures import ThreadPoolExecutor
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import slusne  # noqa: E402
 book, out, wid = sys.argv[1], sys.argv[2], int(sys.argv[3])
 os.makedirs(out, exist_ok=True)
 ks = []
@@ -12,7 +14,7 @@ def one(k):
     if not os.path.exists(f):
         u = (f"https://www.portafontium.eu/fcgi-bin/iipsrv.fcgi?FIF=amtsbuch/soap-pn/vs-horazdovice/{book}/"
              f"soap-pn_20033-vs-horazdovice_{book}_{k*10:04d}.jp2&WID={wid}&CVT=jpeg")
-        data = urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=120).read()
+        data = slusne.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), "obrazek", timeout=120).read()
         open(f, "wb").write(data)
     return k
 with ThreadPoolExecutor(6) as ex:

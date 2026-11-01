@@ -3,8 +3,10 @@ usage: python -I zayt.py <book_base_url e.g. https://files.zayt.org/zayt-239/boo
 level_offset: 0 = top level (full res), 1 = half, ...
 """
 import sys, re, math, io, os, concurrent.futures as cf
-import requests
 from PIL import Image
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import slusne  # noqa: E402
 
 base, page, outdir = sys.argv[1], int(sys.argv[2]), sys.argv[3]
 off = int(sys.argv[4]) if len(sys.argv) > 4 else 0
@@ -13,7 +15,7 @@ if not base.endswith('/'):
     base += '/'
 pu = f"{base}p{page}/"
 H = {"Referer": "https://zayt.org/", "User-Agent": "Mozilla/5.0"}
-xml = requests.get(pu + "ImageProperties.xml", headers=H, timeout=30).text
+xml = slusne.get(pu + "ImageProperties.xml", "stranka", headers=H, timeout=30).text
 W = int(re.search(r'WIDTH="(\d+)"', xml).group(1)); Hh = int(re.search(r'HEIGHT="(\d+)"', xml).group(1))
 TS = int(re.search(r'TILESIZE="(\d+)"', xml).group(1)); NT = int(re.search(r'NUMTILES="(\d+)"', xml).group(1))
 
@@ -49,7 +51,7 @@ def fetch(xy):
     x, y = xy
     idx = before + y * nx + x
     u = f"{pp}TileGroup{idx // 256}/{z}-{x}-{y}.jpg"
-    r = requests.get(u, headers=H, timeout=60)
+    r = slusne.get(u, "obrazek", headers=H, timeout=60)
     if r.status_code != 200:
         return xy, None
     return xy, Image.open(io.BytesIO(r.content)).convert("RGB")

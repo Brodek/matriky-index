@@ -1,10 +1,12 @@
 """zayt.org book search. usage: python -I books.py "<search term>" [max] [--raw]"""
-import sys, json, requests
+import sys, json, os
 sys.stdout.reconfigure(encoding="utf-8")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import slusne  # noqa: E402
 term = sys.argv[1]
 mx = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].isdigit() else 99
 q = {"query": {"searchTerm": term, "hasFilters": False}, "range": [0, mx]}
-r = requests.get("https://zayt.org/api/books", params={"q": json.dumps(q)}, headers={"User-Agent": "Mozilla/5.0"}, timeout=60)
+r = slusne.get("https://zayt.org/api/books", "stranka", params={"q": json.dumps(q)}, headers={"User-Agent": "Mozilla/5.0"}, timeout=60)
 if r.status_code != 200:
     print(r.status_code, r.text[:300]); sys.exit(1)
 d = r.json()

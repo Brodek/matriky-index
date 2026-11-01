@@ -6,6 +6,9 @@ import sys
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import slusne  # noqa: E402
+
 book, out, wid = sys.argv[1], sys.argv[2], int(sys.argv[3])
 parish = book.rsplit("-", 1)[0]
 os.makedirs(out, exist_ok=True)
@@ -13,7 +16,8 @@ UA = {"User-Agent": "Mozilla/5.0"}
 
 
 def get(u):
-    return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=120).read()
+    druh = "obrazek" if "iipsrv" in u else "stranka"
+    return slusne.urlopen(urllib.request.Request(u, headers=UA), druh, timeout=120).read()
 
 
 page = get(f"https://www.portafontium.eu/register/soap-pn/{book}").decode("utf-8", "replace")

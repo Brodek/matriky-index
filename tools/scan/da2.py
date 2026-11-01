@@ -1,6 +1,8 @@
 """da2.py <bookid> <level> <outdir> <page|a-b> ... — DigiArchiv SOA Třeboň page images (Zoomify tiles via isrv8)."""
 import io, os, re, sys, time, urllib.request, http.cookiejar
 from PIL import Image
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import slusne  # noqa: E402
 B = "https://digi.ceskearchivy.cz"
 cj = http.cookiejar.CookieJar(); op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
 op.addheaders = [("User-Agent", "Mozilla/5.0")]
@@ -8,7 +10,9 @@ def get(u, ref=None, tries=4):
     for t in range(tries):
         try:
             r = urllib.request.Request(B + u, headers={"Referer": ref} if ref else {})
-            return op.open(r, timeout=60).read()
+            return slusne.urlopen(r, "obrazek" if ".jpg" in u or "isrv" in u else "stranka", timeout=60, opener=op).read()
+        except slusne.Zablokovano:
+            raise
         except Exception:
             time.sleep(2 + 2 * t)
     return b""

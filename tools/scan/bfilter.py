@@ -1,12 +1,14 @@
 """usage: python -I bfilter.py "<search>" <year> <col n|o|z> <alt-substring>"""
-import sys, json, re, requests
+import sys, json, re, os
 sys.stdout.reconfigure(encoding="utf-8")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import slusne  # noqa: E402
 term, year, col, sub = sys.argv[1], int(sys.argv[2]), sys.argv[3], sys.argv[4].lower()
 out = []
 start = 0
 while True:
     q = {"query": {"searchTerm": term, "hasFilters": False}, "range": [start, start + 99]}
-    d = requests.get("https://zayt.org/api/books", params={"q": json.dumps(q)}, headers={"User-Agent": "Mozilla/5.0"}, timeout=60).json()
+    d = slusne.get("https://zayt.org/api/books", "stranka", params={"q": json.dumps(q)}, headers={"User-Agent": "Mozilla/5.0"}, timeout=60).json()
     bs = d["books"]
     for b in bs:
         rng = b.get(f"date_ranges_{col}") or ""

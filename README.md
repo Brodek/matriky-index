@@ -28,10 +28,16 @@ tools/
   pero_import.py  převod exportu z PERO do knihy/…
   scan/           stahování skenů: pfl.py, pf64.py (Porta fontium), ebget.py (eBadatelna SOA Praha), da2.py,
                   dasearch.py (DigiArchiv SOA Třeboň), zget.py + rzip.py (VČA Zámrsk), zayt.py, books.py, bfilter.py
-                  (zayt.org), cr.py (výřez skenu)
+                  (zayt.org), mza.py (Acta Publica, MZA Brno), cr.py (výřez skenu); slusne.py = společný limit dotazů
 ```
 
-Archivy: `portafontium` (SOA Plzeň), `soapraha` (eBadatelna, kniha = id matriky), `soatrebon`, `vca`, `zayt`, `nacr`.
+Archivy: `portafontium` (SOA Plzeň), `soapraha` (eBadatelna, kniha = id matriky), `soatrebon`, `vca`, `zayt`, `nacr`,
+`mza` (Acta Publica, kniha = id z adresy matrika/detail/<id>), `ahmp`, `familysearch` (kniha = číslo DGS).
+
+Archivy blokují IP adresu po dávce rychlých dotazů. Každé stahování proto jde přes `tools/scan/slusne.py`: stránky
+a hledání 1 dotaz za 2 s, obrázky 5 za 1 s, po 429/503 půl hodiny nic (sdíleno mezi procesy, `python -I
+tools/scan/slusne.py stav`). Vlastní jednorázové skripty volají `slusne.urlopen()` / `slusne.get()`, ne přímo
+`urllib`, `requests` ani `curl`. Souběžné procesy limit nezrychlí – jen se o něj dělí.
 
 ## Hledání
 
