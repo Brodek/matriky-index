@@ -10,7 +10,8 @@
     python slusne.py odblokuj <server>
 
 Limity: stránky, hledání a API 1 dotaz za 2 s, obrázky, dlaždice a čtení zipu 5 za 1 s. Po 429 nebo 503 je server
-30 minut zablokovaný pro všechny procesy: pockej() pak vyhodí Zablokovano a nic se znovu nezkouší. Archivy za dávky
+30 minut zablokovaný pro všechny procesy: pockej() pak vyhodí Zablokovano a nic se znovu nezkouší. Po třech
+nepovedených spojeních za sebou (server odmítá nebo neodpovídá) je odstavený na 10 minut. Archivy za dávky
 rychlých dotazů blokují IP adresu, proto musí každé stahování jít přes tento modul.
 """
 import json
@@ -24,6 +25,7 @@ from pathlib import Path
 
 INTERVAL = {"stranka": 2.0, "obrazek": 0.2}
 BLOKACE = 30 * 60
+SELHANI, PAUZA_SELHANI = 3, 10 * 60
 STAV = Path(os.environ.get("SLUSNE_STAV", Path.home() / ".cache" / "rodokmen-slusne"))
 UA = "Mozilla/5.0 (rodokmen)"
 
@@ -94,35 +96,53 @@ def pockej(url, druh="stranka"):
 
 
 def hlas(url, status):
-    """Zaznamená odpověď; 429 a 503 zablokují server na 30 minut."""
-    if status in (429, 503):
-        host = _host(url)
-        with _Zamek(host):
-            st = _cti(host)
+    """Zaznamená odpověď; 429 a 503 zablokují server na 30 minut. status None = spojení selhalo (odmítnuto, vypršelo):
+    po třetím selhání za sebou se server odstaví na 10 minut, ať se do nedostupného webu nebuší dál."""
+    host = _host(url)
+    with _Zamek(host):
+        st = _cti(host)
+        if status in (429, 503):
             st.update(blokovano_do=time.time() + BLOKACE, duvod=status)
-            _zapis(host, st)
+        elif status is None:
+            st["selhani"] = st.get("selhani", 0) + 1
+            if st["selhani"] >= SELHANI:
+                st.update(blokovano_do=time.time() + PAUZA_SELHANI, duvod="nedostupný", selhani=0)
+        elif st.get("selhani"):
+            st["selhani"] = 0
+        else:
+            return
+        _zapis(host, st)
 
 
 def urlopen(req, druh="stranka", timeout=120, opener=None):
-    """urllib.request.urlopen (nebo opener.open) s čekáním na limit a hlášením 429/503."""
+    """urllib.request.urlopen (nebo opener.open) s čekáním na limit a hlášením odpovědi."""
     if isinstance(req, str):
         req = urllib.request.Request(req)
     if not req.has_header("User-agent"):
         req.add_header("User-Agent", UA)
     pockej(req, druh)
     try:
-        return (opener.open if opener else urllib.request.urlopen)(req, timeout=timeout)
+        r = (opener.open if opener else urllib.request.urlopen)(req, timeout=timeout)
     except urllib.error.HTTPError as e:
         hlas(req, e.code)
         raise
+    except (urllib.error.URLError, OSError):
+        hlas(req, None)
+        raise
+    hlas(req, r.status)
+    return r
 
 
 def get(url, druh="stranka", **kw):
-    """requests.get s čekáním na limit a hlášením 429/503."""
+    """requests.get s čekáním na limit a hlášením odpovědi."""
     import requests
     kw.setdefault("headers", {}).setdefault("User-Agent", UA)
     pockej(url, druh)
-    r = requests.get(url, **kw)
+    try:
+        r = requests.get(url, **kw)
+    except requests.exceptions.RequestException:
+        hlas(url, None)
+        raise
     hlas(url, r.status_code)
     return r
 
