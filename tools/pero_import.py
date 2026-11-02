@@ -115,6 +115,26 @@ BOOKS = {
                             "OCR ze šedotónových JPEG 2400 px",
                       url="https://aron.vychodoceskearchivy.cz/apu/06a51ee1-4891-4871-b054-cd9370536c0b", prefix="lit7492",
                       delitel=1),
+    "o-2741": dict(archiv="zayt", nazev="Praha-Karlín, židovská matrika O 1848–1856 (NA HBMa inv. 2741)",
+                   farnost="Karlín (krajský rabín Kouřimska; snoubenci z celého kraje)", roky="1848–1856",
+                   obsah="„Trauungs-Matrik“, tištěný formulář přes dvojstranu, 4 posty na stranu (sn. 20 = pag. 18, 1854); "
+                         "OCR snímky 3–35; soubor = snímek, obrázek oříznutý na knihu, šedotónový",
+                   url="https://zayt.org/collections/jewish-registers-1784-1949/o-2741", prefix="o2741", delitel=1),
+    "o-2745": dict(archiv="zayt", nazev="Praha-Libeň, židovská matrika O 1833–1849 (NA HBMa inv. 2745)",
+                   farnost="Libeň (snoubenci i z venkova – Přistoupim, Poříčany, Cerhenice aj.)", roky="1833–1849",
+                   obsah="ručně linkovaná tabulka přes dvojstranu (sn. 10 = pag. 12–13, rok 1837); OCR snímky 4–17; soubor = "
+                         "snímek, obrázek oříznutý na knihu, šedotónový",
+                   url="https://zayt.org/collections/jewish-registers-1784-1949/o-2745", prefix="o2745", delitel=1),
+    "z-481": dict(archiv="zayt", nazev="Hroubovice (FÚ Luže), židovská kontrolní matrika Z (NA inv. 481)", farnost="Luže",
+                  roky="1840–1873", obsah="Z Hroubovice 1840–1873; OCR snímky 3–52; soubor = snímek; oříznuté, šedotónové; "
+                                          "sn. 3–11 neotočené, 12–52 otočené o 90° (soubor -r)",
+                  url="https://zayt.org/collections/jewish-control-registers-1780-1911/z-481", prefix="z481", delitel=1),
+    "su-xiv-5": dict(archiv="zaopava", nazev="Bohdíkov N 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 5 (inv. 7909)",
+                     farnost="Bohdíkov (Bartoňov, Bohdíkov, Bušín/Buschin, Hostice, Jakubovice, Olšany, Raškov, Ruda n. M. …)",
+                     roky="1779–1825", obsah="OCR snímky 30–95 (asi 1782–1788; str. 1–181 = všechny obce 1779–1788); latinsky; "
+                                             "soubor = snímek; obrázky v polovičním rozlišení (1800 px), šedotónové",
+                     url="https://digi.archives.cz/da/permalink?xid=be93172a-f13c-102f-8255-0050568c0263",
+                     prefix="bohdikov5", delitel=1),
     "z-236": dict(archiv="zayt", nazev="Hrochův Týnec, židovská kontrolní matrika Z (NA inv. 236)", farnost="Hrochův Týnec",
                   roky="1839–1882", obsah="OCR snímky 41–46 a 51–58 (asi 1855–1857 a 1861–1866); soubor = snímek; zápisy svisle, "
                                           "OCR z oříznutých a otočených obrázků (soubor -r)",
@@ -167,6 +187,10 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "kvasnovice-05": (["kvasnovice-05"], "eb1b5565-a613-4f43-9054-284e334056b0", "Kurrent (German, Czech)", "2026-10-22"),
     "maly-bor-06": (["maly-bor-06"], "c118aa96-dcf1-4ad3-97b9-21d1454f0e54", "Czech Handwritten", "2026-10-22"),
     "litomysl-z-index-7492": (["sign-7492"], "7c8f80c2-117d-4ead-bb24-519ac40c2005", "Czech Handwritten", "2026-11-02"),
+    "litomysl-n-1309": (["sign-1309"], "9cf4c19e-3582-41cf-82c8-c4cb45510542", "Kurrent (German, Czech)", "2026-11-02"),
+    "kurrent-2741-2745-481": (["o-2741", "o-2745", "z-481"], "8b22ff4d-4bfb-48ce-a789-7644f374dc32",
+                              "Kurrent (German, Czech)", "2026-11-02"),
+    "bohdikov-su-xiv-5": (["su-xiv-5"], "161c8c33-983b-4c9a-87cd-36473e311b18", "Czech Handwritten", "2026-11-02"),
     "horazdovice-05": (["horazdovice-05"], "fd143024-c5a7-4f8e-808b-be33654abe80", "Czech Handwritten", "2026-10-22"),
     "vs-horazdovice-k1563": (["vs-horazdovice-k1563"], "d93b37ec-4ffb-4ad6-a2a6-e3d4846c54da", "Czech Handwritten",
                              "2026-10-22"),
