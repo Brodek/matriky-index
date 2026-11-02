@@ -1,10 +1,10 @@
 # Přehled indexu
 
-Stav k 1. 11. 2026 (generuje `python tools/prehled.py`).
+Stav k 2. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **112 knih** (matrika 73, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 6, soupis poddaných 2, urbář 1)
-- **3 156 stran** převedených strojově (PERO OCR), **422 143 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **1 589 zápisů přečtených očima**: narození 697, sňatky 263, úmrtí 375, převody gruntů 49, soupisy 25, jiné 180
+- **116 knih** (matrika 77, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 6, soupis poddaných 2, urbář 1)
+- **3 943 stran** převedených strojově (PERO OCR), **616 166 řádků** strojového textu – nekontrolovaný, slouží k hledání
+- **1 636 zápisů přečtených očima**: narození 729, sňatky 263, úmrtí 385, převody gruntů 49, soupisy 25, jiné 185
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -52,7 +52,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [vs-horazdovice-k1593](https://www.portafontium.eu/amtsbuch/soap-pn/vs-horazdovice/k1593) | pozemková kniha |  |  |  | 1 (P 1) |
 | [vs-horazdovice-k1594](https://www.portafontium.eu/amtsbuch/soap-pn/vs-horazdovice/k1594) | pozemková kniha |  |  |  | 1 (P 1) |
 
-## SOA Zámrsk – Východočeské archivy (ARON) (19)
+## SOA Zámrsk – Východočeské archivy (ARON) (21)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -69,14 +69,16 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Opočno N, Z, O 1723–1797, sign. 120-1 (kód VCACWBOV)](https://storage.vychodoceskearchivy.cz/matriky/V/CZ_215000010_00190_VCACWBOV_sign-120-1.zip) | matrika |  |  |  | 4 (O 4) |
 | [Opočno O 1784–1834 (Pohoří, Puličky, Semechnice, Trnov), sign. 120-11 (kód 5JZN4DBO)](https://storage.vychodoceskearchivy.cz/matriky/5/CZ_215000010_00190_5JZN4DBO_sign-120-11.zip) | matrika |  |  |  | 6 (O 6) |
 | [Opočno, rejstřík oddaných 1723–1797, sign. 120-15 (kód L2A5OAAQ)](https://storage.vychodoceskearchivy.cz/matriky/L/CZ_215000010_00190_L2A5OAAQ_sign-120-15.zip) | matrika |  |  |  | 2 (J 2) |
-| [Litomyšl N 1850–1857, sign. 1309 (kód WRH6GG3Q)](https://storage.vychodoceskearchivy.cz/matriky/W/CZ_215000010_00190_WRH6GG3Q_sign-1309.zip) | matrika |  |  |  | 9 (N 9) |
+| [Litomyšl N 1850–1857, sign. 1309 (kód WRH6GG3Q)](https://aron.vychodoceskearchivy.cz/apu/9340aa8e-bfe5-4c80-af51-9adf97017290) | matrika | 10/1850–1857 | 395 | 56501 | 9 (N 9) |
 | [Litomyšl O 1800–1823, sign. 1319 (kód UZIZVUY2)](https://storage.vychodoceskearchivy.cz/matriky/U/CZ_215000010_00190_UZIZVUY2_sign-1319.zip) | matrika |  |  |  | 1 (O 1) |
 | [Litomyšl Z 1820–1852, sign. 1331 (kód AZZOANBY)](https://storage.vychodoceskearchivy.cz/matriky/A/CZ_215000010_00190_AZZOANBY_sign-1331.zip) | matrika |  |  |  | 1 (Z 1) |
 | [Dobruška Z, vesnice 1806–1843, sign. 26-12 (kód 3CF3NFID)](https://storage.vychodoceskearchivy.cz/matriky/3/CZ_215000010_00190_3CF3NFID_sign-26-12.zip) | matrika |  |  |  | 6 (Z 6) |
 | [Dobruška, rejstřík narozených 1799–1806, sign. 26-13 (kód XLDDPY2A)](https://storage.vychodoceskearchivy.cz/matriky/X/CZ_215000010_00190_XLDDPY2A_sign-26-13.zip) | matrika |  |  |  | 2 (J 2) |
 | [Dobruška, rejstřík zemřelých 1806–1886, sign. 26-3860 (kód TSIIQZJO)](https://storage.vychodoceskearchivy.cz/matriky/T/CZ_215000010_00190_TSIIQZJO_sign-26-3860.zip) | matrika |  |  |  | 5 (J 5) |
+| [Litomyšl Z 1864–1881, sign. 5411 (kód 6J44UBOZ)](https://aron.vychodoceskearchivy.cz/apu/26fa22af-989b-4af5-b291-69e9797c9606) | matrika |  |  |  | 10 (Z 10) |
+| [Litomyšl, index Z 1864–1906, sign. 7492 (kód LRIQXP2E)](https://aron.vychodoceskearchivy.cz/apu/06a51ee1-4891-4871-b054-cd9370536c0b) | matrika | 1864–1906 | 229 | 85754 | 5 (J 5) |
 
-## Národní archiv – židovské matriky a familianti (zayt.org) (27)
+## Národní archiv – židovské matriky a familianti (zayt.org) (28)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -99,13 +101,14 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hrochův Týnec, židovská kontrolní matrika O (NA HBMa inv. 235)](https://zayt.org/collections/jewish-control-registers-1780-1911/o-235) | matrika | 1839–1889 | 15 | 2302 | 3 (O 3) |
 | [Zájezdec, židovská matrika O (NA HBMa inv. 2434)](https://zayt.org/collections/jewish-registers-1784-1949/o-2434) | matrika | 1839, 1841–1868 | 13 | 1711 | 8 (O 8) |
 | [Praha, židovská matrika O 1881 (NA HBMa inv. 2677)](https://zayt.org/collections/jewish-registers-1784-1949/o-2677) | matrika | 1881 |  |  | 1 (O 1) |
-| [Praha-Libeň, židovská matrika O 1833–1849 (NA HBMa inv. 2745)](https://zayt.org/collections/jewish-registers-1784-1949/o-2745) | matrika | 1833–1849 |  |  | 1 (O 1) |
+| [Praha-Karlín, židovská matrika O 1848–1856 (NA HBMa inv. 2741)](https://zayt.org/collections/jewish-registers-1784-1949/o-2741) | matrika | 1848–1856 | 33 | 8669 |  |
+| [Praha-Libeň, židovská matrika O 1833–1849 (NA HBMa inv. 2745)](https://zayt.org/collections/jewish-registers-1784-1949/o-2745) | matrika | 1833–1849 | 14 | 3300 | 1 (O 1) |
 | [Heřmanův Městec, židovská matrika O (NA inv. 406), duplikát 1839–1850](https://zayt.org/collections/jewish-registers-1784-1949/o-406) | matrika | 1839–1850 | 30 | 4761 |  |
 | [Hroubovice, rejstřík oddaných a zemřelých 1840–1895 (NA inv. 531)](https://zayt.org/collections/jewish-registers-1784-1949/oz-531) | matrika | 1840–1895 |  |  | 2 (J 2) |
 | z-1721 | matrika |  |  |  | 6 (Z 6) |
 | [Hrochův Týnec, židovská kontrolní matrika Z (NA inv. 236)](https://zayt.org/collections/jewish-control-registers-1780-1911/z-236) | matrika | 1839–1882 | 14 | 2011 | 14 (J 6 Z 8) |
 | [Praha-Karlín, židovská matrika Z 1869–1939 (NA HBMa inv. 2844)](https://zayt.org/collections/jewish-registers-1784-1949/z-2844) | matrika | 1869–1939 |  |  | 1 (Z 1) |
-| [Hroubovice (FÚ Luže), židovská kontrolní matrika Z (NA inv. 481)](https://zayt.org/collections/jewish-control-registers-1780-1911/z-481) | matrika | 1840–1873 |  |  | 16 (J 1 Z 15) |
+| [Hroubovice (FÚ Luže), židovská kontrolní matrika Z (NA inv. 481)](https://zayt.org/collections/jewish-control-registers-1780-1911/z-481) | matrika | 1840–1873 | 50 | 7731 | 16 (J 1 Z 15) |
 | [Kolín, židovská matrika Z 1847–1865 (NA HBMa inv. 835)](https://zayt.org/collections/jewish-registers-1784-1949/z-835) | matrika | 1847–1865 |  |  | 1 (J 1) |
 
 ## SOA Praha – eBadatelna (1)
@@ -164,3 +167,9 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 |---|---|---|--:|--:|---|
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
+
+## zaopava (1)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Bohdíkov N 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 5 (inv. 7909)](https://digi.archives.cz/da/permalink?xid=be93172a-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 66 | 32068 | 32 (N 32) |
