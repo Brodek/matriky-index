@@ -42,10 +42,24 @@ tools/
 Archivy: `portafontium` (SOA Plzeň), `soapraha` (eBadatelna, kniha = id matriky), `soatrebon`, `vca`, `zayt`, `nacr`,
 `mza` (Acta Publica, kniha = id z adresy matrika/detail/<id>), `ahmp`, `familysearch` (kniha = číslo DGS).
 
-Archivy blokují IP adresu po dávce rychlých dotazů. Každé stahování proto jde přes `tools/scan/slusne.py`: stránky
-a hledání 1 dotaz za 2 s, obrázky 5 za 1 s, po 429/503 půl hodiny nic (sdíleno mezi procesy, `python -I
-tools/scan/slusne.py stav`). Vlastní jednorázové skripty volají `slusne.urlopen()` / `slusne.get()`, ne přímo
-`urllib`, `requests` ani `curl`. Souběžné procesy limit nezrychlí – jen se o něj dělí.
+## Ohleduplnost k archivům
+
+Digitální badatelny jsou veřejná služba pro všechny badatele, ne zdroj dat pro hromadné stahování. Když po nich začne
+skeny tahat víc lidí s automatickými nástroji najednou, archiv přestane stíhat a odnesou to všichni, i ti, kdo listují
+ručně. Na přelomu října a listopadu 2026 přestala Acta Publica (MZA Brno) odpovídat řadě badatelů a některé IP adresy
+zablokovala.
+
+- Stahujte jen knihy, které opravdu potřebujete, a jen jejich potřebnou část (rejstřík, roky, obec). Celou knihu do
+  PERO teprve tehdy, když hledané jméno nejde najít jinak.
+- Každé stahování jde přes `tools/scan/slusne.py`. Výchozí limit: stránky a hledání 1 dotaz za 2 s, obrázky 5 za 1 s.
+  Přetížené archivy mají přísnější limit (`POMALE`, Acta Publica 1 snímek za 2 s). Po 429/503 je server půl hodiny
+  zablokovaný pro všechny procesy (`python -I tools/scan/slusne.py stav`). Vlastní jednorázové skripty volají
+  `slusne.urlopen()` / `slusne.get()`, ne přímo `urllib`, `requests` ani `curl`. Souběžné procesy limit nezrychlí, jen
+  se o něj dělí.
+- Když archiv odpovídá pomalu, píše o přetížení nebo vás zablokuje, dejte mu pauzu: `python -I tools/scan/slusne.py
+  zablokuj <server> <hodin>`. Blokaci neobcházejte jinou sítí ani jinou IP adresou.
+- Než knihu stáhnete, podívejte se do `knihy/`, jestli ji tu už někdo nepřečetl. Proto index existuje: jednou přečtená
+  kniha se nemusí stahovat znovu.
 
 ## Hledání
 
