@@ -4,7 +4,7 @@ Stav k 2. 11. 2026 (generuje `python tools/prehled.py`).
 
 - **116 knih** (matrika 77, pozemková kniha 19, sčítání lidu 11, policejní přihlášky 6, soupis poddaných 2, urbář 1)
 - **3 943 stran** převedených strojově (PERO OCR), **616 166 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **1 636 zápisů přečtených očima**: narození 729, sňatky 263, úmrtí 385, převody gruntů 49, soupisy 25, jiné 185
+- **1 654 zápisů přečtených očima**: narození 729, sňatky 272, úmrtí 392, převody gruntů 49, soupisy 25, jiné 187
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -101,14 +101,14 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hrochův Týnec, židovská kontrolní matrika O (NA HBMa inv. 235)](https://zayt.org/collections/jewish-control-registers-1780-1911/o-235) | matrika | 1839–1889 | 15 | 2302 | 3 (O 3) |
 | [Zájezdec, židovská matrika O (NA HBMa inv. 2434)](https://zayt.org/collections/jewish-registers-1784-1949/o-2434) | matrika | 1839, 1841–1868 | 13 | 1711 | 8 (O 8) |
 | [Praha, židovská matrika O 1881 (NA HBMa inv. 2677)](https://zayt.org/collections/jewish-registers-1784-1949/o-2677) | matrika | 1881 |  |  | 1 (O 1) |
-| [Praha-Karlín, židovská matrika O 1848–1856 (NA HBMa inv. 2741)](https://zayt.org/collections/jewish-registers-1784-1949/o-2741) | matrika | 1848–1856 | 33 | 8669 |  |
-| [Praha-Libeň, židovská matrika O 1833–1849 (NA HBMa inv. 2745)](https://zayt.org/collections/jewish-registers-1784-1949/o-2745) | matrika | 1833–1849 | 14 | 3300 | 1 (O 1) |
+| [Praha-Karlín, židovská matrika O 1848–1856 (NA HBMa inv. 2741)](https://zayt.org/collections/jewish-registers-1784-1949/o-2741) | matrika | 1848–1856 | 33 | 8669 | 7 (J 1 O 6) |
+| [Praha-Libeň, židovská matrika O 1833–1849 (NA HBMa inv. 2745)](https://zayt.org/collections/jewish-registers-1784-1949/o-2745) | matrika | 1833–1849 | 14 | 3300 | 4 (O 4) |
 | [Heřmanův Městec, židovská matrika O (NA inv. 406), duplikát 1839–1850](https://zayt.org/collections/jewish-registers-1784-1949/o-406) | matrika | 1839–1850 | 30 | 4761 |  |
 | [Hroubovice, rejstřík oddaných a zemřelých 1840–1895 (NA inv. 531)](https://zayt.org/collections/jewish-registers-1784-1949/oz-531) | matrika | 1840–1895 |  |  | 2 (J 2) |
 | z-1721 | matrika |  |  |  | 6 (Z 6) |
 | [Hrochův Týnec, židovská kontrolní matrika Z (NA inv. 236)](https://zayt.org/collections/jewish-control-registers-1780-1911/z-236) | matrika | 1839–1882 | 14 | 2011 | 14 (J 6 Z 8) |
 | [Praha-Karlín, židovská matrika Z 1869–1939 (NA HBMa inv. 2844)](https://zayt.org/collections/jewish-registers-1784-1949/z-2844) | matrika | 1869–1939 |  |  | 1 (Z 1) |
-| [Hroubovice (FÚ Luže), židovská kontrolní matrika Z (NA inv. 481)](https://zayt.org/collections/jewish-control-registers-1780-1911/z-481) | matrika | 1840–1873 | 50 | 7731 | 16 (J 1 Z 15) |
+| [Hroubovice (FÚ Luže), židovská kontrolní matrika Z (NA inv. 481)](https://zayt.org/collections/jewish-control-registers-1780-1911/z-481) | matrika | 1840–1873 | 50 | 7731 | 24 (J 2 Z 22) |
 | [Kolín, židovská matrika Z 1847–1865 (NA HBMa inv. 835)](https://zayt.org/collections/jewish-registers-1784-1949/z-835) | matrika | 1847–1865 |  |  | 1 (J 1) |
 
 ## SOA Praha – eBadatelna (1)
