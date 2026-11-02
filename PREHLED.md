@@ -2,9 +2,9 @@
 
 Stav k 2. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **130 knih** (matrika 81, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, soupis poddaných 2, urbář 1)
-- **4 457 stran** převedených strojově (PERO OCR), **780 153 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **2 043 zápisů přečtených očima**: narození 751, sňatky 279, úmrtí 716, převody gruntů 49, soupisy 29, jiné 190
+- **132 knih** (matrika 83, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, soupis poddaných 2, urbář 1)
+- **4 695 stran** převedených strojově (PERO OCR), **829 519 řádků** strojového textu – nekontrolovaný, slouží k hledání
+- **2 070 zápisů přečtených očima**: narození 756, sňatky 288, úmrtí 718, převody gruntů 49, soupisy 29, jiné 201
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -72,14 +72,14 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Litomyšl N 1850–1857, sign. 1309 (kód WRH6GG3Q)](https://aron.vychodoceskearchivy.cz/apu/9340aa8e-bfe5-4c80-af51-9adf97017290) | matrika | 10/1850–1857 | 395 | 56501 | 9 (N 9) |
 | [Litomyšl O 1800–1823, sign. 1319 (kód UZIZVUY2)](https://storage.vychodoceskearchivy.cz/matriky/U/CZ_215000010_00190_UZIZVUY2_sign-1319.zip) | matrika |  |  |  | 1 (O 1) |
 | [Litomyšl Z 1820–1852, sign. 1331 (kód AZZOANBY)](https://storage.vychodoceskearchivy.cz/matriky/A/CZ_215000010_00190_AZZOANBY_sign-1331.zip) | matrika |  |  |  | 1 (Z 1) |
-| [Dobruška N 1799–1806 (a Z), sign. 26-1 (kód RRGJJKAQ)](https://storage.vychodoceskearchivy.cz/matriky/R/CZ_215000010_00190_RRGJJKAQ_sign-26-1.zip) | matrika |  |  |  | 3 (N 3) |
-| [Dobruška Z, vesnice 1806–1843, sign. 26-12 (kód 3CF3NFID)](https://storage.vychodoceskearchivy.cz/matriky/3/CZ_215000010_00190_3CF3NFID_sign-26-12.zip) | matrika |  |  |  | 6 (Z 6) |
+| [Dobruška N 1799–1806 a Z 1799–1806, sign. 26-1 (kód RRGJJKAQ)](https://storage.vychodoceskearchivy.cz/matriky/R/CZ_215000010_00190_RRGJJKAQ_sign-26-1.zip) | matrika | 1799–1806 | 75 | 16718 | 3 (N 3) |
+| [Dobruška Z vesnice 1806–1843, sign. 26-12 (kód 3CF3NFID)](https://storage.vychodoceskearchivy.cz/matriky/3/CZ_215000010_00190_3CF3NFID_sign-26-12.zip) | matrika | 1806–1843 | 14 | 4004 | 6 (Z 6) |
 | [Dobruška, rejstřík narozených 1799–1806, sign. 26-13 (kód XLDDPY2A)](https://storage.vychodoceskearchivy.cz/matriky/X/CZ_215000010_00190_XLDDPY2A_sign-26-13.zip) | matrika |  |  |  | 2 (J 2) |
 | [Dobruška, rejstřík zemřelých 1806–1886, sign. 26-3860 (kód TSIIQZJO)](https://storage.vychodoceskearchivy.cz/matriky/T/CZ_215000010_00190_TSIIQZJO_sign-26-3860.zip) | matrika |  |  |  | 5 (J 5) |
 | [Litomyšl Z 1864–1881, sign. 5411 (kód 6J44UBOZ)](https://aron.vychodoceskearchivy.cz/apu/26fa22af-989b-4af5-b291-69e9797c9606) | matrika |  |  |  | 10 (Z 10) |
 | [Litomyšl, index Z 1864–1906, sign. 7492 (kód LRIQXP2E)](https://aron.vychodoceskearchivy.cz/apu/06a51ee1-4891-4871-b054-cd9370536c0b) | matrika | 1864–1906 | 229 | 85754 | 5 (J 5) |
 
-## Národní archiv – židovské matriky a familianti (zayt.org) (28)
+## Národní archiv – židovské matriky a familianti (zayt.org) (30)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -96,6 +96,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | noz-2437 | matrika |  |  |  | 6 (J 6) |
 | [Praha-Karlín, rejstřík N, O, Z Karlín č. 1 1858–1885 (NA HBMa inv. 2937)](https://zayt.org/collections/jewish-registers-1784-1949/noz-2937) | matrika | 1858–1885 |  |  | 1 (J 1) |
 | [Kostelec nad Černými lesy, židovská kontrolní matrika NOZ (NA HBMa inv. 372)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-372) | matrika | 1840–1862 | 17 | 2842 | 27 (J 2 N 11 O 12 Z 2) |
+| [Hroubovice, židovská matrika N 1874–1895, O 1875–1891, Z 1875–1895 (NA inv. 530)](https://zayt.org/collections/jewish-registers-1784-1949/noz-530) | matrika | 1874–1895 | 72 | 14382 | 11 (J 1 N 5 O 3 Z 2) |
 | [Přistoupim, židovská kontrolní matrika NOZ (NA inv. 726)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-726) | matrika | 1803–1840 | 19 | 3335 | 17 (J 3 N 8 O 2 Z 4) |
 | [Přistoupim, židovská kontrolní matrika NOZ (NA inv. 727)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-727) | matrika | 1840–1858 | 12 | 2799 | 7 (J 2 N 3 Z 2) |
 | nz-1722 | matrika |  |  |  | 43 (Z 43) |
@@ -105,6 +106,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Praha-Karlín, židovská matrika O 1848–1856 (NA HBMa inv. 2741)](https://zayt.org/collections/jewish-registers-1784-1949/o-2741) | matrika | 1848–1856 | 33 | 8669 | 7 (J 1 O 6) |
 | [Praha-Libeň, židovská matrika O 1833–1849 (NA HBMa inv. 2745)](https://zayt.org/collections/jewish-registers-1784-1949/o-2745) | matrika | 1833–1849 | 14 | 3300 | 4 (O 4) |
 | [Heřmanův Městec, židovská matrika O (NA inv. 406), duplikát 1839–1850](https://zayt.org/collections/jewish-registers-1784-1949/o-406) | matrika | 1839–1850 | 30 | 4761 |  |
+| [Kolín, židovská matrika O 1850–1895 s rejstříkem (NA inv. 830)](https://zayt.org/collections/jewish-registers-1784-1949/o-830) | matrika | 1850–1895 | 77 | 14262 | 16 (J 10 O 6) |
 | [Hroubovice, rejstřík oddaných a zemřelých 1840–1895 (NA inv. 531)](https://zayt.org/collections/jewish-registers-1784-1949/oz-531) | matrika | 1840–1895 |  |  | 2 (J 2) |
 | z-1721 | matrika |  |  |  | 6 (Z 6) |
 | [Hrochův Týnec, židovská kontrolní matrika Z (NA inv. 236)](https://zayt.org/collections/jewish-control-registers-1780-1911/z-236) | matrika | 1839–1882 | 14 | 2011 | 14 (J 6 Z 8) |
@@ -171,6 +173,15 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
+## zaopava (4)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Ruda nad Moravou O 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 14 (inv. 7918)](https://digi.archives.cz/da/permalink?xid=be9312c0-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 35 | 13361 | 7 (J 1 O 6) |
+| [Ruda nad Moravou Z 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 19 (inv. 7923)](https://digi.archives.cz/da/permalink?xid=be930f8c-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 302 | 116893 | 322 (Z 322) |
+| [Ruda nad Moravou N, O, Z 1772–1778, ZA Opava, NAD 165, sign. Šu XIV 4 (inv. 7908)](https://digi.archives.cz/da/permalink?xid=be9317b6-f13c-102f-8255-0050568c0263) | matrika | 1772–1778 | 177 | 33733 | 24 (J 2 N 19 O 1 Z 2) |
+| [Ruda nad Moravou N 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 5 (inv. 7909)](https://digi.archives.cz/da/permalink?xid=be93172a-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 66 | 32068 | 32 (N 32) |
+
 ## cuzk (8)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -183,12 +194,3 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
-
-## zaopava (4)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Ruda nad Moravou O 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 14 (inv. 7918)](https://digi.archives.cz/da/permalink?xid=be9312c0-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 35 | 13361 | 7 (J 1 O 6) |
-| [Ruda nad Moravou Z 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 19 (inv. 7923)](https://digi.archives.cz/da/permalink?xid=be930f8c-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 302 | 116893 | 322 (Z 322) |
-| [Ruda nad Moravou N, O, Z 1772–1778, ZA Opava, NAD 165, sign. Šu XIV 4 (inv. 7908)](https://digi.archives.cz/da/permalink?xid=be9317b6-f13c-102f-8255-0050568c0263) | matrika | 1772–1778 | 177 | 33733 | 24 (J 2 N 19 O 1 Z 2) |
-| [Ruda nad Moravou N 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 5 (inv. 7909)](https://digi.archives.cz/da/permalink?xid=be93172a-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 66 | 32068 | 32 (N 32) |

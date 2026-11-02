@@ -1,6 +1,11 @@
-"""ebget.py <matrikaId> <Name_NN> <outdir> <n|a-b> ... — stáhne skeny z eBadatelny SOA Praha a uloží náhledy _s.jpg."""
+"""ebget.py <matrikaId> <Name_NN> <outdir> <n|a-b> ... — stáhne skeny z eBadatelny SOA Praha a uloží náhledy _s.jpg.
+
+Obrázek se bere z prohlížeče snímku (/d/<matrikaId>/<snímek>, <img id="scanImage">); Name_NN se už nepoužívá a zůstává
+jen kvůli dřívějšímu volání.
+"""
 import http.cookiejar
 import os
+import re
 import sys
 import urllib.request
 
@@ -19,9 +24,13 @@ for a in sys.argv[4:]:
     for k in range(lo, hi + 1):
         p = os.path.join(out, f"{k:04d}.jpg")
         if not os.path.exists(p):
-            slusne.urlopen(f"https://ebadatelna.soapraha.cz/d/{mid}/{k}", "stranka", timeout=60, opener=op).read()
-            data = slusne.urlopen(f"https://ebadatelna.soapraha.cz/wicket/resource/org.apache.wicket.Application/{name}__{k:03d}.jpg",
-                                  "obrazek", timeout=120, opener=op).read()
+            page = slusne.urlopen(f"https://ebadatelna.soapraha.cz/d/{mid}/{k}", "stranka", timeout=60, opener=op).read()
+            src = re.search(rb'id="scanImage"[^>]*src="\./([^"]+)"', page)
+            if not src:
+                print(k, "no scan on the page")
+                continue
+            img = src.group(1).decode().replace("&amp;", "&")
+            data = slusne.urlopen(f"https://ebadatelna.soapraha.cz/d/{mid}/{img}", "obrazek", timeout=120, opener=op).read()
             if data[:2] != b"\xff\xd8":
                 print(k, "not an image")
                 continue
