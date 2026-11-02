@@ -36,8 +36,10 @@ nejdřív zkontroluj náhled jednoho souboru. Číslo v názvu souboru je čísl
 
 1. `/layout_analysis/select_layout/<dokument>` → **Handwritten layout** → Submit. Rozbor po OCR znovu spustit nejde
    (pak nový dokument).
-2. Po dokončení `/ocr/select_ocr/<dokument>`: **Kurrent (German, Czech)** pro kurent (německé i české zápisy),
-   **Czech Handwritten** pro latinku (latina, čeština 2. pol. 19. stol.); jazykový model NONE.
+2. Po dokončení `/ocr/select_ocr/<dokument>`: řádky (`baseline_id`) **Universal**; OCR **Kurrent (German, Czech)**
+   pro kurent (německé i české zápisy), **Czech Handwritten** pro latinku (latina, čeština 2. pol. 19. stol.); jazykový
+   model NONE. Handwritten layout najde jen oblasti, řádky hledá až baseline model: bez něj OCR skončí „OCR completed“
+   s nulou řádků a dokument je třeba nahrát znovu.
 3. Stav je v `/document/documents`. Doba závisí na vytížení serveru: obvykle minuty až desítky minut na stovky stran.
 
 ## 4. Export a import do indexu
