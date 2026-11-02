@@ -166,6 +166,7 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "kvasnovice-01": (["kvasnovice-01"], "5c1a99a8-9ce5-4a29-b55e-e421741e0f61", "Kurrent (German, Czech)", "2026-10-21"),
     "kvasnovice-05": (["kvasnovice-05"], "eb1b5565-a613-4f43-9054-284e334056b0", "Kurrent (German, Czech)", "2026-10-22"),
     "maly-bor-06": (["maly-bor-06"], "c118aa96-dcf1-4ad3-97b9-21d1454f0e54", "Czech Handwritten", "2026-10-22"),
+    "litomysl-z-index-7492": (["sign-7492"], "7c8f80c2-117d-4ead-bb24-519ac40c2005", "Czech Handwritten", "2026-11-02"),
     "horazdovice-05": (["horazdovice-05"], "fd143024-c5a7-4f8e-808b-be33654abe80", "Czech Handwritten", "2026-10-22"),
     "vs-horazdovice-k1563": (["vs-horazdovice-k1563"], "d93b37ec-4ffb-4ad6-a2a6-e3d4846c54da", "Czech Handwritten",
                              "2026-10-22"),
