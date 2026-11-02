@@ -1,0 +1,23 @@
+name: Čtu knihu
+description: Dejte vědět, že knihu právě čtete, ať ji nečte někdo další souběžně.
+title: "Čtu: <archiv>/<kniha>"
+labels: ["čtu"]
+body:
+  - type: input
+    id: kniha
+    attributes:
+      label: Archiv a kniha
+      placeholder: ZA Opava, Ruda nad Moravou Z 1779–1825, Šu XIV 19
+    validations:
+      required: true
+  - type: input
+    id: rozsah
+    attributes:
+      label: Rozsah a způsob
+      description: Které snímky nebo roky a jak (PERO celé knihy, očima jen zásahy …).
+      placeholder: snímky 1–302, PERO Czech Handwritten
+  - type: input
+    id: kdy
+    attributes:
+      label: Odhad dokončení
+      placeholder: do konce listopadu

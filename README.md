@@ -1,7 +1,8 @@
 # Index matrik
 
 Co už bylo z matričních knih přečteno – strojově (PERO OCR) i očima – bez vazby na konkrétní rodokmen. Slouží k tomu,
-aby se stejná stránka nemusela znovu stahovat, OCRkovat ani číst, a jednou se dá zveřejnit jako index.
+aby se stejná stránka nemusela znovu stahovat, OCRkovat ani číst. Index je veřejný a společný: kdo něco
+nového přečte, pošle to sem (viz [Přispějte](#přispějte)).
 
 Kromě matrik sem patří i další knihy se jmény: pozemkové (gruntovní) knihy, soupisy poddaných, familiantské knihy. Mají
 stejnou strukturu; druh knihy říká pole `druh` v `kniha.yaml` (`matrika`, `pozemková kniha`, `urbář`,
@@ -15,6 +16,13 @@ Co v indexu je (knihy, rozsah OCR, počty přečtených zápisů): [PREHLED.md](
 
 Licence: nástroje MIT ([LICENSE](LICENSE)), data v `knihy/` CC BY 4.0 ([LICENSE-DATA.md](LICENSE-DATA.md)).
 
+## Přispějte
+
+Přečetli jste si matriku nebo jiný pramen – očima, přes PERO OCR nebo s Claudem? Pošlete to sem, ať to nemusí číst
+nikdo další. Stačí pull request s novými řádky v `knihy/<archiv>/<kniha>/precteno.tsv` (Claude Code ho podle
+[AGENTS.md](AGENTS.md) připraví sám), nebo formulář „Nové čtení“ v Issues. Pravidla, kontrola a licence:
+[CONTRIBUTING.md](CONTRIBUTING.md). Než začnete číst celou knihu, založte Issue „Čtu knihu“.
+
 ## Struktura
 
 ```
@@ -27,6 +35,7 @@ knihy/<archiv>/<kniha>/
   precteno.tsv    zápisy přečtené očima (formát níže)
 knihy/testy/      pokusná OCR (výřezy)
 tools/
+  kontrola.py     kontrola dat (formát, povinná pole, lhůty pro žijící lidi); běží u každého pull requestu
   hledej.py       volné hledání slova ve všech knihách (precteno, OCR s opravami; Levenshtein na začátku slova)
   opravy.py       přidání opravy strojového čtení do opravy.tsv
   pero_import.py  převod exportu z PERO do knihy/…
@@ -105,7 +114,7 @@ první řádek hlavička:
 |---|---|
 | snimek | číslo snímku na portálu a strana, např. `124R` |
 | datum | datum události, jak je čitelné (`1756-01-14`, `1757-04`, `~1723`) |
-| typ | `N` narození/křest, `O` sňatek, `Z` úmrtí/pohřeb, `P` převod gruntu v pozemkové knize (koupě, dědictví, přiženění, odhad), `S` řádek soupisu poddaných, `J` jiné (ohlášky, atestát, rejstřík, familiant, prázdná strana) |
+| typ | `N` narození/křest, `O` sňatek, `Z` úmrtí/pohřeb, `P` převod gruntu v pozemkové knize (koupě, dědictví, přiženění, odhad), `S` řádek soupisu poddaných nebo sčítání lidu, `K` katastrální mapa (indikační skica: číslo domu, majitel), `J` jiné (ohlášky, atestát, rejstřík, familiant, prázdná strana) |
 | obec | obec a číslo domu (`Jetenovice 7`); u pozemkové knihy i jméno gruntu (`Velké Hydčice 3, grunt Němcovský`) |
 | osoby | hlavní osoby s rolí: `dítě: Ambrož; otec: Matěj Píhr; matka: Ludmila` (u O ženich, nevěsta a jejich rodiče; u P `prodávající: …; kupující: …; výměnkář: …`; u S `hospodář: …; manželka: …; děti: …`) |
 | ostatni | kmotři, svědci, povolání, věk, příčina smrti – stručně; u P cena, splátky, výminek, svědci |

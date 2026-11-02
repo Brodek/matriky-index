@@ -1,0 +1,36 @@
+name: Nové čtení
+description: Pošlete přečtené zápisy bez gitu – správce z nich udělá pull request.
+title: "Čtení: <archiv>/<kniha>"
+labels: ["nové čtení"]
+body:
+  - type: input
+    id: kniha
+    attributes:
+      label: Archiv a kniha
+      description: Archiv, signatura nebo název knihy a odkaz na knihu na portálu archivu.
+      placeholder: VČA Zámrsk, Litomyšl N 1850–1857, sign. 1309, https://aron.vychodoceskearchivy.cz/apu/…
+    validations:
+      required: true
+  - type: textarea
+    id: zapisy
+    attributes:
+      label: Přečtené zápisy
+      description: >-
+        Jeden zápis na řádek: snímek, datum, typ (N/O/Z/P/S/K/J), obec a číslo domu, osoby, ostatní, jistota.
+        Klidně jako tabulka zkopírovaná z Excelu, nebo přiložte soubor. Nejistá místa označte [?].
+    validations:
+      required: true
+  - type: input
+    id: cetl
+    attributes:
+      label: Kdo a čím četl
+      placeholder: Jan Novák, očima + PERO OCR, 2026-11-05
+    validations:
+      required: true
+  - type: checkboxes
+    id: souhlas
+    attributes:
+      label: Souhlas
+      options:
+        - label: Souhlasím se zveřejněním pod CC BY 4.0 a zápisy nejsou mladší než 100 let (narození) / 75 let (sňatky, úmrtí).
+          required: true

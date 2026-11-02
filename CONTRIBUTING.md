@@ -1,0 +1,55 @@
+# Jak přispět do indexu
+
+Index je společný: co jednou někdo přečetl, nemusí už nikdo číst znovu. Když si necháte přečíst matriku, pozemkovou knihu,
+sčítání lidu nebo jiný pramen (očima, přes PERO OCR, Claude nebo jiný nástroj), pošlete výsledek sem, ne jen do svého
+klonu. Přečtené zápisy se hodí, i když se netýkají vaší rodiny – právě ty ušetří práci ostatním.
+
+## Tři cesty
+
+1. **Pull request** (doporučeno; Claude Code nebo jiný agent ho připraví sám, viz [AGENTS.md](AGENTS.md)):
+   fork repozitáře → nová větev → přidané řádky v `knihy/<archiv>/<kniha>/` → `python tools/kontrola.py` →
+   pull request proti větvi `main`.
+2. **Formulář „Nové čtení“** v [Issues](../../issues/new/choose) pro ty, kdo nepoužívají git: archiv, kniha, snímky a
+   přečtené zápisy (vložený text nebo přiložený soubor). Správce z nich pull request udělá.
+3. **Úprava v prohlížeči**: na GitHubu otevřete `precteno.tsv` knihy, tužkou ho upravte (přidejte řádky na konec) a
+   zvolte „Propose changes“ – GitHub sám vytvoří fork a pull request.
+
+Než začnete číst celou knihu, podívejte se do [PREHLED.md](PREHLED.md) a `python tools/hledej.py`, jestli už přečtená
+není, a založte Issue „Čtu: <archiv>/<kniha>“ (formulář „Čtu knihu“), ať ji nečte někdo další souběžně.
+
+## Co se přidává
+
+- `precteno.tsv` – zápisy přečtené očima, jeden řádek na zápis, doslovně, nejistá místa s `[?]`; formát v
+  [README](README.md#precteno-tsv--zápisy-přečtené-očima). Do `cetl` napište, kdo četl a kdy, např.
+  `Jan Novák 2026-11-05` nebo `Jan Novák + Claude 2026-11-05`.
+- `ocr-pero.tsv`, `stranky.tsv` – strojový text z PERO; postup v [PERO.md](PERO.md).
+- `opravy.tsv` – opravy strojového čtení, nástrojem `tools/opravy.py`.
+- Nová kniha potřebuje `kniha.yaml` aspoň s poli `archiv`, `kniha`, `nazev`, `url` (odkaz na knihu na portálu archivu),
+  ideálně i `roky`, `farnost`, `obsah`.
+
+Nepatří sem: skeny a celé exporty z PERO (dají se kdykoli stáhnout znovu), výklad (kdo osoba ve skutečnosti je – to
+patří do vašeho rodokmenu, ve sloupci `odkaz` se na něj dá odkázat) a nic o žijících lidech.
+
+## Pravidla
+
+- **Jen přidávat.** Cizí řádky se nemažou ani nepřepisují. Nesouhlasíte se čtením? Přidejte vlastní řádek k témuž zápisu
+  nebo opravu do `opravy.tsv`; obě čtení zůstanou vedle sebe a rozhodne sken.
+- **Žijící lidé.** Matriky narozených jsou veřejné po 100 letech, oddaných a zemřelých po 75 letech (zákon o matrikách
+  301/2000 Sb.); stejnou lhůtu držíme u sčítání lidu. Mladší zápisy kontrola odmítne.
+- **Ohleduplnost k archivům.** Stahujte jen, co potřebujete, a přes `tools/scan/slusne.py` (viz
+  [README](README.md#ohleduplnost-k-archivům)). Blokaci archivu neobcházejte.
+- **Každý řádek musí jít ověřit**: archiv, kniha a snímek vedou na sken. Proto se nepřidávají zápisy bez snímku.
+
+## Kontrola a schválení
+
+1. U každého pull requestu běží automaticky `python tools/kontrola.py --zmeny main` (formát, povinná pole, lhůty,
+   zákaz mazání). Totéž si spusťte předem.
+2. Správce projde změny a u nového přispěvatele namátkou porovná několik řádků se skeny. Chybné čtení není problém,
+   pokud je označené nižší jistotou; vymyšlená data bez snímku se nepřijímají.
+3. Po sloučení se kniha objeví v [PREHLED.md](PREHLED.md).
+
+## Licence
+
+Odesláním pull requestu nebo formuláře souhlasíte, že vaše data budou zveřejněna pod licencí
+[CC BY 4.0](LICENSE-DATA.md) jako zbytek indexu a příspěvky do `tools/` pod licencí [MIT](LICENSE). Autorství zůstává
+vidět ve sloupci `cetl` a v historii gitu.
