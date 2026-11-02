@@ -4,7 +4,7 @@ Stav k 2. 11. 2026 (generuje `python tools/prehled.py`).
 
 - **127 knih** (matrika 80, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 6, soupis poddaných 2, urbář 1)
 - **4 155 stran** převedených strojově (PERO OCR), **663 260 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **1 686 zápisů přečtených očima**: narození 732, sňatky 272, úmrtí 392, převody gruntů 49, soupisy 25, jiné 187
+- **1 717 zápisů přečtených očima**: narození 751, sňatky 279, úmrtí 394, převody gruntů 49, soupisy 25, jiné 190
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -186,6 +186,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
-| [Ruda nad Moravou O 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 14 (inv. 7918)](https://digi.archives.cz/da/permalink?xid=be9312c0-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 35 | 13361 |  |
-| [Ruda nad Moravou N, O, Z 1772–1778, ZA Opava, NAD 165, sign. Šu XIV 4 (inv. 7908)](https://digi.archives.cz/da/permalink?xid=be9317b6-f13c-102f-8255-0050568c0263) | matrika | 1772–1778 | 177 | 33733 |  |
+| [Ruda nad Moravou O 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 14 (inv. 7918)](https://digi.archives.cz/da/permalink?xid=be9312c0-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 35 | 13361 | 7 (J 1 O 6) |
+| [Ruda nad Moravou N, O, Z 1772–1778, ZA Opava, NAD 165, sign. Šu XIV 4 (inv. 7908)](https://digi.archives.cz/da/permalink?xid=be9317b6-f13c-102f-8255-0050568c0263) | matrika | 1772–1778 | 177 | 33733 | 24 (J 2 N 19 O 1 Z 2) |
 | [Ruda nad Moravou N 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 5 (inv. 7909)](https://digi.archives.cz/da/permalink?xid=be93172a-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 66 | 32068 | 32 (N 32) |
