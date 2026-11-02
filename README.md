@@ -40,7 +40,9 @@ tools/
 ```
 
 Archivy: `portafontium` (SOA Plzeň), `soapraha` (eBadatelna, kniha = id matriky), `soatrebon`, `vca`, `zayt`, `nacr`,
-`mza` (Acta Publica, kniha = id z adresy matrika/detail/<id>), `ahmp`, `familysearch` (kniha = číslo DGS).
+`mza` (Acta Publica, kniha = id z adresy matrika/detail/<id>), `ahmp`, `familysearch` (kniha = číslo DGS),
+`zaopava`, `konskripce` (policejní přihlášky NA), `cuzk` (indikační skici stabilního katastru, kniha = id rastru
+z adresy ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=<id>; čtou se v prohlížeči archivu map ČÚZK).
 
 ## Ohleduplnost k archivům
 
