@@ -1,7 +1,17 @@
 archiv: "zayt"
 kniha: "o-2745"
 nazev: "Praha-Libeň, židovská matrika O 1833–1849 (NA HBMa inv. 2745)"
-farnost: "Libeň (rabín; snoubenci i z venkova – Přistoupim, Poříčany, Cerhenice aj.)"
+druh: "matrika"
+farnost: "Libeň (snoubenci i z venkova – Přistoupim, Poříčany, Cerhenice aj.)"
 roky: "1833–1849"
-obsah: "sn. 3 titulní list, zápisy sn. 4–17, tabulka přes dvojstranu (stránkování vlevo nahoře/vpravo nahoře, sn. 10 = pag. 12–13, rok 1837); sloupce ženich, nevěsta, dominium, Gub. Zahl, …, místo sňatku, rabín"
+obsah: "ručně linkovaná tabulka přes dvojstranu (sn. 10 = pag. 12–13, rok 1837); OCR snímky 4–17; soubor = snímek, obrázek oříznutý na knihu, šedotónový"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/o-2745"
+ocr:
+- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "8b22ff4d-4bfb-48ce-a789-7644f374dc32"
+  model: "Kurrent (German, Czech)"
+  datum: "2026-11-02"
+  export: "kurrent-2741-2745-481.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  stranek: 14
+  radku: 3300
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
