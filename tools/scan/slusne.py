@@ -8,8 +8,10 @@
 
     python slusne.py stav          # stav limitů a blokací
     python slusne.py odblokuj <server>
+    python slusne.py zablokuj <server> <hodin>   # dobrovolná pauza, např. když archiv nestíhá
 
-Limity: stránky, hledání a API 1 dotaz za 2 s, obrázky, dlaždice a čtení zipu 5 za 1 s. Po 429 nebo 503 je server
+Limity: stránky, hledání a API 1 dotaz za 2 s, obrázky, dlaždice a čtení zipu 5 za 1 s; přetížené archivy mají
+přísnější limit v POMALE. Po 429 nebo 503 je server
 30 minut zablokovaný pro všechny procesy: pockej() pak vyhodí Zablokovano a nic se znovu nezkouší. Po třech
 nepovedených spojeních za sebou (server odmítá nebo neodpovídá) je odstavený na 10 minut. Archivy za dávky
 rychlých dotazů blokují IP adresu, proto musí každé stahování jít přes tento modul.
@@ -24,6 +26,9 @@ import urllib.request
 from pathlib import Path
 
 INTERVAL = {"stranka": 2.0, "obrazek": 0.2}
+# Acta Publica (MZA) na přelomu 10/11 2026 přestala odpovídat řadě badatelů; obrázky z jejího iipsrv jsou celé snímky,
+# ne dlaždice, takže i 1 za 2 s je pro ni znát.
+POMALE = {"www.mza.cz": {"stranka": 5.0, "obrazek": 2.0}}
 BLOKACE = 30 * 60
 SELHANI, PAUZA_SELHANI = 3, 10 * 60
 STAV = Path(os.environ.get("SLUSNE_STAV", Path.home() / ".cache" / "rodokmen-slusne"))
@@ -89,7 +94,7 @@ def pockej(url, druh="stranka"):
             raise Zablokovano(f"{host} zablokován do {time.strftime('%H:%M', time.localtime(st['blokovano_do']))}"
                               f" (HTTP {st.get('duvod')})")
         slot = max(now, st.get(druh, 0))
-        st[druh] = slot + INTERVAL[druh]
+        st[druh] = slot + POMALE.get(host, INTERVAL)[druh]
         _zapis(host, st)
     if slot > now:
         time.sleep(slot - now)
@@ -161,6 +166,12 @@ def main():
             st.pop("blokovano_do", None)
             _zapis(sys.argv[2], st)
         print("odblokováno", sys.argv[2])
+    elif sys.argv[1:2] == ["zablokuj"] and len(sys.argv) > 3:
+        with _Zamek(sys.argv[2]):
+            st = _cti(sys.argv[2])
+            st.update(blokovano_do=time.time() + float(sys.argv[3]) * 3600, duvod="ručně")
+            _zapis(sys.argv[2], st)
+        print("zablokováno", sys.argv[2], "na", sys.argv[3], "h")
     else:
         print(__doc__)
 

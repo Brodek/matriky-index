@@ -39,8 +39,9 @@ function pripravNahravani() {
 }
 
 // Na téže stránce: nahraje obrázky rovnou z archivu, který povoluje CORS (Porta fontium, MZA Acta Publica).
-// seznam = [[jménoSouboru, url], …], např. výstup `mza.py pero`. Stahuje po jednom, nejvýš 5 obrázků za sekundu,
-// a čeká, než nahrávač stránky dožene frontu. Stav je v window.__zUrl.
+// seznam = [[jménoSouboru, url], …], např. výstup `mza.py pero`. Stahuje po jednom, nejvýš 5 obrázků za sekundu
+// (z www.mza.cz 1 za 2 s, viz POMALE v tools/scan/slusne.py), a čeká, než nahrávač stránky dožene frontu. Stav je
+// v window.__zUrl.
 async function nahrajZUrl(seznam) {
   const dz = Dropzone.instances[0];
   window.__zUrl = {hotovo: 0, chyby: []};
@@ -59,7 +60,8 @@ async function nahrajZUrl(seznam) {
     } catch (e) {
       window.__zUrl.chyby.push(name + " " + e);
     }
-    await new Promise(r => setTimeout(r, Math.max(0, 200 - (Date.now() - t0))));
+    const odstup = new URL(url).hostname === "www.mza.cz" ? 2000 : 200;
+    await new Promise(r => setTimeout(r, Math.max(0, odstup - (Date.now() - t0))));
   }
   return window.__zUrl;
 }
