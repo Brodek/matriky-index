@@ -150,6 +150,13 @@ BOOKS = {
                      roky="1772–1778", obsah="po obcích, u každé N, O, Z (Bušín str. 1–72); OCR snímky 1–177; soubor = snímek; "
                                              "obrázky v polovičním rozlišení, šedotónové",
                      url="https://digi.archives.cz/da/permalink?xid=be9317b6-f13c-102f-8255-0050568c0263", prefix="ruda4", delitel=1),
+    "be97d562": dict(archiv="zaopava", nazev="Ruda nad Moravou N, O, Z 1757–1771 s rejstříky N a O (1757–1792), ZA Opava, NAD 165",
+                     farnost="Ruda nad Moravou (Bušín, Hostice, Olšany, Dolní Bohdíkov, Klášterec, Vyšehoří, Hartíkov …)",
+                     roky="1757–1771", obsah="N str. 1–107, O str. 123–162, Z str. 184–239, rejstříky N a O (do 1792); OCR "
+                                             "snímky 1–131 bez sn. 45 (portál nevydal); soubor = snímek; poloviční rozlišení, "
+                                             "šedotónové",
+                     url="https://digi.archives.cz/da/permalink?xid=be97d562-f13c-102f-8255-0050568c0263", prefix="ruda1757",
+                     delitel=1),
     "su-xiv-14": dict(archiv="zaopava", nazev="Ruda nad Moravou O 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 14 (inv. 7918)",
                       farnost="Ruda nad Moravou (Bartoňov, Bohdíkov, Bušín, Hostice, Jakubovice, Olšany, Raškov …)",
                       roky="1779–1825", obsah="str. 1–47 = všechny obce 1779–1788, od 1789 po obcích; OCR snímky 1–35 "
@@ -225,6 +232,7 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
     "kurrent-2741-2745-481": (["o-2741", "o-2745", "z-481"], "8b22ff4d-4bfb-48ce-a789-7644f374dc32",
                               "Kurrent (German, Czech)", "2026-11-02"),
     "bohdikov-su-xiv-5": (["su-xiv-5"], "161c8c33-983b-4c9a-87cd-36473e311b18", "Czech Handwritten", "2026-11-02"),
+    "ruda-1757-1771": (["be97d562"], "61da916d-56f4-46e5-b358-2f9080289d2c", "Czech Handwritten", "2026-11-02"),
     "ruda-su-xiv-19": (["su-xiv-19"], "1a7cf0e9-622f-4314-8b7a-2a4027591f52", "Czech Handwritten", "2026-11-02"),
     "ruda-su-xiv-4-14": (["su-xiv-4", "su-xiv-14"], "2d56f6dc-b89c-49a9-9e93-099de7a9306b", "Czech Handwritten", "2026-11-02"),
     "zayt-o830-noz530": (["o-830", "noz-530"], "e9d24973-74c9-4448-a926-a8bbf814d218", "Kurrent (German, Czech)", "2026-11-02"),
