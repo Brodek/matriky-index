@@ -7,10 +7,9 @@ nového přečte, pošle to sem (viz [Přispějte](#přispějte)).
 Kromě matrik sem patří i další knihy se jmény: pozemkové (gruntovní) knihy, soupisy poddaných, familiantské knihy. Mají
 stejnou strukturu; druh knihy říká pole `druh` v `kniha.yaml` (`matrika`, `pozemková kniha`, `urbář`,
 `soupis poddaných`, `sčítání lidu`, `policejní přihlášky`, `familianti`; chybí-li, jde o matriku). Zápisy přečtené dřív
-při práci na rodokmenu jsou přenesené se `cetl` = „Claude (z rodokmenu …)“ a odkazem `rodokmen: <id záznamu>`.
+při práci na rodokmenu jsou přenesené se `cetl` = „Claude (z rodokmenu …)“.
 
-Skeny se neukládají (lze je kdykoli stáhnout z archivu). Plné exporty z PERO (PAGE XML s obrysy řádků) jsou mimo git
-na Google Disku v `Documents/Dol/rodokmen/pero-exporty/`.
+Skeny se neukládají (lze je kdykoli stáhnout z archivu). Plné exporty z PERO (PAGE XML s obrysy řádků) jsou mimo git.
 
 Co v indexu je (knihy, rozsah OCR, počty přečtených zápisů): [PREHLED.md](PREHLED.md), generuje `python tools/prehled.py`.
 

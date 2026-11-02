@@ -11,7 +11,7 @@ ocr:
   dokument: "61da916d-56f4-46e5-b358-2f9080289d2c"
   model: "Czech Handwritten"
   datum: "2026-11-02"
-  export: "ruda-1757-1771.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "ruda-1757-1771.pagexml.zip"
   stranek: 130
   radku: 40412
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

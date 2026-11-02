@@ -10,7 +10,7 @@ ocr:
   dokument: "fda952f8-d802-487f-b70a-c278de37df0a"
   model: "Czech Handwritten"
   datum: "2026-10-21"
-  export: "knezeves-03.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "knezeves-03.zip"
   stranek: 42
   radku: 9474
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

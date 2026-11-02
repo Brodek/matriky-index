@@ -10,7 +10,7 @@ ocr:
   dokument: "17f0a0e2-56cb-476e-beb1-667191362e2a"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-21"
-  export: "zidovske-o235-o2434-noz372.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "zidovske-o235-o2434-noz372.zip"
   stranek: 17
   radku: 2842
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

@@ -11,7 +11,7 @@ ocr:
   dokument: "e9d24973-74c9-4448-a926-a8bbf814d218"
   model: "Kurrent (German, Czech)"
   datum: "2026-11-02"
-  export: "zayt-o830-noz530.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "zayt-o830-noz530.pagexml.zip"
   stranek: 77
   radku: 14262
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

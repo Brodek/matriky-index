@@ -10,7 +10,7 @@ ocr:
   dokument: "3ffd9a97-1756-472a-bc3f-84333d8b10fc"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-21"
-  export: "pristoupim-noz726-noz727.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "pristoupim-noz726-noz727.zip"
   stranek: 19
   radku: 3335
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

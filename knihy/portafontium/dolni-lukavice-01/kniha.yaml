@@ -10,7 +10,7 @@ ocr:
   dokument: "f576fcb5-bc48-406e-b75a-5a0a3b1e2d2c"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-19"
-  export: "dolni-lukavice-01.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "dolni-lukavice-01.pagexml.zip"
   stranek: 368
   radku: 40916
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

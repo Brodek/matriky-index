@@ -10,7 +10,7 @@ ocr:
   dokument: "658b2c64-93b8-43a8-a478-3cfd30f232fa"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-19"
-  export: "velky-bor-01.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "velky-bor-01.zip"
   stranek: 226
   radku: 32078
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

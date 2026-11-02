@@ -10,7 +10,7 @@ ocr:
   dokument: "ac372e5b-9763-46d4-9c58-9d48def1d0cf"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-22"
-  export: "hrochuv-tynec-z236-otocene.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "hrochuv-tynec-z236-otocene.pagexml.zip"
   stranek: 14
   radku: 2011
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

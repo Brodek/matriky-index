@@ -10,7 +10,7 @@ ocr:
   dokument: "8c28db92-6852-49c1-8a02-d9dcb650a12b"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-21"
-  export: "familianti-83-kostelec.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "familianti-83-kostelec.zip"
   stranek: 50
   radku: 5002
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

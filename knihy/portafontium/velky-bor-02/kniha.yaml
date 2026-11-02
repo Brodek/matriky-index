@@ -10,7 +10,7 @@ ocr:
   dokument: "ea0f5d04-f694-4607-a7b3-030028813dbf"
   model: "Czech Handwritten"
   datum: "2026-10-21"
-  export: "velky-bor-02.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "velky-bor-02.zip"
   stranek: 159
   radku: 25028
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

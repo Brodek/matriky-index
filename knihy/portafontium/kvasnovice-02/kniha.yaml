@@ -10,7 +10,7 @@ ocr:
   dokument: "039c275f-e042-487c-af86-180ece6ab7e1"
   model: "Czech Handwritten"
   datum: "2026-10-21"
-  export: "kvasnovice-02.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "kvasnovice-02.pagexml.zip"
   stranek: 241
   radku: 60446
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

@@ -10,7 +10,7 @@ ocr:
   dokument: "5c1a99a8-9ce5-4a29-b55e-e421741e0f61"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-21"
-  export: "kvasnovice-01.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "kvasnovice-01.pagexml.zip"
   stranek: 122
   radku: 16910
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

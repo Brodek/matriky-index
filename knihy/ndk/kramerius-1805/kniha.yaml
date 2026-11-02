@@ -11,7 +11,7 @@ ocr:
   dokument: "9fa4607b-77db-46dc-930f-d34910174fc0"
   model: "Czech Fraktur Printed"
   datum: "2026-11-02"
-  export: "kramerius-1804-1805.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "kramerius-1804-1805.pagexml.zip"
   stranek: 52
   radku: 3940
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

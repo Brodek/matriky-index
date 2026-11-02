@@ -10,7 +10,7 @@ ocr:
   dokument: "fd143024-c5a7-4f8e-808b-be33654abe80"
   model: "Czech Handwritten"
   datum: "2026-10-22"
-  export: "horazdovice-05.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "horazdovice-05.pagexml.zip"
   stranek: 195
   radku: 20189
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

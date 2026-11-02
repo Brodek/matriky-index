@@ -11,7 +11,7 @@ ocr:
   dokument: "d93b37ec-4ffb-4ad6-a2a6-e3d4846c54da"
   model: "Czech Handwritten"
   datum: "2026-10-22"
-  export: "vs-horazdovice-k1563.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "vs-horazdovice-k1563.pagexml.zip"
   stranek: 375
   radku: 32477
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

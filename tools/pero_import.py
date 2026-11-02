@@ -337,7 +337,7 @@ def write_book(key, export_stem, rows, page_rows, pero_doc, model, date):
             f"roky: {q(meta['roky'])}", f"obsah: {q(meta['obsah'])}", f"url: {q(meta['url'])}",
             "ocr:", f"- nastroj: {q('PERO OCR (pero-ocr.fit.vutbr.cz)')}", f"  dokument: {q(pero_doc)}", f"  model: {q(model)}",
             f"  datum: {q(date)}",
-            f"  export: {q(export_stem + ' (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)')}",
+            f"  export: {q(export_stem)}",
             f"  stranek: {len(page_rows)}", f"  radku: {len(rows)}",
             f"  poznamka: {q('souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný')}"]
     (out / "kniha.yaml").write_text("\n".join(yaml) + "\n", encoding="utf-8")

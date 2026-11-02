@@ -11,7 +11,7 @@ ocr:
   dokument: "7c8f80c2-117d-4ead-bb24-519ac40c2005"
   model: "Czech Handwritten"
   datum: "2026-11-02"
-  export: "litomysl-z-index-7492.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "litomysl-z-index-7492.pagexml.zip"
   stranek: 229
   radku: 85754
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

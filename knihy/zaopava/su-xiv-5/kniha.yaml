@@ -11,7 +11,7 @@ ocr:
   dokument: "161c8c33-983b-4c9a-87cd-36473e311b18"
   model: "Czech Handwritten"
   datum: "2026-11-02"
-  export: "bohdikov-su-xiv-5.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "bohdikov-su-xiv-5.pagexml.zip"
   stranek: 66
   radku: 32068
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

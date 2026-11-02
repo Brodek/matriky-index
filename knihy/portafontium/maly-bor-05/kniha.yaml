@@ -10,7 +10,7 @@ ocr:
   dokument: "414ba723-3991-4f8a-b1a5-5c2b4e63bf4a"
   model: "Czech Handwritten"
   datum: "2026-10-21"
-  export: "maly-bor-05.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "maly-bor-05.zip"
   stranek: 174
   radku: 26479
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

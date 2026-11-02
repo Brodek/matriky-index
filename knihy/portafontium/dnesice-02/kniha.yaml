@@ -10,7 +10,7 @@ ocr:
   dokument: "103bd7f2-529f-455d-b84e-285b8807397a"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-19"
-  export: "dnesice-02-test.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "dnesice-02-test.zip"
   stranek: 33
   radku: 4242
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

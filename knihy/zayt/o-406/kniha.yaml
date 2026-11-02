@@ -10,7 +10,7 @@ ocr:
   dokument: "59d2c47d-c079-4cbe-af77-4f405ae9982a"
   model: "Kurrent (German, Czech)"
   datum: "2026-10-22"
-  export: "hermanuv-mestec-o406-otocene.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  export: "hermanuv-mestec-o406-otocene.pagexml.zip"
   stranek: 30
   radku: 4761
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
