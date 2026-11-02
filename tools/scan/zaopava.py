@@ -67,6 +67,7 @@ def stahni(path, uroven, out):
 
 
 def main():
+    sys.stdout.reconfigure(encoding="utf-8")
     cesty = json.load(open(sys.argv[1], encoding="utf-8"))
     out = sys.argv[2]
     uroven = int(sys.argv[3]) if len(sys.argv) > 3 else -1
@@ -81,6 +82,9 @@ def main():
         if vyber and int(k) not in vyber:
             continue
         p = os.path.join(out, f"{int(k):04d}.jpg")
+        if not cesty[k]:
+            print(k, "bez cesty – přeskočeno", flush=True)
+            continue
         if not os.path.exists(p):
             print(k, stahni(cesty[k], uroven, p), flush=True)
 
