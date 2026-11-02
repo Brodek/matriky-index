@@ -1,0 +1,17 @@
+archiv: "zaopava"
+kniha: "be97d562"
+nazev: "Ruda nad Moravou N, O, Z 1757–1771 s rejstříky N a O (1757–1792), ZA Opava, NAD 165"
+druh: "matrika"
+farnost: "Ruda nad Moravou (Bušín, Hostice, Olšany, Dolní Bohdíkov, Klášterec, Vyšehoří, Hartíkov …)"
+roky: "1757–1771"
+obsah: "N str. 1–107, O str. 123–162, Z str. 184–239, rejstříky N a O (do 1792); OCR snímky 1–131 bez sn. 45 (portál nevydal); soubor = snímek; poloviční rozlišení, šedotónové"
+url: "https://digi.archives.cz/da/permalink?xid=be97d562-f13c-102f-8255-0050568c0263"
+ocr:
+- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "61da916d-56f4-46e5-b358-2f9080289d2c"
+  model: "Czech Handwritten"
+  datum: "2026-11-02"
+  export: "ruda-1757-1771.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  stranek: 130
+  radku: 40412
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
