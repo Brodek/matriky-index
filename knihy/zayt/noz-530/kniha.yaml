@@ -1,0 +1,17 @@
+archiv: "zayt"
+kniha: "noz-530"
+nazev: "Hroubovice, židovská matrika N 1874–1895, O 1875–1891, Z 1875–1895 (NA inv. 530)"
+druh: "matrika"
+farnost: "Hroubovice"
+roky: "1874–1895"
+obsah: "OCR snímky 2–73; soubor = snímek; oříznuté, šedotónové, poloviční rozlišení"
+url: "https://zayt.org/collections/jewish-registers-1784-1949/noz-530"
+ocr:
+- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "e9d24973-74c9-4448-a926-a8bbf814d218"
+  model: "Kurrent (German, Czech)"
+  datum: "2026-11-02"
+  export: "zayt-o830-noz530.pagexml.zip (plný export: Google Disk, Documents/Dol/rodokmen/pero-exporty)"
+  stranek: 72
+  radku: 14382
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
