@@ -4,7 +4,7 @@ Stav k 3. 11. 2026 (generuje `python tools/prehled.py`).
 
 - **146 knih** (matrika 95, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, noviny 2, soupis poddaných 2, urbář 1)
 - **5 341 stran** převedených strojově (PERO OCR), **935 595 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **3 112 zápisů přečtených očima**: narození 1508, sňatky 556, úmrtí 736, převody gruntů 49, soupisy 29, jiné 205
+- **4 483 zápisů přečtených očima**: narození 1906, sňatky 692, úmrtí 1573, převody gruntů 49, soupisy 29, jiné 205
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -21,7 +21,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [horazdovice-k1558](https://www.portafontium.eu/amtsbuch/soap-pn/horazdovice-k1558) | pozemková kniha |  |  |  | 5 (P 5) |
 | [horazdovice-k1559](https://www.portafontium.eu/amtsbuch/soap-pn/horazdovice-k1559) | pozemková kniha |  |  |  | 1 (P 1) |
 | [horazdovice-k1562](https://www.portafontium.eu/amtsbuch/soap-pn/horazdovice-k1562) | pozemková kniha |  |  |  | 5 (P 5) |
-| [Kotouň 02](https://www.portafontium.eu/register/soap-pn/kotoun-02) | matrika | 1681–1734 |  |  | 744 (N 584 O 160) |
+| [Kotouň 02](https://www.portafontium.eu/register/soap-pn/kotoun-02) | matrika | 1681–1734 |  |  | 2115 (N 982 O 296 Z 837) |
 | [Kvasňovice 01](https://www.portafontium.eu/register/soap-pn/kvasnovice-01) | matrika | 1738–1765 | 122 | 16910 | 66 (J 1 N 7 O 51 Z 7) |
 | [Kvasňovice 02](https://www.portafontium.eu/register/soap-pn/kvasnovice-02) | matrika | 1766–1793 | 241 | 60446 | 77 (N 74 Z 3) |
 | kvasnovice-04 | matrika |  |  |  | 9 (O 9) |
@@ -183,6 +183,13 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
+## ndk (2)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
+
 ## cuzk (8)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -195,13 +202,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
-
-## ndk (2)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
 
 ## zaopava (6)
 
