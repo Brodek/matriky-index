@@ -1,0 +1,17 @@
+archiv: "zaopava"
+kniha: "be9318d8"
+nazev: "Ruda nad Moravou N, Z, O 1701–1757, ZA Opava, NAD 165, sign. Šu XIV 2 (inv. 7906)"
+druh: "matrika"
+farnost: "Ruda nad Moravou (Bohdíkov, Bušín, Hartíkov, Hostice, Jakubovice, Janoušov, Klášterec, Komňátka, Olšany, Raškov, Štědrákova Lhota, Vyšehoří)"
+roky: "1701–1757"
+obsah: "N 1701–1757 asi sn. 1–249 (sn. 200 = I 1749), O asi sn. 250–363 (sn. 360 = I 1747), Z dál; OCR snímky 160–228 (N X 1738 – asi 1757) a 250–362 (O); soubor = snímek; poloviční rozlišení, šedotónové"
+url: "https://digi.archives.cz/da/permalink?xid=be9318d8-f13c-102f-8255-0050568c0263"
+ocr:
+- nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "59dc2bb6-c7b9-4457-a9a1-4dd2d84eba46, 6e04fb07-1adc-4450-ac97-c3c0d7f458c1"
+  model: "Czech Handwritten"
+  datum: "2026-11-03"
+  export: "ruda-1701-1757.pagexml.zip"
+  stranek: 182
+  radku: 24301
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

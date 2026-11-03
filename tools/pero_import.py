@@ -157,6 +157,14 @@ BOOKS = {
                                              "šedotónové",
                      url="https://digi.archives.cz/da/permalink?xid=be97d562-f13c-102f-8255-0050568c0263", prefix="ruda1757",
                      delitel=1),
+    "be9318d8": dict(archiv="zaopava", nazev="Ruda nad Moravou N, Z, O 1701–1757, ZA Opava, NAD 165, sign. Šu XIV 2 (inv. 7906)",
+                     farnost="Ruda nad Moravou (Bohdíkov, Bušín, Hartíkov, Hostice, Jakubovice, Janoušov, Klášterec, "
+                             "Komňátka, Olšany, Raškov, Štědrákova Lhota, Vyšehoří)",
+                     roky="1701–1757", obsah="N 1701–1757 asi sn. 1–249 (sn. 200 = I 1749), O asi sn. 250–363 (sn. 360 = I 1747), Z dál; "
+                                             "OCR snímky 160–228 (N X 1738 – asi 1757) a 250–362 (O); soubor = snímek; "
+                                             "poloviční rozlišení, šedotónové",
+                     url="https://digi.archives.cz/da/permalink?xid=be9318d8-f13c-102f-8255-0050568c0263", prefix="ruda1701",
+                     delitel=1),
     "su-xiv-14": dict(archiv="zaopava", nazev="Ruda nad Moravou O 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 14 (inv. 7918)",
                       farnost="Ruda nad Moravou (Bartoňov, Bohdíkov, Bušín, Hostice, Jakubovice, Olšany, Raškov …)",
                       roky="1779–1825", obsah="str. 1–47 = všechny obce 1779–1788, od 1789 po obcích; OCR snímky 1–35 "
@@ -243,6 +251,8 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
                               "Kurrent (German, Czech)", "2026-11-02"),
     "bohdikov-su-xiv-5": (["su-xiv-5"], "161c8c33-983b-4c9a-87cd-36473e311b18", "Czech Handwritten", "2026-11-02"),
     "ruda-1757-1771": (["be97d562"], "61da916d-56f4-46e5-b358-2f9080289d2c", "Czech Handwritten", "2026-11-02"),
+    "ruda-1701-1757": (["be9318d8"], "59dc2bb6-c7b9-4457-a9a1-4dd2d84eba46, 6e04fb07-1adc-4450-ac97-c3c0d7f458c1",
+                       "Czech Handwritten", "2026-11-03"),
     "kramerius-1804-1805": (["kramerius-1804", "kramerius-1805"], "9fa4607b-77db-46dc-930f-d34910174fc0",
                             "Czech Fraktur Printed", "2026-11-02"),
     "ruda-su-xiv-19": (["su-xiv-19"], "1a7cf0e9-622f-4314-8b7a-2a4027591f52", "Czech Handwritten", "2026-11-02"),
