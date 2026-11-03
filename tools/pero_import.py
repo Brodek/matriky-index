@@ -161,7 +161,7 @@ BOOKS = {
                      farnost="Ruda nad Moravou (Bohdíkov, Bušín, Hartíkov, Hostice, Jakubovice, Janoušov, Klášterec, "
                              "Komňátka, Olšany, Raškov, Štědrákova Lhota, Vyšehoří)",
                      roky="1701–1757", obsah="N 1701–1757 asi sn. 1–249 (sn. 200 = I 1749), O asi sn. 250–363 (sn. 360 = I 1747), Z dál; "
-                                             "OCR snímky 160–228 (N X 1738 – asi 1757) a 250–362 (O); soubor = snímek; "
+                                             "OCR snímky 1–80 (N 1701–1720), 160–228 (N X 1738 – asi 1757) a 250–362 (O); soubor = snímek; "
                                              "poloviční rozlišení, šedotónové",
                      url="https://digi.archives.cz/da/permalink?xid=be9318d8-f13c-102f-8255-0050568c0263", prefix="ruda1701",
                      delitel=1),
@@ -251,7 +251,8 @@ EXPORTS = {  # export file stem -> books it contains, PERO document, model, date
                               "Kurrent (German, Czech)", "2026-11-02"),
     "bohdikov-su-xiv-5": (["su-xiv-5"], "161c8c33-983b-4c9a-87cd-36473e311b18", "Czech Handwritten", "2026-11-02"),
     "ruda-1757-1771": (["be97d562"], "61da916d-56f4-46e5-b358-2f9080289d2c", "Czech Handwritten", "2026-11-02"),
-    "ruda-1701-1757": (["be9318d8"], "59dc2bb6-c7b9-4457-a9a1-4dd2d84eba46, 6e04fb07-1adc-4450-ac97-c3c0d7f458c1",
+    "ruda-1701-1757": (["be9318d8"], "59dc2bb6-c7b9-4457-a9a1-4dd2d84eba46, 6e04fb07-1adc-4450-ac97-c3c0d7f458c1, "
+                                     "5b1e5314-fc04-48ac-a7d5-fe111c9e8cef",
                        "Czech Handwritten", "2026-11-03"),
     "kramerius-1804-1805": (["kramerius-1804", "kramerius-1805"], "9fa4607b-77db-46dc-930f-d34910174fc0",
                             "Czech Fraktur Printed", "2026-11-02"),
