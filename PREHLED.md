@@ -2,9 +2,9 @@
 
 Stav k 3. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **138 knih** (matrika 87, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, noviny 2, soupis poddaných 2, urbář 1)
+- **144 knih** (matrika 93, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, noviny 2, soupis poddaných 2, urbář 1)
 - **5 163 stran** převedených strojově (PERO OCR), **917 274 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **3 007 zápisů přečtených očima**: narození 1503, sňatky 462, úmrtí 732, převody gruntů 49, soupisy 29, jiné 203
+- **3 102 zápisů přečtených očima**: narození 1503, sňatky 555, úmrtí 732, převody gruntů 49, soupisy 29, jiné 205
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -80,7 +80,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Litomyšl Z 1864–1881, sign. 5411 (kód 6J44UBOZ)](https://aron.vychodoceskearchivy.cz/apu/26fa22af-989b-4af5-b291-69e9797c9606) | matrika |  |  |  | 10 (Z 10) |
 | [Litomyšl, index Z 1864–1906, sign. 7492 (kód LRIQXP2E)](https://aron.vychodoceskearchivy.cz/apu/06a51ee1-4891-4871-b054-cd9370536c0b) | matrika | 1864–1906 | 229 | 85754 | 5 (J 5) |
 
-## Národní archiv – židovské matriky a familianti (zayt.org) (30)
+## Národní archiv – židovské matriky a familianti (zayt.org) (36)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -92,14 +92,18 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Familiantská kniha Kouřimský kraj HBF IX/X (Škvorec, Štiřín, Střížkov, Svojšice, Čakovice, Tvoršovice, Vestec)](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/84) | matrika | 1811–1848 |  |  | 2 (J 2) |
 | [Kolín, židovská matrika N 1842–1864 (NA HBMa inv. 824)](https://zayt.org/collections/jewish-registers-1784-1949/n-824) | matrika | 1842–1864 |  |  | 2 (J 2) |
 | [Kostelec nad Černými lesy, židovská matrika N 1841–1859 (NA HBMa inv. 872)](https://zayt.org/collections/jewish-registers-1784-1949/n-872) | matrika | 1841–1859 |  |  | 11 (J 5 N 6) |
+| [Hrusice, židovská kontrolní matrika NOZ (O 1847–1856)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-241) | matrika | 1847–1856 |  |  | 4 (O 4) |
 | noz-2435 | matrika |  |  |  | 23 (J 2 Z 21) |
 | noz-2436 | matrika |  |  |  | 6 (J 6) |
 | noz-2437 | matrika |  |  |  | 6 (J 6) |
 | [Praha-Karlín, rejstřík N, O, Z Karlín č. 1 1858–1885 (NA HBMa inv. 2937)](https://zayt.org/collections/jewish-registers-1784-1949/noz-2937) | matrika | 1858–1885 |  |  | 1 (J 1) |
 | [Kostelec nad Černými lesy, židovská kontrolní matrika NOZ (NA HBMa inv. 372)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-372) | matrika | 1840–1862 | 17 | 2842 | 27 (J 2 N 11 O 12 Z 2) |
+| [Lošany, židovská kontrolní matrika NOZ (O 1845, 1854, 1855)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-461) | matrika | 1845–1855 |  |  | 3 (O 3) |
 | [Hroubovice, židovská matrika N 1874–1895, O 1875–1891, Z 1875–1895 (NA inv. 530)](https://zayt.org/collections/jewish-registers-1784-1949/noz-530) | matrika | 1874–1895 | 72 | 14382 | 11 (J 1 N 5 O 3 Z 2) |
 | [Přistoupim, židovská kontrolní matrika NOZ (NA inv. 726)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-726) | matrika | 1803–1840 | 19 | 3335 | 17 (J 3 N 8 O 2 Z 4) |
 | [Přistoupim, židovská kontrolní matrika NOZ (NA inv. 727)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-727) | matrika | 1840–1858 | 12 | 2799 | 7 (J 2 N 3 Z 2) |
+| [Týnec nad Labem, židovská kontrolní matrika NOZ (O 1849–1858)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-941) | matrika | 1849–1858 |  |  | 7 (O 7) |
+| [Vitice, židovská kontrolní matrika NOZ (O 1848–1854)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-994) | matrika | 1848–1854 |  |  | 5 (O 5) |
 | nz-1722 | matrika |  |  |  | 43 (Z 43) |
 | [Hrochův Týnec, židovská kontrolní matrika O (NA HBMa inv. 235)](https://zayt.org/collections/jewish-control-registers-1780-1911/o-235) | matrika | 1839–1889 | 15 | 2302 | 3 (O 3) |
 | [Zájezdec, židovská matrika O (NA HBMa inv. 2434)](https://zayt.org/collections/jewish-registers-1784-1949/o-2434) | matrika | 1839, 1841–1868 | 13 | 1711 | 8 (O 8) |
@@ -107,7 +111,9 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Praha-Karlín, židovská matrika O 1848–1856 (NA HBMa inv. 2741)](https://zayt.org/collections/jewish-registers-1784-1949/o-2741) | matrika | 1848–1856 | 33 | 8669 | 7 (J 1 O 6) |
 | [Praha-Libeň, židovská matrika O 1833–1849 (NA HBMa inv. 2745)](https://zayt.org/collections/jewish-registers-1784-1949/o-2745) | matrika | 1833–1849 | 14 | 3300 | 4 (O 4) |
 | [Heřmanův Městec, židovská matrika O (NA inv. 406), duplikát 1839–1850](https://zayt.org/collections/jewish-registers-1784-1949/o-406) | matrika | 1839–1850 | 30 | 4761 |  |
+| [Kolín, židovská kontrolní matrika O 1848–1849](https://zayt.org/collections/jewish-control-registers-1780-1911/o-829) | matrika | 1848–1849 |  |  | 72 (O 72) |
 | [Kolín, židovská matrika O 1850–1895 s rejstříkem (NA inv. 830)](https://zayt.org/collections/jewish-registers-1784-1949/o-830) | matrika | 1850–1895 | 77 | 14262 | 16 (J 10 O 6) |
+| [Uhlířské Janovice, židovská kontrolní matrika O 1839–1861 (NA inv. 953)](https://zayt.org/collections/jewish-control-registers-1780-1911/o-953) | matrika | 1839–1861 |  |  | 4 (J 2 O 2) |
 | [Hroubovice, rejstřík oddaných a zemřelých 1840–1895 (NA inv. 531)](https://zayt.org/collections/jewish-registers-1784-1949/oz-531) | matrika | 1840–1895 |  |  | 2 (J 2) |
 | z-1721 | matrika |  |  |  | 6 (Z 6) |
 | [Hrochův Týnec, židovská kontrolní matrika Z (NA inv. 236)](https://zayt.org/collections/jewish-control-registers-1780-1911/z-236) | matrika | 1839–1882 | 14 | 2011 | 14 (J 6 Z 8) |
@@ -175,17 +181,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
-## zaopava (6)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Ruda nad Moravou N, Z, O 1701–1757, ZA Opava, NAD 165, sign. Šu XIV 2 (inv. 7906)](https://digi.archives.cz/da/permalink?xid=be9318d8-f13c-102f-8255-0050568c0263) | matrika | 1701–1757 | 262 | 41563 | 121 (N 119 O 2) |
-| [Ruda nad Moravou N, O, Z 1757–1771 s rejstříky N a O (1757–1792), ZA Opava, NAD 165](https://digi.archives.cz/da/permalink?xid=be97d562-f13c-102f-8255-0050568c0263) | matrika | 1757–1771 | 130 | 40412 | 55 (N 37 O 12 Z 6) |
-| [Ruda nad Moravou O 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 14 (inv. 7918)](https://digi.archives.cz/da/permalink?xid=be9312c0-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 35 | 13361 | 7 (J 1 O 6) |
-| [Ruda nad Moravou Z 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 19 (inv. 7923)](https://digi.archives.cz/da/permalink?xid=be930f8c-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 302 | 116893 | 322 (Z 322) |
-| [Ruda nad Moravou N, O, Z 1772–1778, ZA Opava, NAD 165, sign. Šu XIV 4 (inv. 7908)](https://digi.archives.cz/da/permalink?xid=be9317b6-f13c-102f-8255-0050568c0263) | matrika | 1772–1778 | 177 | 33733 | 24 (J 2 N 19 O 1 Z 2) |
-| [Ruda nad Moravou N 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 5 (inv. 7909)](https://digi.archives.cz/da/permalink?xid=be93172a-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 66 | 32068 | 32 (N 32) |
-
 ## cuzk (8)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -198,6 +193,17 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+
+## zaopava (6)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Ruda nad Moravou N, Z, O 1701–1757, ZA Opava, NAD 165, sign. Šu XIV 2 (inv. 7906)](https://digi.archives.cz/da/permalink?xid=be9318d8-f13c-102f-8255-0050568c0263) | matrika | 1701–1757 | 262 | 41563 | 121 (N 119 O 2) |
+| [Ruda nad Moravou N, O, Z 1757–1771 s rejstříky N a O (1757–1792), ZA Opava, NAD 165](https://digi.archives.cz/da/permalink?xid=be97d562-f13c-102f-8255-0050568c0263) | matrika | 1757–1771 | 130 | 40412 | 55 (N 37 O 12 Z 6) |
+| [Ruda nad Moravou O 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 14 (inv. 7918)](https://digi.archives.cz/da/permalink?xid=be9312c0-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 35 | 13361 | 7 (J 1 O 6) |
+| [Ruda nad Moravou Z 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 19 (inv. 7923)](https://digi.archives.cz/da/permalink?xid=be930f8c-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 302 | 116893 | 322 (Z 322) |
+| [Ruda nad Moravou N, O, Z 1772–1778, ZA Opava, NAD 165, sign. Šu XIV 4 (inv. 7908)](https://digi.archives.cz/da/permalink?xid=be9317b6-f13c-102f-8255-0050568c0263) | matrika | 1772–1778 | 177 | 33733 | 24 (J 2 N 19 O 1 Z 2) |
+| [Ruda nad Moravou N 1779–1825, ZA Opava, NAD 165, sign. Šu XIV 5 (inv. 7909)](https://digi.archives.cz/da/permalink?xid=be93172a-f13c-102f-8255-0050568c0263) | matrika | 1779–1825 | 66 | 32068 | 32 (N 32) |
 
 ## ndk (2)
 
