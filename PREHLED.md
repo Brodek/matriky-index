@@ -2,9 +2,9 @@
 
 Stav k 3. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **144 knih** (matrika 93, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, noviny 2, soupis poddaných 2, urbář 1)
+- **146 knih** (matrika 95, pozemková kniha 19, sčítání lidu 11, indikační skica stabilního katastru 8, policejní přihlášky 8, noviny 2, soupis poddaných 2, urbář 1)
 - **5 163 stran** převedených strojově (PERO OCR), **917 274 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **3 102 zápisů přečtených očima**: narození 1503, sňatky 555, úmrtí 732, převody gruntů 49, soupisy 29, jiné 205
+- **3 108 zápisů přečtených očima**: narození 1508, sňatky 556, úmrtí 732, převody gruntů 49, soupisy 29, jiné 205
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -53,7 +53,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [vs-horazdovice-k1593](https://www.portafontium.eu/amtsbuch/soap-pn/vs-horazdovice/k1593) | pozemková kniha |  |  |  | 1 (P 1) |
 | [vs-horazdovice-k1594](https://www.portafontium.eu/amtsbuch/soap-pn/vs-horazdovice/k1594) | pozemková kniha |  |  |  | 1 (P 1) |
 
-## SOA Zámrsk – Východočeské archivy (ARON) (22)
+## SOA Zámrsk – Východočeské archivy (ARON) (24)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -70,8 +70,10 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Opočno N, Z, O 1723–1797, sign. 120-1 (kód VCACWBOV)](https://storage.vychodoceskearchivy.cz/matriky/V/CZ_215000010_00190_VCACWBOV_sign-120-1.zip) | matrika |  |  |  | 4 (O 4) |
 | [Opočno O 1784–1834 (Pohoří, Puličky, Semechnice, Trnov), sign. 120-11 (kód 5JZN4DBO)](https://storage.vychodoceskearchivy.cz/matriky/5/CZ_215000010_00190_5JZN4DBO_sign-120-11.zip) | matrika |  |  |  | 6 (O 6) |
 | [Opočno, rejstřík oddaných 1723–1797, sign. 120-15 (kód L2A5OAAQ)](https://storage.vychodoceskearchivy.cz/matriky/L/CZ_215000010_00190_L2A5OAAQ_sign-120-15.zip) | matrika |  |  |  | 2 (J 2) |
+| [Litomyšl N 5/1784–2/1791, sign. 1302 (kód 7LD4PSX7)](https://aron.vychodoceskearchivy.cz/apu/b259a4de-8881-4932-b4d8-4bc3ac30afd6) | matrika | 1784–1791 |  |  | 3 (N 3) |
+| [Litomyšl N 3/1791–5/1802, sign. 1303 (kód 6AQHTLBH)](https://aron.vychodoceskearchivy.cz/apu/f6976c73-6eac-4f48-8ee7-3104a05785a6) | matrika | 1791–1802 |  |  | 2 (N 2) |
 | [Litomyšl N 1850–1857, sign. 1309 (kód WRH6GG3Q)](https://aron.vychodoceskearchivy.cz/apu/9340aa8e-bfe5-4c80-af51-9adf97017290) | matrika | 10/1850–1857 | 395 | 56501 | 9 (N 9) |
-| [Litomyšl O 1800–1823, sign. 1319 (kód UZIZVUY2)](https://storage.vychodoceskearchivy.cz/matriky/U/CZ_215000010_00190_UZIZVUY2_sign-1319.zip) | matrika |  |  |  | 1 (O 1) |
+| [Litomyšl O 1800–1823, sign. 1319 (kód UZIZVUY2)](https://storage.vychodoceskearchivy.cz/matriky/U/CZ_215000010_00190_UZIZVUY2_sign-1319.zip) | matrika |  |  |  | 2 (O 2) |
 | [Litomyšl Z 1820–1852, sign. 1331 (kód AZZOANBY)](https://storage.vychodoceskearchivy.cz/matriky/A/CZ_215000010_00190_AZZOANBY_sign-1331.zip) | matrika |  |  |  | 1 (Z 1) |
 | [Dobruška N 1799–1806 a Z 1799–1806, sign. 26-1 (kód RRGJJKAQ)](https://storage.vychodoceskearchivy.cz/matriky/R/CZ_215000010_00190_RRGJJKAQ_sign-26-1.zip) | matrika | 1799–1806 | 75 | 16718 | 16 (N 10 Z 6) |
 | [Dobruška Z vesnice 1806–1843, sign. 26-12 (kód 3CF3NFID)](https://storage.vychodoceskearchivy.cz/matriky/3/CZ_215000010_00190_3CF3NFID_sign-26-12.zip) | matrika | 1806–1843 | 14 | 4004 | 8 (Z 8) |
