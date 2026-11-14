@@ -13,6 +13,7 @@ import argparse
 import collections
 import csv
 import datetime
+import functools
 import re
 import subprocess
 import sys
@@ -120,6 +121,8 @@ class Hlaseni:
         self.varovani.append(f"{kde}: {co}")
 
 
+# Volá se pro každý řádek každé tabulky (miliony řádků strojového čtení), Path.relative_to je pomalé.
+@functools.cache
 def rel(p):
     return p.relative_to(ROOT).as_posix()
 

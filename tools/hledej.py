@@ -11,6 +11,7 @@ that a name is missing from a book.
 """
 import argparse
 import csv
+import functools
 import re
 import sys
 import unicodedata
@@ -27,12 +28,15 @@ def norm(text):
     return "".join(c for c in text if not unicodedata.combining(c)).lower()
 
 
-def lev(a, b):
+def lev(a, b, limit=None):
+    """Levenshtein distance; with limit, any value above it once no alignment can stay within the limit."""
     prev = list(range(len(b) + 1))
     for i, ca in enumerate(a, 1):
         cur = [i]
         for j, cb in enumerate(b, 1):
             cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        if limit is not None and min(cur) > limit:
+            return limit + 1
         prev = cur
     return prev[-1]
 
@@ -49,10 +53,15 @@ def main():
     target = norm(args.slovo)
     skip = re.compile(args.skip) if args.skip else None
     hits = 0
+
+    # The same word beginnings recur millions of times in the OCR text; each is compared once.
+    @functools.cache
+    def close(prefix):
+        return lev(prefix, target, args.maxd) <= args.maxd
+
     def found(text):
         words = [w for w in re.split(r"[^a-z]+", norm(text)) if len(w) >= len(target) - 1]
-        return next((w for w in words if not (skip and skip.match(w)) and lev(w[: len(target)], target) <= args.maxd),
-                    None)
+        return next((w for w in words if not (skip and skip.match(w)) and close(w[: len(target)])), None)
 
     for folder in sorted(p for p in REPO.glob("knihy/*/*") if p.is_dir()):
         book = folder.name
@@ -82,8 +91,9 @@ def main():
         for ocr in ocr_files(folder):
             label = "" if ocr.name == "ocr-pero.tsv" else f" [{ocr.stem.removeprefix('ocr-')}]"
             rows = read_tsv(ocr)
-            for row in rows:  # the test crops (knihy/testy) have "vyrez" instead of "soubor" and no "strana"
+            for row in rows:  # the test crops (knihy/testy) have "vyrez" instead of "soubor", no "snimek" or "strana"
                 row.setdefault("soubor", row.get("vyrez", ""))
+                row.setdefault("snimek", "")
                 row.setdefault("strana", "")
             rows = apply(rows, read_tsv(folder / "opravy.tsv"))
             pages = {}
