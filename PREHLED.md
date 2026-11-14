@@ -1,14 +1,14 @@
 # Přehled indexu
 
-Stav k 13. 11. 2026 (generuje `python tools/prehled.py`).
+Stav k 14. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **887 knih** (matrika 813, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
+- **919 knih** (matrika 845, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, urbář 1, kronika 1)
 - **9 021 stran** převedených strojově (PERO OCR), **1 674 828 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **22 498 zápisů přečtených očima**: narození 9939, sňatky 8548, úmrtí 3237, převody gruntů 49, soupisy 193, jiné 503
+- **22 574 zápisů přečtených očima**: narození 9969, sňatky 8566, úmrtí 3265, převody gruntů 49, soupisy 193, jiné 503
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
-## SOA Plzeň – Porta fontium (111)
+## SOA Plzeň – Porta fontium (122)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -41,14 +41,20 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Kotouň 03](https://www.portafontium.eu/register/soap-pn/kotoun-03) | matrika |  |  |  | 13 (N 7 O 4 Z 2) |
 | [Kotouň 04](https://www.portafontium.eu/register/soap-pn/kotoun-04) | matrika |  |  |  | 1 (Z 1) |
 | [Kotouň 08](https://www.portafontium.eu/register/soap-pn/kotoun-08) | matrika |  |  |  | 2 (Z 2) |
+| [Kožlany 04 (Kožlany: N 1723–1762, O, Z, rejstřík N)](https://www.portafontium.eu/register/soap-pn/kozlany-04) | matrika | 1723–1762 |  |  | 1 (O 1) |
+| [Kožlany 05 (Kožlany, Hedčany, Strachovice aj.: N 1763–1784, O 1758–1784, Z 1760–1784, rejstříky)](https://www.portafontium.eu/register/soap-pn/kozlany-05) | matrika | 1758–1784 |  |  | 2 (N 1 Z 1) |
+| [Kožlany 06 (Kožlany: N 1801–1828, O 1801–1838, Z 1801–1839)](https://www.portafontium.eu/register/soap-pn/kozlany-06) | matrika | 1801–1839 |  |  | 2 (N 1 Z 1) |
 | [Kožlany 09 (Kožlany: N 1829–1850)](https://www.portafontium.eu/register/soap-pn/kozlany-09) | matrika | 1829–1850 |  |  | 1 (N 1) |
+| [Kožlany 13 (Kožlany, Hedčany, Strachovice aj.: Z 1784–1801)](https://www.portafontium.eu/register/soap-pn/kozlany-13) | matrika | 1784–1801 |  |  | 1 (Z 1) |
 | [Kožlany 14 (Kožlany: N 1862–1879)](https://www.portafontium.eu/register/soap-pn/kozlany-14) | matrika | 1862–1879 |  |  | 1 (N 1) |
 | [Kožlany 17 (Kožlany: O 1838–1895)](https://www.portafontium.eu/register/soap-pn/kozlany-17) | matrika | 1838–1895 |  |  | 2 (O 2) |
+| [Kožlany 18 (Kožlany: Z 1840–1899, rejstřík)](https://www.portafontium.eu/register/soap-pn/kozlany-18) | matrika | 1840–1899 |  |  | 1 (Z 1) |
 | [Kožlany 21 (Kožlany: O 1895–1949)](https://www.portafontium.eu/register/soap-pn/kozlany-21) | matrika | 1895–1949 |  |  | 1 (O 1) |
 | [Kožlany 22 (Kožlany: Z 1900–1949)](https://www.portafontium.eu/register/soap-pn/kozlany-22) | matrika | 1900–1949 |  |  | 2 (Z 2) |
 | [Kozojedy 01 (Bohy: O 1784–1831, N 1784–1831, Z 1784–1831)](https://www.portafontium.eu/register/soap-pn/kozojedy-01) | matrika | 1784–1831 |  |  | 1 (N 1) |
 | [Kozojedy 10 (Bohy, Krašov: O 1832–1856, N 1832–1854, Z 1832–1886)](https://www.portafontium.eu/register/soap-pn/kozojedy-10) | matrika | 1832–1886 |  |  | 2 (N 1 O 1) |
 | [Kozojedy 11 (Bohy: N 1856–1880)](https://www.portafontium.eu/register/soap-pn/kozojedy-11) | matrika | 1856–1880 |  |  | 1 (N 1) |
+| [Kozojedy 15 (Brodeslavy: N 1832–1862, O 1835–1859, Z 1833–1927)](https://www.portafontium.eu/register/soap-pn/kozojedy-15) | matrika | 1832–1927 |  |  | 3 (O 1 Z 2) |
 | [Kozojedy 17 (Bohy: O 1856–1945)](https://www.portafontium.eu/register/soap-pn/kozojedy-17) | matrika | 1856–1945 |  |  | 1 (O 1) |
 | [Kralovice – okresní úřad 10 (Kralovice, Kožlany, Bohy, Břežany: O 1931–1947)](https://www.portafontium.eu/register/soap-pn/kralovice-okresni-urad-10) | matrika | 1931–1947 |  |  | 1 (O 1) |
 | [Kvasňovice 01](https://www.portafontium.eu/register/soap-pn/kvasnovice-01) | matrika | 1738–1765 | 122 | 16910 | 80 (J 1 N 16 O 55 Z 8) |
@@ -70,7 +76,9 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Letiny 08](https://www.portafontium.eu/register/soap-pn/letiny-08) | matrika |  |  |  | 2 (N 2) |
 | [Letiny 11](https://www.portafontium.eu/register/soap-pn/letiny-11) | matrika |  |  |  | 2 (J 2) |
 | [Liblín 01 (Liblín, Bujesily, Chockov, Olešná: N 1822–1843)](https://www.portafontium.eu/register/soap-pn/liblin-01) | matrika | 1822–1843 |  |  | 1 (N 1) |
+| [Liblín 02 (Liblín, Bujesily, Chockov, Olešná: N, O, Z 1753–1779)](https://www.portafontium.eu/register/soap-pn/liblin-02) | matrika | 1753–1779 |  |  | 1 (N 1) |
 | [Liblín 05 (Liblín, Bujesily, Chockov, Olešná, …: N 1806–1821)](https://www.portafontium.eu/register/soap-pn/liblin-05) | matrika | 1806–1821 |  |  | 2 (N 2) |
+| [Liblín 08 (Z 1840–1852 po vsích)](https://www.portafontium.eu/register/soap-pn/liblin-08) | matrika | 1840–1852 |  |  | 1 (Z 1) |
 | [Liblín 11 (Liblín, Bujesily, Chockov, Olešná: O 1806–1836)](https://www.portafontium.eu/register/soap-pn/liblin-11) | matrika | 1806–1836 |  |  | 2 (O 2) |
 | [Malý Bor 02](https://www.portafontium.eu/register/soap-pn/maly-bor-02) | matrika | 1670–1703 | 49 | 3565 | 12 (J 3 N 6 O 3) |
 | [Malý Bor 03](https://www.portafontium.eu/register/soap-pn/maly-bor-03) | matrika | 1704–1726 | 98 | 8664 | 77 (J 1 N 27 O 32 Z 17) |
@@ -93,6 +101,9 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Nepomuk 04](https://www.portafontium.eu/register/soap-pn/nepomuk-04) | matrika |  |  |  | 1 (O 1) |
 | [Přeštice 02](https://www.portafontium.eu/register/soap-pn/prestice-02) | matrika | 1722–1756 | 143 | 15779 | 3 (N 1 O 2) |
 | [Přeštice 38](https://www.portafontium.eu/register/soap-pn/prestice-38) | matrika |  | 83 | 19866 |  |
+| [Radnice (RO) 02 (farnost: N 1735–1744, O 1721–1744, Z 1725–1744)](https://www.portafontium.eu/register/soap-pn/radnice-ro-02) | matrika | 1721–1744 |  |  | 2 (N 1 O 1) |
+| [Radnice (RO) 03 (N farnosti 1745–1772; Újezd u Sv. Kříže a Vranov N/O/Z 1773–1821)](https://www.portafontium.eu/register/soap-pn/radnice-ro-03) | matrika | 1745–1821 |  |  | 2 (N 2) |
+| [Radnice (RO) 06 (O farnosti 1745–1772; Přívětice a Sklená Huť N/O/Z 1773–1821)](https://www.portafontium.eu/register/soap-pn/radnice-ro-06) | matrika | 1745–1821 |  |  | 1 (O 1) |
 | [Strašín 23](https://www.portafontium.eu/register/soap-pn/strasin-23) | matrika |  |  |  | 1 (O 1) |
 | [Strašín 24](https://www.portafontium.eu/register/soap-pn/strasin-24) | matrika |  |  |  | 21 (Z 21) |
 | [Velhartice 08](https://www.portafontium.eu/register/soap-pn/velhartice-08) | matrika |  |  |  | 6 (N 4 O 1 Z 1) |
@@ -482,13 +493,25 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hroubovice (FÚ Luže), židovská kontrolní matrika Z (NA inv. 481)](https://zayt.org/collections/jewish-control-registers-1780-1911/z-481) | matrika | 1840–1873 | 50 | 7731 | 24 (J 2 Z 22) |
 | [Kolín, židovská matrika Z 1847–1865 (NA HBMa inv. 835)](https://zayt.org/collections/jewish-registers-1784-1949/z-835) | matrika | 1847–1865 |  |  | 1 (J 1) |
 
-## SOA Praha – eBadatelna (90)
+## SOA Praha – eBadatelna (111)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
+| [Tachlovice 27 (Vysoký Újezd, okr. Beroun: N 1818–1856, O 1819–1891, Z 1818–1880)](https://ebadatelna.soapraha.cz/d/10237/) | matrika | 1818–1891 |  |  | 6 (N 1 O 1 Z 4) |
+| [Tachlovice 28 (Vysoký Újezd, okr. Beroun: N 1857–1882)](https://ebadatelna.soapraha.cz/d/10238/) | matrika | 1857–1882 |  |  | 1 (N 1) |
 | [Nové Strašecí 20 (Ruda: N 1784–1817, O 1784–1840, Z 1784–1820)](https://ebadatelna.soapraha.cz/d/10279/) | matrika |  |  |  | 1 (N 1) |
-| [Panoší Újezd 02 (10813, bez rejstříku)](https://ebadatelna.soapraha.cz/d/10813/) | matrika |  |  |  | 2 (N 1 Z 1) |
-| [Petrovice-RA 09 (Petrovice, Příčina, Řeřichy, Žďár: N 1827–1865)](https://ebadatelna.soapraha.cz/d/11250/) | matrika | 1827–1865 |  |  | 3 (N 3) |
+| [Panoší Újezd 02 (10813, bez rejstříku)](https://ebadatelna.soapraha.cz/d/10813/) | matrika |  |  |  | 3 (N 1 O 1 Z 1) |
+| [Panoší Újezd 03 (Panoší Újezd, Malinová, Příčina, Lubná, Pavlíkov, Skryje aj.: N 1741–1760, Z 1748–1760)](https://ebadatelna.soapraha.cz/d/10926/) | matrika | 1741–1760 |  |  | 2 (N 2) |
+| [Panoší Újezd 08 (Malinová: N 1785–1857)](https://ebadatelna.soapraha.cz/d/10931/) | matrika | 1785–1857 |  |  | 1 (N 1) |
+| [Panoší Újezd 21 (Malinová: Z 1784–1860)](https://ebadatelna.soapraha.cz/d/10944/) | matrika | 1784–1860 |  |  | 2 (Z 2) |
+| [Rakovník 06 (Rakovník: N 1804–1820)](https://ebadatelna.soapraha.cz/d/11050/) | matrika | 1804–1820 |  |  | 1 (N 1) |
+| [Rakovník 13 (Rakovník: O 1785–1820)](https://ebadatelna.soapraha.cz/d/11057/) | matrika | 1785–1820 |  |  | 1 (O 1) |
+| [Rakovník 19 (Rakovník: Z 1785–1812)](https://ebadatelna.soapraha.cz/d/11063/) | matrika | 1785–1812 |  |  | 1 (Z 1) |
+| [Petrovice-RA 03 (fara Petrovice: O 1716–1784)](https://ebadatelna.soapraha.cz/d/11244/) | matrika | 1716–1784 |  |  | 1 (O 1) |
+| [Petrovice-RA 05 (fara Petrovice: N 1747–1784, Z 1758–1784)](https://ebadatelna.soapraha.cz/d/11246/) | matrika | 1747–1784 |  |  | 1 (N 1) |
+| [Petrovice-RA 07 (Příčina, Senec, Zavidov, Žďár: N 1785–1830, O 1785–1825, Z 1785–1832)](https://ebadatelna.soapraha.cz/d/11248/) | matrika | 1785–1832 |  |  | 4 (N 2 O 1 Z 1) |
+| [Petrovice-RA 09 (Petrovice, Příčina, Řeřichy, Žďár: N 1827–1865)](https://ebadatelna.soapraha.cz/d/11250/) | matrika | 1827–1865 |  |  | 4 (N 4) |
+| [Petrovice-RA 14 (Petrovice, Příčina, Senec, Zavidov, Žďár: Z 1832–1865)](https://ebadatelna.soapraha.cz/d/11255/) | matrika | 1832–1865 |  |  | 3 (Z 3) |
 | [Petrovice-RA 21 (Příčina, Žďár: N 1874–1892, O 1874–1899, Z 1876–1915)](https://ebadatelna.soapraha.cz/d/11266/) | matrika | 1874–1915 |  |  | 5 (N 2 O 1 Z 2) |
 | [Sedlec-BN 26, N 1871–1894, Ni 1871–1894](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/11679) | matrika |  |  |  | 1 (N 1) |
 | [Sedlec-BN 18, O 1807–1843](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/11700) | matrika |  |  |  | 1 (O 1) |
@@ -498,7 +521,13 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Slabce 18 (Svinařov: N 1784–1821, O 1784–1821, Z 1784–1821)](https://ebadatelna.soapraha.cz/d/11964/) | matrika | 1784–1821 |  |  | 2 (N 1 O 1) |
 | [Slabce 10 (Modřejovice: N 1821–1853, O 1821–1854, Z 1821–1853)](https://ebadatelna.soapraha.cz/d/11972/) | matrika | 1821–1854 |  |  | 4 (N 2 O 2) |
 | [Slabce 09 (Modřejovice: N 1784–1821, O 1784–1821, Z 1784–1821)](https://ebadatelna.soapraha.cz/d/11973/) | matrika | 1784–1821 |  |  | 5 (N 3 O 2) |
-| [Slabce 04 (Hracholusky, Hřebečníky, Hvozd, Kostelík, …: N 1760–1784, O 1760–1784, Z 1760–1784)](https://ebadatelna.soapraha.cz/d/11978/) | matrika | 1760–1784 |  |  | 2 (N 1 O 1) |
+| [Slabce 04 (Hracholusky, Hřebečníky, Hvozd, Kostelík, …: N 1760–1784, O 1760–1784, Z 1760–1784)](https://ebadatelna.soapraha.cz/d/11978/) | matrika | 1760–1784 |  |  | 3 (N 1 O 1 Z 1) |
+| [Slabce 03 (Hracholusky, Hřebečníky, Hvozd, Kostelík, …: N 1732–1760, O 1732–1760, Z 1732–1760)](https://ebadatelna.soapraha.cz/d/11979/) | matrika | 1732–1760 |  |  | 2 (N 1 O 1) |
+| [Slabce 02 (Hracholusky, Hřebečníky, Kostelík, Modřejovice, Slabce, Svinařov, Týřovice, Malý Újezd, …: N 1710–1731, O 1710–1731, Z 1710–1731)](https://ebadatelna.soapraha.cz/d/11980/) | matrika | 1710–1731 |  |  | 1 (N 1) |
+| [Slabce 01 (Hracholusky, Hřebečníky, Kostelík, Modřejovice, Slabce, Svinařov, Týřovice, Malý Újezd, …: N 1669–1710, O 1669–1710, Z 1669–1707)](https://ebadatelna.soapraha.cz/d/11981/) | matrika | 1669–1710 |  |  | 1 (N 1) |
+| [Smečno 14 (Smečno: N 1784–1814)](https://ebadatelna.soapraha.cz/d/12244/) | matrika | 1784–1814 |  |  | 1 (N 1) |
+| [Smečno 24 (Smečno: O 1784–1849)](https://ebadatelna.soapraha.cz/d/12256/) | matrika | 1784–1849 |  |  | 1 (O 1) |
+| [Smečno 23 (Smečno: O 1757–1784)](https://ebadatelna.soapraha.cz/d/12257/) | matrika | 1757–1784 |  |  | 1 (O 1) |
 | [Smečno 08 (12262)](https://ebadatelna.soapraha.cz/d/12262/) | matrika |  |  |  | 2 (N 2) |
 | [Svémyslice 02, N 1784–1831](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/12789) | matrika |  |  |  | 1 (N 1) |
 | [Prčice 02, N 1688–1723, O 1689–1723, Z 1689–1723](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/13057) | matrika |  |  |  | 3 (N 2 O 1) |
@@ -526,7 +555,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Čistá 05 (Čistá, Krakov, Břežany, Křekovice, …: N 1731–1777, O 1732–1777, Z 1732–1777)](https://ebadatelna.soapraha.cz/d/4888/) | matrika | 1731–1777 |  |  | 5 (N 1 O 3 Z 1) |
 | [Čistá 06 (Čistá, Krakov, Bělbožice, Břežany, …: N 1778–1817, Z 1778–1799)](https://ebadatelna.soapraha.cz/d/4889/) | matrika | 1778–1817 |  |  | 1 (N 1) |
 | [Matrika Hořovice 22 (narození 1870–1885)](https://ebadatelna.soapraha.cz/d/5576/) | matrika |  |  |  | 1 (N 1) |
-| [Hředle 01 (5751), oddaní](https://ebadatelna.soapraha.cz/d/5751/) | matrika |  |  |  | 1 (O 1) |
+| [Hředle 01 (5751), oddaní](https://ebadatelna.soapraha.cz/d/5751/) | matrika |  |  |  | 9 (N 7 O 2) |
 | [Čistá 17 (Čistá, Krakov, Břežany, Křekovice, …: O 1805–1850)](https://ebadatelna.soapraha.cz/d/5859/) | matrika | 1805–1850 |  |  | 1 (O 1) |
 | [Jirny 08, N 1836–1869](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/6181) | matrika |  |  |  | 2 (N 2) |
 | [Jirny 18, O 1831–1850, Oi 1831–1850](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/6191) | matrika |  |  |  | 1 (O 1) |
@@ -542,9 +571,12 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Lány, kniha 7543](https://ebadatelna.soapraha.cz/d/7543/) | matrika |  |  |  | 1 (O 1) |
 | [Lány, kniha 7549](https://ebadatelna.soapraha.cz/d/7549/) | matrika |  |  |  | 1 (N 1) |
 | [Vrchotovy Janovice 11, N 1864–1879](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/7863) | matrika |  |  |  | 1 (N 1) |
+| [Lužná 01 (Lužná: N 1784–1829)](https://ebadatelna.soapraha.cz/d/8223/) | matrika | 1784–1829 |  |  | 3 (N 3) |
 | [Lužná 02 (Lužná, Belšanka: N 1830–1870)](https://ebadatelna.soapraha.cz/d/8224/) | matrika | 1830–1870 |  |  | 2 (N 2) |
-| [Lužná 03 (Lužná: O 1784–1846)](https://ebadatelna.soapraha.cz/d/8225/) | matrika | 1784–1846 |  |  | 3 (O 3) |
+| [Lužná 03 (Lužná: O 1784–1846)](https://ebadatelna.soapraha.cz/d/8225/) | matrika | 1784–1846 |  |  | 8 (O 8) |
+| [Lužná 04 (Lužná: Z 1784–1857)](https://ebadatelna.soapraha.cz/d/8226/) | matrika | 1784–1857 |  |  | 5 (Z 5) |
 | [Lužná 07 (Lužná: O 1847–1889, Z 1847–1878)](https://ebadatelna.soapraha.cz/d/8229/) | matrika | 1847–1889 |  |  | 1 (O 1) |
+| [Lužná 08 (Lužná: Z 1880–1919)](https://ebadatelna.soapraha.cz/d/8230/) | matrika | 1880–1919 |  |  | 4 (Z 4) |
 | [Lysá nad Labem 10, N 1818–1825](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/8240) | matrika |  |  |  | 1 (N 1) |
 | [Lysá nad Labem 14, N 1856–1868, Ni 1856–1868](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/8244) | matrika |  |  |  | 1 (N 1) |
 | [Lysá nad Labem 21, O 1811–1835](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/8251) | matrika |  |  |  | 1 (O 1) |
@@ -827,6 +859,44 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
+## ndk (5)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
+
+## cuzk (8)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Pulice (Gross Pulitz a Klein Pulitz), indikační skica 1840, Hradecký kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=HRA372018400) | indikační skica stabilního katastru | 1840 |  |  | 4 (K 4) |
+| [Libákovice (Libaken), indikační skica 1838, Klatovský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KLA222018380) | indikační skica stabilního katastru | 1838 |  |  | 5 (K 5) |
+| [Svojšice (Swoischitz) s Novou Vsí (Neudorf), indikační skica 1841, Kouřimský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KRM398018410) | indikační skica stabilního katastru | 1841 |  |  | 5 (K 5) |
+| [Malý Bor (Klein Bor), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA043018370) | indikační skica stabilního katastru | 1837 |  |  | 1 (K 1) |
+| [Malé Hydčice, indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA188018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
+| [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
+| [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+| [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+
+## nacr (10)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
+| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
+| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1340, N 1866–1873 (s indexem; duplikát, Tom VIII–XI)](https://vademecum.nacr.cz/vademecum/permalink?xid=e0c4568a-a325-4d10-b8d8-64c1dfb403df) | matrika | 1866–1873 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1341, N 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=26db411b-4bc5-467e-b248-3b48c7ba5f05) | matrika | 1874–1901 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1352, Z 1900–1902, 1905–1949 (index 1905–1912)](https://vademecum.nacr.cz/vademecum/permalink?xid=07f0ee74-aa22-4e76-b5e4-046e37da47fd) | matrika | 1900–1902, 1905–1949 |  |  | 2 (Z 2) |
+
 ## zaopava (90)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -921,41 +991,3 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Dubicko (fara), N, I-N Bohuslavice, Dubicko, Hrabová, Třeština 1810–1849, sign. Zá IV 5, inv. č. 8380](https://digi.archives.cz/da/permalink/be97a79a-f13c-102f-8255-0050568c0263) | matrika | 1810–1849 |  |  | 3 (N 3) |
 | [Dubicko (fara), N, I-N Bohuslavice, Dubicko, Hrabová, Třeština 1850–1898, sign. Zá IV 7, inv. č. 8382](https://digi.archives.cz/da/permalink/be97f934-f13c-102f-8255-0050568c0263) | matrika | 1850–1898 |  |  | 7 (N 7) |
 | [Dubicko (fara), O, I-O Bohuslavice, Brníčko, Dubicko, Hrabová, Kolšov, Lesnice, Strupšín, Třeština 1784–1809, sign. Zá IV 9, inv. č. 8384](https://digi.archives.cz/da/permalink/be97aa74-f13c-102f-8255-0050568c0263) | matrika | 1784–1809 |  |  | 1 (O 1) |
-
-## nacr (10)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
-| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
-| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1340, N 1866–1873 (s indexem; duplikát, Tom VIII–XI)](https://vademecum.nacr.cz/vademecum/permalink?xid=e0c4568a-a325-4d10-b8d8-64c1dfb403df) | matrika | 1866–1873 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1341, N 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=26db411b-4bc5-467e-b248-3b48c7ba5f05) | matrika | 1874–1901 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1352, Z 1900–1902, 1905–1949 (index 1905–1912)](https://vademecum.nacr.cz/vademecum/permalink?xid=07f0ee74-aa22-4e76-b5e4-046e37da47fd) | matrika | 1900–1902, 1905–1949 |  |  | 2 (Z 2) |
-
-## cuzk (8)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Pulice (Gross Pulitz a Klein Pulitz), indikační skica 1840, Hradecký kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=HRA372018400) | indikační skica stabilního katastru | 1840 |  |  | 4 (K 4) |
-| [Libákovice (Libaken), indikační skica 1838, Klatovský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KLA222018380) | indikační skica stabilního katastru | 1838 |  |  | 5 (K 5) |
-| [Svojšice (Swoischitz) s Novou Vsí (Neudorf), indikační skica 1841, Kouřimský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KRM398018410) | indikační skica stabilního katastru | 1841 |  |  | 5 (K 5) |
-| [Malý Bor (Klein Bor), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA043018370) | indikační skica stabilního katastru | 1837 |  |  | 1 (K 1) |
-| [Malé Hydčice, indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA188018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
-| [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
-| [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
-| [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
-
-## ndk (5)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
