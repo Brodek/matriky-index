@@ -42,3 +42,51 @@ snimek	datum	typ	obec	osoby	ostatni	jistota	cetl	odkaz
 12L	1837-12-12	Z	Přestavlky 64	zemřelý: Josef Kohn	č. 44; 73 let; an Altersschwäche	vysoká	claude-opus-5-5/xhigh 2026-10-22	
 12L	1837-12-23[?]	Z	Přestavlky 55	zemřelý: Hermann Wohrizek[?]	pod č. 44 (dopsáno); věk neuveden; příčina nedočtena	nízká	claude-opus-5-5/xhigh 2026-10-22	
 12R	1838-02[?]-25	Z	Přestavlky 55	zemřelá: Helena Wohrizek	č. 45; 76 let; Altersschwäche; poslední zápis, „Vidi … 25. Februar 1841 … Pfarrer zu Hrochowteinitz“	střední	claude-opus-5-5/xhigh 2026-10-22	
+4	1806–1838	J	—	štítek: Kultusgemeinde Hermanstädtel, Geburtsmatriken u. Sterbematrik, wird in Hermanstädtel geführt, früher in Přestawlk, vom Jahre 1806–1838, Index in einem extra Bande	pravá strana: poznámka o certifikátu 2. 3. 1847 – Nathan Herrmann, fünftgeborner Sohn des verstorbenen Abraham Herrmann, * 1805 Přestawlk	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5L	1806-02-21	N	Přestavlky	dítě: Jacob; otec: Gabriel Herrmann; matka: Rosalia	post 1; „Seber“ = Feber; m., manž.; kmotr 0; obřezal Emanuel Taußig[?]	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5L	1810-10-10	N	Přestavlky	dítě: Rosalia; otec: Gabriel Herrmann; matka: Rosalia	post 2; ž., manž.	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5L	1815-10-04	N	Přestavlky 5	dítě: Mari; otec: Philipp Wohřizek; matka: Regina	post 3	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5L	1815-07-15	N	Přestavlky	dítě: Anne; otec: Gabriel Herrmann; matka: Rosalia	post 4; rok psán jako 1818[?], rejstřík H má 1815	střední	claude-opus-5-5/xhigh 2026-11-14
+5L	1818-01-04	N	Přestavlky 5	dítě: Jermias; otec: Veith Munk; matka: Ludmila	post 5; m.; kmotr Elias Breitenfeld[?]; obřezal „Vater selbst“	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5L	1818-01-12	N	Přestavlky	dítě: Sara; otec: Natan Flaschner	post 6; matka nevyplněna[?]	střední	claude-opus-5-5/xhigh 2026-11-14
+5L	1818-03-15	N	Přestavlky 38	dítě: Rosalia; otec: Samuel[?] Schwelb[?]; matka: Malke[?]	post 7	nízká	claude-opus-5-5/xhigh 2026-11-14
+5L	1818-09-11	N	Přestavlky 12	dítě: Leopold; otec: Samuel Herrmann; matka: Rosalia	post 8	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5L	1818-12-08	N	Přestavlky 15	dítě: Johanna; otec: Gabriel Herrmann; matka: Rosalia	post 9	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5L	1819-02-12	N	Přestavlky 3	dítě: Elisabeth; otec: Philipp Wohřizek; matka: Regina	post 10; „Seber“ = Feber	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5L	1819-01-29	N	Přestavlky 2	dítě: Ester; otec: Veit Wohřizek; matka: Anna	post 11	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5L	1819-09-02	N	Přestavlky 4	dítě: Barbara; otec: Bernard Munk; matka: Helena	post 12	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5L	1819-09-15	N	Přestavlky	dítě: Bernard; otec: Abraham Munk; matka: Fany[?]	post 13; kmotr Polak von Leitomischl; obřezal Veith Munk	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5L	1819-10-02	N	Přestavlky 24	dítě: Isac; otec: Jacob Kraus; matka: Franziska	post 14; kmotr Salamon Kraus; obřezal Veith Munk	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5R	1819-12-01	N	Přestavlky 15	dítě: Emanuel; otec: Gabriel H[errmann]; matka: Rosalia	post 15; kmotr Israel Herm[ann]; obřezal Veith Munk	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5R	1820-01-16	N	Přestavlky 59	dítě: Marie; otec: Veith Munk; matka: Ludmila	post 16	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5R	1820-03-10	N	Přestavlky	dítě: Anne; otec: Samuel Herrmann; matka: Rosalia	post 17	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5R	1821-02-29[?]	N	Přestavlky 44	dítě: Samuel; otec: Jakob Kraus; matka: Franziska	post 18; měsíc „Seber“ (únor 1821 nemá 29. den – čtení dne nejisté); kmotr Lapor[?] aus Lusche; obřezal Veith Munk	střední	claude-opus-5-5/xhigh 2026-11-14
+5R	1821-10-15	N	Přestavlky 15	dítě: Franziska; otec: Gabriel Herrmann; matka: Rosalia	post 19	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5R	1822-01-04	N	Přestavlky 0	dítě: Salamon; otec: Jacob Dörfler (nad škrtnutým „Gabriel Herrmann“); matka: Ludmila Bik	post 20; m., nemanž.; kmotr 0; obřezal Veith Munk; poznámka „legitimirt durch nachgefolgte Ehe am 27t Juli 1852“; = Salomon Pick ∞ 1849, později „Salomon Dörfler, recte Pick“	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5R	1822-03-14	N	Přestavlky 5	dítě: Jetto; otec: Veith Munk; matka: Ludmila	post 21	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5R	1822-07-05	N	Přestavlky 3	dítě: Anne; otec: Philipp Wohřizek; matka: Regina	post 22	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5R	1822-07-17	N	Přestavlky 0	dítě: Jonas; otec: Moyses[?] Schwarz[?]; matka: Ewa	post 23; kmotr Jakob[?] … aus Kaunitz[?]; obřezal „Vater selbst“[?]	nízká	claude-opus-5-5/xhigh 2026-11-14
+5R	1822-09-20	N	Přestavlky 0	dítě: Benjamin; otec: Samuel Herrmann; matka: Rosalia	post 24; kmotr Gabriel Herrmann; obřezal Veith Munk	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5R	1822-10-12[?]	N	Přestavlky	dítě: Gabriel; otec: Veith Wohřizek; matka: Anna	post 25; kmotr Jonas Löwi; obřezal Moyses Schwarz[?]	střední	claude-opus-5-5/xhigh 2026-11-14
+5R	1822-10-12	N	Přestavlky 44	dítě: Salomon[?]/Salome[?]; otec: Jacob Kraus; matka: Franziska	post 26; značky Weibl.+Ehel.[?]	nízká	claude-opus-5-5/xhigh 2026-11-14
+5R	1823-04-04	N	Přestavlky 0	dítě: Josua; otec: 0; matka: Ewa Wohřizek	post 27; m., nemanž.; kmotr Moyses aus Mingolitz[?]; obřezal Veith Munk	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5R	1823-04-05	N	Přestavlky 0	dítě: Elias; otec: Abraham Munk; matka: Mari	post 28; obřezal Veith Munk	vysoká	claude-opus-5-5/xhigh 2026-11-14
+5R	1823-07-19	N	Přestavlky 0	dítě: Mari; otec: Josef[?] Kraus; matka: Rosalia	post 29	střední	claude-opus-5-5/xhigh 2026-11-14
+5R	1823-08-24	N	Přestavlky 15	dítě: Manuel[?]; otec: Gabriel Herrmann; matka: Rosalia	post 30	střední	claude-opus-5-5/xhigh 2026-11-14
+5R	1823-09-09	N	Přestavlky 0	dítě: Löwy; otec: Moyses Schwarz[?]; matka: Ewa	post 31; kmotr Jonas Löwi[?]	střední	claude-opus-5-5/xhigh 2026-11-14
+6L	1824-03-11	N	Přestavlky 0	dítě: Nane; otec: Jakob Dörfler; matka: Ludmila Pik	post 32; ž.; značka ve sl. Ehel. (nemanželství neoznačeno); kmotr 0; bába/obřezovatel 0; legitimační poznámka není	vysoká	claude-opus-5-5/xhigh 2026-11-14
+6L	1824-12-01	N	Přestavlky 0	dítě: Mariana; otec: Emanuel Herrmann; matka: Rosalia[?]	post 33	střední	claude-opus-5-5/xhigh 2026-11-14
+6L	1825-01-15	N	Přestavlky 15	dítě: Helena[?]; otec: Gabriel Herrmann; matka: Rosalia	post 34; jméno dítěte čteno nejistě, rejstřík H: Herrmann Helena 15. 1. 1825 V. Gabriel	střední	claude-opus-5-5/xhigh 2026-11-14
+6L	1825-02-03	N	Přestavlky 0	dítě: Emanuel; otec: Abraham Munk; matka: …[?] Porges	post 35; kmotr Salamon Löw; obřezal Veith Munk	střední	claude-opus-5-5/xhigh 2026-11-14
+6L	1825-09-08	N	Přestavlky 44	dítě: Salaman; otec: Josef[?] Kraus; matka: Rosalia	post 36; kmotr Moises[?] Pik; obřezal Veith Munk	střední	claude-opus-5-5/xhigh 2026-11-14
+6L	1825-09-20	N	Přestavlky 0	dítě: Fany; otec: Tobias Kowanitz[?]; matka: Barbara	post 37	střední	claude-opus-5-5/xhigh 2026-11-14
+6L	1825-11-01	N	Přestavlky 5	dítě: Nany; otec: Veith Munk; matka: Ludmila	post 38; „9ber“	vysoká	claude-opus-5-5/xhigh 2026-11-14
+6L	1825-12-07	N	Přestavlky 44	dítě: Salaman[?]; otec: Jacob Kraus; matka: Franziska	post 39; kmotr Josef[?] Kraus; obřezal Moyses Schwarz[?]	střední	claude-opus-5-5/xhigh 2026-11-14
+6L	1826-05-10	N	Přestavlky 2	dítě: Natan; otec: Veith Wohřizek; matka: Anna	post 40; kmotr Wolf Aschler[?]; obřezal Veith Munk	střední	claude-opus-5-5/xhigh 2026-11-14
+6L	1826-06-03	N	Přestavlky 0	dítě: Joachim; otec: Abraham Munk; matka: Katharina[?] Porges	post 41; obřezal Veith Munk	střední	claude-opus-5-5/xhigh 2026-11-14
+6L	1826-09-08	N	Přestavlky 5	dítě: Philipp; otec: Moses Pik; matka: Rosalia Munk	post 42; kmotr Gabriel Herrmann[?]; obřezal Veith Munk	vysoká	claude-opus-5-5/xhigh 2026-11-14
+6L	1826-09-29	N	Přestavlky 67	dítě: Sigmund; otec: Joachim Flaschner; matka: Mariana	post 43; kmotr Josef Flaschner; obřezal Veith Munk	vysoká	claude-opus-5-5/xhigh 2026-11-14
+6L	1826-11-30	N	Přestavlky	dítě: Aron; otec: Jakob Dörfler („Vater“, zapsán ve sl. Mutter); matka: Ludmila Pik (zapsána ve sl. Vater)	post 44; „9ber 30“; m., nemanž.; kmotr Lazar Brecher[?]; obřezal Emanuel Kaufmann[?]; legitimační poznámka není; rejstřík noz-2436 má 30. 9. 1826	vysoká	claude-opus-5-5/xhigh 2026-11-14
+6L	1827-03-14	N	Přestavlky 0	dítě: Rosalia; otec: Tobias Kowanitz[?]; matka: Barbara	post 45	střední	claude-opus-5-5/xhigh 2026-11-14
+6L	1827-03-18	N	Přestavlky 66	dítě: Abraham; otec: Samuel[?] Herrmann; matka: Veronika[?]	post 46; kmotr Emanuel Baran[?]; obřezal Veith Munk; rejstřík H má Abraham 18. 3. 1826 V. Samuel	nízká	claude-opus-5-5/xhigh 2026-11-14
+6L	1827-05-12	N	Přestavlky 0	dítě: Moses; otec: Veith Munk; matka: Ludmila	post 47; obřezal „Vater selbst“; rejstřík M má 12. 5. 1826	střední	claude-opus-5-5/xhigh 2026-11-14
