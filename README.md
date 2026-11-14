@@ -68,6 +68,7 @@ tools/
                   k posouzení); běží u každého pull requestu
   hledej.py       volné hledání slova ve všech knihách (precteno, výklady, OCR s opravami; Levenshtein na začátku slova)
   pruhy.py        čtení skenů: rejstřík po svislých pruzích, kontrast vybledlé strany, mapa knihy z horních okrajů
+  mapa.py         body pro Mapu matrik ze zápisů N/O/Z (bez jmen); posílá je workflow mapa.yml po každé změně dat
   opravy.py       přidání opravy strojového čtení do opravy.tsv
   vyklad.py       přidání výkladu (chyby písaře) do vyklad.tsv
   pero_import.py  převod exportu z PERO do knihy/…

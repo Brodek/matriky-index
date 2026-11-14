@@ -1,0 +1,67 @@
+# Body z indexu do Mapy matrik (ondrnovy/mapa-matrik): tools/mapa.py převede zápisy N/O/Z na body bez jmen
+# a workflow je pošle jako pull request z forku pe-pan/mapa-matrik. Kontrola mapy body `by: pe-pan`
+# a `by: matriky-index` z účtu pe-pan slučuje sama; ubývající body nebo smazanou knihu dá správci mapy.
+# Dokud je pull request otevřený, další běh jen přepíše jeho větev a popis.
+#
+# Token: secret MAPA_TOKEN = klasický token účtu pe-pan s oprávněním public_repo (push do forku, pull request do mapy).
+# Bez něj se převod jen přeskočí.
+name: Převod do Mapy matrik
+on:
+  push:
+    branches: [main]
+    paths: ["knihy/**"]
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: mapa
+  cancel-in-progress: true
+jobs:
+  prevod:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.MAPA_TOKEN }}
+      MAPA: ondrnovy/mapa-matrik
+      FORK: pe-pan/mapa-matrik
+      VETEV: z-indexu-matrik
+    steps:
+      - name: Bez tokenu se nic neposílá
+        if: env.GH_TOKEN == ''
+        run: echo "Chybí secret MAPA_TOKEN – převod do Mapy matrik se přeskakuje." >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/checkout@v4
+        if: env.GH_TOKEN != ''
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        if: env.GH_TOKEN != ''
+        with:
+          python-version: "3.12"
+      - name: Převod
+        if: env.GH_TOKEN != ''
+        run: |
+          pip install pyyaml
+          git clone --depth 1 "https://github.com/$MAPA.git" ../mapa
+          python -I tools/mapa.py ../mapa/data --souhrn ../souhrn.md > /dev/null
+          cat ../souhrn.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Pull request do mapy
+        if: env.GH_TOKEN != ''
+        run: |
+          cd ../mapa
+          git add -A data
+          if git diff --cached --quiet; then
+            echo "Mapa je s indexem v souladu, není co poslat." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -q -m "Body z indexu matrik ($(date -u +%F))"
+          git push -q --force "https://x-access-token:$GH_TOKEN@github.com/$FORK.git" "HEAD:refs/heads/$VETEV"
+          cislo=$(gh api "repos/$MAPA/pulls?head=${FORK%%/*}:$VETEV&state=open" --jq '.[0].number // empty')
+          if [ -n "$cislo" ]; then
+            gh pr edit "$cislo" --repo "$MAPA" --body-file ../souhrn.md
+            echo "Aktualizován pull request $MAPA#$cislo." >> "$GITHUB_STEP_SUMMARY"
+          else
+            gh pr create --repo "$MAPA" --head "${FORK%%/*}:$VETEV" --base main --title "Body z indexu matrik" \
+              --body-file ../souhrn.md >> "$GITHUB_STEP_SUMMARY"
+          fi

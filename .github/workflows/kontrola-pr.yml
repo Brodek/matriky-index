@@ -179,5 +179,6 @@ jobs:
           fi
           gh pr merge "$PR" --repo "$repo" --merge --match-head-commit "$HEAD_SHA"
           gh pr comment "$PR" --repo "$repo" --body "$DIKY"
-          # Sloučení tokenem workflow nespustí workflow na push do main; přehled, web a kontrolu indexu spustí tady.
-          for w in prehled.yml pages.yml kontrola.yml; do gh workflow run "$w" --repo "$repo" --ref main; done
+          # Sloučení tokenem workflow nespustí workflow na push do main; přehled, web, kontrolu indexu a převod do
+          # Mapy matrik spustí tady.
+          for w in prehled.yml pages.yml kontrola.yml mapa.yml; do gh workflow run "$w" --repo "$repo" --ref main; done
