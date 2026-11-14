@@ -3,11 +3,10 @@ kniha: "horazdovice-05-zo"
 nazev: "Horažďovice 05 – zemřelí a oddaní"
 farnost: "Horažďovice"
 roky: "1699–1747"
-obsah: "Z (snímky 185–252) a O (269–322); oddíl N je v horazdovice-05"
+obsah: "Z (snímky 186–253) a O (270–323); oddíl N je v horazdovice-05"
 url: "https://www.portafontium.eu/register/soap-pn/horazdovice-05"
 import:
   prefix: "horazdovice-05"
-  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
@@ -15,7 +14,7 @@ ocr:
   model: "Czech Handwritten"
   datum: "2026-10-22"
   export: "horazdovice-05-zo.pagexml.zip"
-  snimky: "185–200, 202–252, 269–322"
+  snimky: "186–201, 203–253, 270–323"
   stranek: 121
   radku: 13989
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
@@ -26,7 +25,7 @@ ocr:
   nastaveni: "rozbor rozložení automaticky, jazykový model žádný; nahráno 2400 px (Opočno, Uhřínov) a 2600 px šedotónově (Horažďovice)"
   datum: "2026-11-13"
   export: "export_job_31977240.zip"
-  snimky: "277–282"
+  snimky: "278–283"
   stranek: 6
   radku: 421
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky-transkribus-czech-m1.tsv); text je strojový, nekontrolovaný"

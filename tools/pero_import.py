@@ -9,7 +9,9 @@ bundle assembled in the browser ("### PAGE <id>" followed by the page's PAGE XML
 
 Everything the import needs is data in the book's kniha.yaml, so a new reading changes nothing outside knihy/:
 - `import: {prefix, delitel}` – prefix is the part of the image file name before "_<number>" (empty when the export
-  holds one book only), delitel turns the file number into the snímek on the portal (file number // delitel);
+  holds one book only), delitel turns the file number into the snímek on the portal (file number // delitel). A book
+  with snimky.tsv (Porta fontium, tools/scan/pf_snimky.py) takes the snímek from it instead: the scan's position on
+  the portal, which file numbers do not give when the book skips or inserts files;
 - an `ocr` entry whose `export` names the export (file name, with or without .zip/.pagexml.zip), with `soubor`
   (ocr-pero.tsv, or ocr-<cteni>.tsv for another tool or model), `nastroj`, `dokument`, `model`, `nastaveni`, `datum`.
   An export that mixes models (Transkribus) has one entry per model, told apart by `model_id` or "(model <id>)" in
@@ -130,11 +132,30 @@ def file_number(image):
     return int(m.group(1)) if m else None
 
 
-def snimek(data, image):
-    n = file_number(image)
-    if n is None:
+_SNIMKY = {}
+
+
+def snimky_knihy(folder):
+    """{(file number, suffix): snímek} from the book's snimky.tsv (scans in the portal's order), {} without it."""
+    if folder not in _SNIMKY:
+        path = folder / "snimky.tsv"
+        found = {}
+        if path.exists():
+            with open(path, encoding="utf-8", newline="") as f:
+                for row in list(csv.reader(f, delimiter="\t"))[1:]:
+                    if len(row) >= 2 and (m := re.search(r"(\d{4})(-[a-z]+)?$", row[1])):
+                        found[(int(m[1]), m[2] or "")] = row[0]
+        _SNIMKY[folder] = found
+    return _SNIMKY[folder]
+
+
+def snimek(folder, data, image):
+    m = re.search(r"(\d{4})(-[a-z]+)?$", image)
+    if not m:
         return ""
-    return str(n // int((data.get("import") or {}).get("delitel", 10)))
+    if snimky := snimky_knihy(folder):
+        return snimky.get((int(m[1]), m[2] or ""), "")
+    return str(int(m[1]) // int((data.get("import") or {}).get("delitel", 10)))
 
 
 def entry_for(entries, info, image):
@@ -230,7 +251,10 @@ def main():
             data, book_entries = books[folder]
             entry = entry_for(book_entries, info, image)
             cteni = cteni_of(entry.get("soubor"))
-            snim = snimek(data, image)
+            snim = snimek(folder, data, image)
+            if not snim and snimky_knihy(folder):
+                sys.exit(f"{image}: the file is not in {folder.relative_to(KNIHY).as_posix()}/snimky.tsv "
+                         f"(tools/scan/pf_snimky.py refreshes it)")
             page_rows.setdefault((folder, cteni), []).append([snim, image, width, height, len(lines)])
             for x, y, wd, ht, conf, text in lines:
                 rows.setdefault((folder, cteni), []).append(

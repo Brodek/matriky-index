@@ -3,11 +3,10 @@ kniha: "maly-bor-06"
 nazev: "Malý Bor 06"
 farnost: "Malý Bor"
 roky: "1764–1784"
-obsah: "N (snímky 5–95), O od 1764 (96–129), Z (130–187); latinsky"
+obsah: "N (snímky 5–96), O od 1764 (97–131), Z (132–190); latinsky"
 url: "https://www.portafontium.eu/register/soap-pn/maly-bor-06"
 import:
   prefix: "maly-bor-06"
-  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
@@ -15,7 +14,7 @@ ocr:
   model: "Czech Handwritten"
   datum: "2026-10-22"
   export: "maly-bor-06.pagexml.zip"
-  snimky: "5–187"
+  snimky: "5–64, 66–119, 121–151, 153–190"
   stranek: 183
   radku: 34691
   poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"

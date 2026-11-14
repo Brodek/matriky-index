@@ -9,7 +9,6 @@ url: "https://www.portafontium.eu/register/soap-pn/kasejovice-03"
 poznamka: "zápisy přečtené očima: N 0030–0440 (1667–1676) a 0580–1080 (1677–1689), O 0450–0570 a 1090–1260 (1667–1689); příjmení většinou čtena ze snímků 1600 px, proto nízká jistota"
 import:
   prefix: "kasejovice-03"
-  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

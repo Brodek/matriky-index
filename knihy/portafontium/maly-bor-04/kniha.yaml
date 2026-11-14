@@ -7,7 +7,6 @@ obsah: "N 1727–1744 (snímky 3–78, mezi nimi listy x; na snímku 72 i oddan�
 url: "https://www.portafontium.eu/register/soap-pn/maly-bor-04"
 import:
   prefix: "maly-bor-04"
-  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

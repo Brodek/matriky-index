@@ -59,6 +59,7 @@ knihy/<archiv>/<kniha>/
   ocr-<cteni>.tsv,  další strojová čtení téže knihy (jiný nástroj nebo model, např. ocr-transkribus-czech-m1.tsv,
   stranky-<cteni>.tsv   ocr-scribblesense.tsv) ve stejném formátu; každé čtení má vlastní dvojici souborů
   precteno.tsv    zápisy přečtené očima (formát níže)
+  snimky.tsv      jen Porta fontium: snímek (pořadí na portálu) a soubor obrázku; z tools/scan/pf_snimky.py
   opravy.tsv      opravy strojového čtení (viz Vrstvy a opravy)
   vyklad.tsv      chyby písaře doložené jinými zápisy (formát níže)
 knihy/testy/      pokusná OCR (výřezy)
@@ -72,13 +73,15 @@ tools/
   prehled.py      vygeneruje PREHLED.md
   web.py          vyrobí webovou stránku indexu do _site/ (GitHub Pages)
   pero/           balik.py (skeny do balíků ≤ 9,4 MB), pero.js (nahrávání a export ve stránce PERO) – viz PERO.md
-  scan/           stahování skenů: pfl.py, pf64.py (Porta fontium), ebget.py (eBadatelna SOA Praha), zget.py + rzip.py (VČA Zámrsk; vcakniha.py = celá kniha pro PERO),
+  scan/           stahování skenů: pfl.py (Porta fontium podle snímku, i pozemkové knihy a urbáře adresou knihy; pf_snimky.py = snimky.tsv knihy), ebget.py (eBadatelna SOA Praha), zget.py + rzip.py (VČA Zámrsk; vcakniha.py = celá kniha pro PERO),
                   zayt.py, books.py, bfilter.py (zayt.org), mza.py (Acta Publica, MZA Brno), zaopava.py (ZA Opava, cesty
                   ke snímkům zjistí tools/pero/zaopava.js v prohlížeči), cr.py (výřez skenu);
                   slusne.py = společný limit dotazů
 ```
 
-Archivy: `portafontium` (SOA Plzeň), `soapraha` (eBadatelna, kniha = id matriky), `soatrebon`, `vca`, `zayt`, `nacr`,
+Archivy: `portafontium` (SOA Plzeň; snímek = pořadí snímku na portálu, jak ho ukazuje prohlížeč a jak ho píše Mapa
+matrik, ne číslo souboru obrázku – soubory mají mezery i vložené listy, převod dává `snimky.tsv` knihy z
+`tools/scan/pf_snimky.py`), `soapraha` (eBadatelna, kniha = id matriky), `soatrebon`, `vca`, `zayt`, `nacr`,
 `mza` (Acta Publica, kniha = id z adresy matrika/detail/<id>), `ahmp`, `familysearch` (kniha = číslo DGS),
 `zaopava`, `konskripce` (policejní přihlášky NA), `cuzk` (indikační skici stabilního katastru, kniha = id rastru
 z adresy ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=<id>; čtou se v prohlížeči archivu map ČÚZK),
@@ -156,7 +159,7 @@ první řádek hlavička:
 
 | sloupec | obsah |
 |---|---|
-| snimek | číslo snímku na portálu a strana, např. `124R` |
+| snimek | číslo snímku na portálu (pořadí v prohlížeči archivu) a strana, např. `124R` |
 | datum | datum události v jednom z tvarů `1756-01-14`, `1757-04`, `~1723` nebo rozsah `1756–1758` (`1786/1787`); neznámý den nebo měsíc se vynechá, nejistě přečtené datum se zapíše bez otazníku a nejistota do `ostatni` (např. `datum nejisté`), aby šlo řadit a hledat; u `J` smí být prázdné |
 | typ | `N` narození/křest, `O` sňatek, `Z` úmrtí/pohřeb, `P` převod gruntu v pozemkové knize (koupě, dědictví, přiženění, odhad), `S` řádek soupisu poddaných nebo sčítání lidu, `K` katastrální mapa (indikační skica: číslo domu, majitel), `J` jiné (ohlášky, atestát, rejstřík, familiant, prázdná strana) |
 | obec | obec dnešním názvem a číslo domu (`Lhota 7`, `Praha – Nové Město 512`), aby šlo hledat podle místa; dobový tvar patří do `osoby` nebo `ostatni`, nejasnou obec nechte prázdnou; u pozemkové knihy i jméno gruntu (`Nová Ves 3, grunt Horákovský`) |

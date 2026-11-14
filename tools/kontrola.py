@@ -28,6 +28,7 @@ HLAVICKY = {
     "stranky.tsv": ["snimek", "soubor", "sirka_obrazku", "vyska_obrazku", "radku"],
     "opravy.tsv": ["snimek", "soubor", "strana", "x", "y", "sirka", "vyska", "puvodne", "spravne", "kdo", "jistota"],
     "vyklad.tsv": ["snimek", "datum", "udaj", "napsano", "spravne", "doklady", "kdo", "jistota"],
+    "snimky.tsv": ["snimek", "soubor"],
 }
 TYPY = {"N", "O", "Z", "P", "S", "K", "J"}
 JISTOTA = ("vysoká", "střední", "nízká")
@@ -62,8 +63,10 @@ OBEC_S_OSOBAMI = re.compile(r"^\s*(ženich|nevěsta|dítě|zemřel[áý]?|otec|m
 # Hlavička hunku diffu: +<první řádek>[,<počet>]; počet chybí, když je řádek jeden.
 HUNK = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 # Kniha smí obsahovat jen tyto soubory; skeny a celé exporty se do indexu nedávají.
-POVOLENE = re.compile(r"^(kniha\.yaml|precteno\.tsv|opravy\.tsv|vyklad\.tsv|ocr-[a-z0-9-]+\.tsv|"
+POVOLENE = re.compile(r"^(kniha\.yaml|precteno\.tsv|opravy\.tsv|vyklad\.tsv|snimky\.tsv|ocr-[a-z0-9-]+\.tsv|"
                       r"stranky(?:-[a-z0-9-]+)?\.tsv)$")
+# Konec názvu obrázku Porta fontium: číslo souboru a přípona (…_0100-o). Číslo souboru není číslo snímku.
+SOUBOR_PF = re.compile(r"(\d{4})(-[a-z]+)?$")
 # E-mail, telefon nebo cesta na disk přispěvatele do veřejného indexu nepatří. Písmeno s dvojtečkou za písmenem je
 # schéma adresy (https://), ne disk.
 OSOBNI = re.compile(r"[\w.+-]+@[\w-]+\.[a-z]{2,}|\+42[01] ?\d{3} ?\d{3} ?\d{3}|\b[67]\d{2} \d{3} \d{3}\b|"
@@ -182,6 +185,49 @@ def kontrola_knihy(d, h, prisne, pridane=None, nova=False):
         for e in ocr if isinstance(ocr, list) else [ocr]:
             if isinstance(e, dict) and e.get("soubor") and not (d / str(e["soubor"])).exists():
                 h.chyba(rel(ky), f"ocr: soubor {e['soubor']} v knize není")
+    if archiv == "portafontium":
+        kontrola_snimku_pf(d, h)
+
+
+def snimky_pf(d):
+    """{(číslo souboru, přípona): snímek} ze snimky.tsv knihy Porta fontium, None bez něj."""
+    p = d / "snimky.tsv"
+    if not p.exists():
+        return None
+    return {(int(m[1]), m[2] or ""): r[0] for r in tsv_radky(p)[1:] if len(r) >= 2 and (m := SOUBOR_PF.search(r[1]))}
+
+
+def kontrola_snimku_pf(d, h):
+    """Porta fontium: snímek je pořadí na portálu ze snimky.tsv, ne číslo souboru (to má mezery a vložené listy)."""
+    snimky = snimky_pf(d)
+    if snimky is None:
+        h.varuj(rel(d), f"chybí snimky.tsv (python tools/scan/pf_snimky.py {d.name}) – bez něj nejde ověřit čísla snímků")
+        return
+    posledni = len(snimky)
+    for p in sorted(d.glob("*.tsv")):
+        if p.name == "snimky.tsv":
+            continue
+        radky = tsv_radky(p)
+        if not radky or "snimek" not in radky[0]:
+            continue
+        si = radky[0].index("snimek")
+        fi = radky[0].index("soubor") if "soubor" in radky[0] else None
+        for i, r in enumerate(radky[1:], start=2):
+            if len(r) <= si or not r[si].strip():
+                continue
+            kde, snimek = f"{rel(p)}:{i}", r[si]
+            if fi is not None and len(r) > fi and (m := SOUBOR_PF.search(r[fi])):
+                spravne = snimky.get((int(m[1]), m[2] or ""))
+                if spravne is None:
+                    h.chyba(kde, f"soubor {r[fi]} v snimky.tsv knihy není")
+                elif re.sub(r"[LR]$", "", snimek) != spravne:
+                    h.chyba(kde, f"snímek {snimek} nesouhlasí se souborem {r[fi]} (podle snimky.tsv snímek {spravne})")
+                continue
+            if re.search(r"\d{4}-[a-z]", snimek):
+                h.chyba(kde, f"snímek {snimek} je číslo souboru – u Porta fontium se píše pořadí snímku na portálu "
+                             "(jako v prohlížeči, viz snimky.tsv knihy)")
+            elif any(int(n) > posledni for n in re.findall(r"\d+", snimek)):
+                h.chyba(kde, f"snímek {snimek}, kniha má na portálu {posledni} snímků")
 
 
 def normalizuj_url(url):

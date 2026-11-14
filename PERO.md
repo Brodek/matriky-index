@@ -8,7 +8,7 @@ vlastní účet v PERO; všechno níže běží v prohlížeči přihlášeném 
 
 | archiv | jak k obrázkům |
 |---|---|
-| Porta fontium (SOA Plzeň) | přímo z prohlížeče (archiv povoluje CORS): adresy `iipsrv.fcgi?FIF=…&WID=4000&CVT=jpeg`, seznam snímků dá `tools/scan/pfl.py` |
+| Porta fontium (SOA Plzeň) | přímo z prohlížeče (archiv povoluje CORS): adresy `iipsrv.fcgi?FIF=…&WID=4000&CVT=jpeg`, seznam snímků v pořadí portálu dá `tools/scan/pf_snimky.py` (`snimky.tsv` knihy) |
 | Acta Publica (MZA Brno) | přímo z prohlížeče: `python -I tools/scan/mza.py pero <id> <a-b> <prefix> [sirka]` vypíše `[[soubor, url], …]` |
 | VČA – SOA Zámrsk | na disk: `python -I tools/scan/vcakniha.py <kód> <sign> <složka> <prefix>` (celá kniha, šedotónově, 2400 px) |
 | zayt.org (Národní archiv) | na disk po stranách: `tools/scan/zayt.py`, oříznout na knihu |
@@ -57,7 +57,8 @@ nejdřív zkontroluj náhled jednoho souboru. Číslo v názvu souboru je čísl
    url: "https://aron.vychodoceskearchivy.cz/apu/…"
    import:
      prefix: "uhersko532"   # název obrázku před „_<číslo>“; prázdný, když je v exportu jen tato kniha
-     delitel: 1             # snímek = číslo souboru // delitel (Porta fontium 10, soubory po jedné 1)
+     delitel: 1             # snímek = číslo souboru // delitel (soubory po jedné 1); u Porta fontium se
+                            # nepíše, snímek dá snimky.tsv knihy (tools/scan/pf_snimky.py <kniha>)
    ocr:
    - soubor: "ocr-pero.tsv"
      nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"

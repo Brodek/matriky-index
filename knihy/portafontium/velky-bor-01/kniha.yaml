@@ -7,7 +7,6 @@ obsah: "N 1707–1753 (snímky 2–180), O 1708–1754 (181–228); snímek 135 
 url: "https://www.portafontium.eu/register/soap-pn/velky-bor-01"
 import:
   prefix: "velky-bor-01"
-  delitel: 10
 ocr:
 - soubor: "ocr-pero.tsv"
   nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
