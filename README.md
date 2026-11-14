@@ -67,6 +67,7 @@ tools/
   kontrola.py     kontrola dat (formát, povinná pole, lhůty pro žijící lidi, doklady výkladů, u pull requestu i body
                   k posouzení); běží u každého pull requestu
   hledej.py       volné hledání slova ve všech knihách (precteno, výklady, OCR s opravami; Levenshtein na začátku slova)
+  pruhy.py        čtení skenů: rejstřík po svislých pruzích, kontrast vybledlé strany, mapa knihy z horních okrajů
   opravy.py       přidání opravy strojového čtení do opravy.tsv
   vyklad.py       přidání výkladu (chyby písaře) do vyklad.tsv
   pero_import.py  převod exportu z PERO do knihy/…
@@ -76,7 +77,7 @@ tools/
   scan/           stahování skenů: pfl.py (Porta fontium podle snímku, i pozemkové knihy a urbáře adresou knihy; pf_snimky.py = snimky.tsv knihy), ebget.py (eBadatelna SOA Praha), zget.py + rzip.py (VČA Zámrsk; vcakniha.py = celá kniha pro PERO),
                   zayt.py, books.py, bfilter.py (zayt.org), mza.py (Acta Publica, MZA Brno), zaopava.py (ZA Opava, cesty
                   ke snímkům zjistí tools/pero/zaopava.js v prohlížeči), cr.py (výřez skenu);
-                  slusne.py = společný limit dotazů
+                  slusne.py = společný limit dotazů a mezipaměť stažených obrázků (~/.cache/rodokmen-snimky)
 ```
 
 Archivy: `portafontium` (SOA Plzeň; snímek = pořadí snímku na portálu, jak ho ukazuje prohlížeč a jak ho píše Mapa

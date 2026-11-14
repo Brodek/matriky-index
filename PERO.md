@@ -77,6 +77,9 @@ nejdřív zkontroluj náhled jednoho souboru. Číslo v názvu souboru je čísl
 ## 5. Hledání a čtení
 
 - `python tools/hledej.py <slovo> --maxd 2` – volné hledání ve strojovém textu (vzácná příjmení PERO komolí).
+- Rejstřík čti po svislých pruzích (`python tools/pruhy.py sloupce <sken> --sloupce 0.3,0.55,0.8`), vybledlou stranu
+  s kontrastem (`pruhy.py kontrast`); „v rejstříku není“ a „strana je prázdná“ platí až potom. Stavbu knihy (oddíly po
+  vsích, ročníky) ukáže `pruhy.py mapa` z horních okrajů několika snímků.
 - Zásah ověř na skenu; přečtený zápis zapiš celý do `precteno.tsv` (i když se netýká tvé rodiny – ušetří to práci
   dalším), opravu strojového čtení přes `tools/opravy.py`.
 - Celé knihy očima nelistuj: na to je PERO. Prázdný výsledek hledání nepřítomnost nedokazuje.

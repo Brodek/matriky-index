@@ -9,13 +9,20 @@
     python slusne.py stav          # stav limitů a blokací
     python slusne.py odblokuj <server>
     python slusne.py zablokuj <server> <hodin>   # dobrovolná pauza, např. když archiv nestíhá
+    python slusne.py mezipamet [smaz <dní>]      # velikost mezipaměti obrázků; smazat starší než <dní>
 
 Limity: stránky, hledání a API 1 dotaz za 2 s, obrázky, dlaždice a čtení zipu 5 za 1 s; přetížené archivy mají
 přísnější limit v POMALE. Po 429 nebo 503 je server
 30 minut zablokovaný pro všechny procesy: pockej() pak vyhodí Zablokovano a nic se znovu nezkouší. Po třech
 nepovedených spojeních za sebou (server odmítá nebo neodpovídá) je odstavený na 10 minut. Archivy za dávky
 rychlých dotazů blokují IP adresu, proto musí každé stahování jít přes tento modul.
+
+Obrázky (druh "obrazek", celý soubor bez Range) stažené přes urlopen se ukládají do mezipaměti společné pro všechny
+skripty a sezení (~/.cache/rodokmen-snimky, jinde SLUSNE_MEZIPAMET); stejná adresa se podruhé ze serveru nestahuje.
+SLUSNE_BEZ_MEZIPAMETI=1 ji vypne.
 """
+import hashlib
+import io
 import json
 import os
 import sys
@@ -32,6 +39,9 @@ POMALE = {"www.mza.cz": {"stranka": 5.0, "obrazek": 2.0}}
 BLOKACE = 30 * 60
 SELHANI, PAUZA_SELHANI = 3, 10 * 60
 STAV = Path(os.environ.get("SLUSNE_STAV", Path.home() / ".cache" / "rodokmen-slusne"))
+MEZIPAMET = Path(os.environ.get("SLUSNE_MEZIPAMET", Path.home() / ".cache" / "rodokmen-snimky"))
+# Do mezipaměti jen opravdové obrázky; chybová stránka se stavem 200 se neuloží.
+OBRAZEK = (b"\xff\xd8", b"\x89PNG", b"II*\x00", b"MM\x00*", b"GIF8", b"RIFF")
 UA = "Mozilla/5.0 (rodokmen)"
 
 
@@ -119,12 +129,26 @@ def hlas(url, status):
         _zapis(host, st)
 
 
+class _Ulozeny(io.BytesIO):
+    """Odpověď z mezipaměti; volající z ní čtou jen read(), status a with jako u urllib."""
+    status = 200
+    headers = {}
+
+    def getcode(self):
+        return 200
+
+
 def urlopen(req, druh="stranka", timeout=120, opener=None):
-    """urllib.request.urlopen (nebo opener.open) s čekáním na limit a hlášením odpovědi."""
+    """urllib.request.urlopen (nebo opener.open) s čekáním na limit a hlášením odpovědi; obrázky přes mezipaměť."""
     if isinstance(req, str):
         req = urllib.request.Request(req)
     if not req.has_header("User-agent"):
         req.add_header("User-Agent", UA)
+    ulozit = (druh == "obrazek" and req.get_method() == "GET" and not req.has_header("Range")
+              and os.environ.get("SLUSNE_BEZ_MEZIPAMETI") != "1")
+    soubor = MEZIPAMET / _host(req) / hashlib.sha1(req.full_url.encode("utf-8")).hexdigest()
+    if ulozit and soubor.exists():
+        return _Ulozeny(soubor.read_bytes())
     pockej(req, druh)
     try:
         r = (opener.open if opener else urllib.request.urlopen)(req, timeout=timeout)
@@ -135,7 +159,15 @@ def urlopen(req, druh="stranka", timeout=120, opener=None):
         hlas(req, None)
         raise
     hlas(req, r.status)
-    return r
+    if not ulozit or r.status != 200:
+        return r
+    data = r.read()
+    if data.startswith(OBRAZEK):
+        soubor.parent.mkdir(parents=True, exist_ok=True)
+        docasny = soubor.with_name(soubor.name + f".{os.getpid()}.tmp")
+        docasny.write_bytes(data)
+        docasny.replace(soubor)
+    return _Ulozeny(data)
 
 
 def get(url, druh="stranka", **kw):
@@ -172,6 +204,22 @@ def main():
             st.update(blokovano_do=time.time() + float(sys.argv[3]) * 3600, duvod="ručně")
             _zapis(sys.argv[2], st)
         print("zablokováno", sys.argv[2], "na", sys.argv[3], "h")
+    elif sys.argv[1:2] == ["mezipamet"]:
+        soubory = [p for p in MEZIPAMET.glob("*/*") if p.is_file() and not p.name.endswith(".tmp")]
+        if sys.argv[2:3] == ["smaz"] and len(sys.argv) > 3:
+            hranice = time.time() - float(sys.argv[3]) * 86400
+            stare = [p for p in soubory if p.stat().st_mtime < hranice]
+            for p in stare:
+                p.unlink()
+            print(f"smazáno {len(stare)} obrázků starších než {sys.argv[3]} dní")
+            soubory = [p for p in soubory if p not in stare]
+        po_serverech = {}
+        for p in soubory:
+            n, b = po_serverech.get(p.parent.name, (0, 0))
+            po_serverech[p.parent.name] = (n + 1, b + p.stat().st_size)
+        for host, (n, b) in sorted(po_serverech.items()):
+            print(f"{host}: {n} obrázků, {b / 2**20:.0f} MB")
+        print(f"{MEZIPAMET}: celkem {len(soubory)} obrázků, {sum(b for _, b in po_serverech.values()) / 2**20:.0f} MB")
     else:
         print(__doc__)
 
