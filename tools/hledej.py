@@ -93,19 +93,21 @@ def main():
     args = parser.parse_args()
     targets = old_spellings(args.slovo) if args.stary_pravopis else [norm(args.slovo)]
     shortest = min(len(t) for t in targets)
+    longest = max(len(t) for t in targets)
     skip = re.compile(args.skip) if args.skip else None
     place = re.compile(norm(args.obec)) if args.obec else None
     hits = 0
     per_book = {}
 
-    # The same word beginnings recur millions of times in the OCR text; each is compared once.
+    # The same word beginnings recur millions of times in the OCR text; each is compared once
+    # (cached by the beginning as long as the longest spelling, cut to each spelling inside).
     @functools.cache
-    def close(word):
-        return any(lev(word[: len(t)], t, args.maxd) <= args.maxd for t in targets)
+    def close(prefix):
+        return any(lev(prefix[: len(t)], t, args.maxd) <= args.maxd for t in targets)
 
     def found(text):
         words = [w for w in re.split(r"[^a-z]+", norm(text)) if len(w) >= shortest - 1]
-        return next((w for w in words if not (skip and skip.match(w)) and close(w)), None)
+        return next((w for w in words if not (skip and skip.match(w)) and close(w[:longest])), None)
 
     def report(where, snimek, kind, match, line, obec=None):
         """Prints a hit (or only counts it for --souhrn); skips it when --obec matches neither the entry nor the book."""
@@ -135,9 +137,11 @@ def main():
         for v in read_tsv(folder / "vyklad.tsv"):
             vyklady.setdefault((v["snimek"], v["datum"]), []).append(v)
         entries = {}
+        villages = {}
         for row in read_tsv(folder / "precteno.tsv"):
             text = " | ".join(row.get(k, "") for k in ("datum", "typ", "obec", "osoby", "ostatni"))
             entries.setdefault((row["snimek"], row["datum"]), text)
+            villages.setdefault((row["snimek"], row["datum"]), row.get("obec", ""))
             note = "".join(f" [výklad: {v['udaj']} „{v['napsano']}“ → „{v['spravne']}“]"
                            for v in vyklady.get((row["snimek"], row["datum"]), []))
             match = found(text)
@@ -151,7 +155,7 @@ def main():
                     entry = entries.get((snimek, datum), datum)
                     report(where, snimek, "vyklad", match,
                            f"{where} snímek {snimek} [výklad] [{match}] {v['udaj']}: napsáno „{v['napsano']}“, správně "
-                           f"„{v['spravne']}“ (doklady: {v['doklady']}) | {entry}", entry)
+                           f"„{v['spravne']}“ (doklady: {v['doklady']}) | {entry}", villages.get((snimek, datum), ""))
         if args.jen_ocima or (place and not place.search(book_place)):  # OCR lines carry no village: only by book
             continue
         for ocr in ocr_files(folder):

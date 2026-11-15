@@ -120,7 +120,7 @@ farnost a obsah knihy; bez diakritiky), `--archiv vca` a `--jen-ocima` (bez stro
 počty po knihách, `--json` jeden objekt na zásah (pro skripty a AI asistenty). `--stary-pravopis` hledá i staré podoby
 (Příhoda → Przihoda, Wick místo Vick).
 
-    python tools/hledej.py prihoda --maxd 1 --stary-pravopis --obec choce
+    python tools/hledej.py Příhoda --maxd 1 --stary-pravopis --obec choce
 
 ## Přidání knihy
 
