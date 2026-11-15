@@ -17,6 +17,14 @@ vyrábí `python tools/web.py` (GitHub Action `pages.yml` po každém pushi do `
 `python -m http.server -d _site`). U zápisu přečteného víckrát (stejný snímek, datum, typ a obec) ukazuje nejnovější čtení
 a starší na rozkliknutí.
 
+Hledání podle obce (třeba z AI asistenta) nemusí stahovat celé `data/precteno.json` (několik MB): web má pro každou obec
+malý soubor s jejími přečtenými zápisy a výklady i s knihami, ve kterých stojí, např.
+[data/obce/damnikov.json](https://pe-pan.github.io/matriky-index/data/obce/damnikov.json). Název souboru je obec ze
+sloupce `obec` bez čísla domu, bez diakritiky, malými písmeny, mezery jako pomlčky (`panska-ves`). Seznam obcí s počty
+zápisů a s tvary, jak stojí v indexu (staré tvary i s dnešním názvem v závorce, např. `Weselcz (Oselce)`), je v
+[data/obce.json](https://pe-pan.github.io/matriky-index/data/obce.json); obec hledejte i v jeho poli `nazvy`. Zápisy bez
+obce a strojový text (OCR) v souborech obcí nejsou.
+
 Co v indexu je (knihy, rozsah OCR, počty přečtených zápisů): [PREHLED.md](PREHLED.md), po každé změně dat v `main` ho
 přegeneruje GitHub Action (`tools/prehled.py`).
 

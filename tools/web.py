@@ -4,7 +4,9 @@
 
 Writes <out>/index.html (copied from web/index.html), <out>/data/knihy.json (one entry per book), <out>/data/precteno.json
 and <out>/data/vyklad.json (all eye-read entries and interpretations, rows referring to a book by its position in
-knihy.json) and copies knihy/ so the page can load a book's OCR and corrections on demand. Run by the GitHub Action
+knihy.json), <out>/data/obce/<obec>.json (one village's eye-read entries and interpretations with their books, so a
+search by village need not download precteno.json) with the list of villages <out>/data/obce.json, and copies knihy/ so
+the page can load a book's OCR and corrections on demand. Run by the GitHub Action
 .github/workflows/pages.yml on every push to main; locally: python tools/web.py && python -m http.server -d _site.
 """
 import argparse
@@ -12,6 +14,7 @@ import csv
 import json
 import re
 import shutil
+import unicodedata
 from pathlib import Path
 
 import yaml
@@ -48,6 +51,40 @@ def url_snimku(archiv, kniha, url):
     return ""
 
 
+SLOUPCE_PRECTENO = ("snimek", "datum", "typ", "obec", "osoby", "ostatni", "jistota", "cetl", "odkaz")
+SLOUPCE_VYKLADU = ("snimek", "datum", "udaj", "napsano", "spravne", "doklady", "kdo", "jistota")
+KNIHA_OBCE = ("archiv_nazev", "nazev", "farnost", "druh", "roky", "url", "url_snimku")
+
+
+def klic_obce(nazev):
+    """File name of a village: lower case, without diacritics, other characters as hyphens."""
+    ascii_ = unicodedata.normalize("NFKD", nazev.replace("ß", "ss")).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", ascii_.lower()).strip("-")
+
+
+def obce_zapisu(obec):
+    """Villages of an entry's obec column: {key: name as written, without the house number}.
+
+    A cell can name several villages, separated by ";" or ","; a name not starting with a capital letter ("grunt …",
+    "[nečitelné]") is none. The key is the name before any parenthesis, without the house number and "[?]", or the
+    parenthesis when the text before it is no name ("nemanželské (Lužná)"); the name as written keeps the parenthesis,
+    where the index gives e.g. the present-day name of an old spelling."""
+    def cisty(text):
+        text = re.sub(r"\([^)]*\)|[\[\]?„“…]", "", text)
+        return " ".join(re.sub(r"\s+(?:č\.\s*p\.|čp\.|č\.)?\s*\d.*$", "", text).split())
+
+    out = {}
+    for cast in re.split(r"[;,](?![^(]*\))", obec):
+        zavorky = re.findall(r"\(([^)]*)\)", cast)
+        jak_psano = (cisty(cast) + "".join(f" ({z.strip()})" for z in zavorky)).strip()
+        for nazev in [cisty(cast)] + [cisty(z) for z in zavorky]:
+            klic = klic_obce(nazev)
+            if nazev[:1].isupper() and klic:
+                out.setdefault(klic, jak_psano)
+                break
+    return out
+
+
 def read_tsv(path):
     if not path.exists():
         return []
@@ -80,6 +117,10 @@ def main():
     (out / "data").mkdir(parents=True)
 
     knihy, precteno, vyklad = [], [], []
+    obce = {}  # key -> {"nazvy": set, "precteno": [(book index, row)], "vyklad": [(book index, row)]}
+
+    def obec(klic):
+        return obce.setdefault(klic, {"nazvy": set(), "precteno": [], "vyklad": []})
     for meta_path in sorted(REPO.glob("knihy/*/*/kniha.yaml")):
         d = meta_path.parent
         archiv, kniha = d.parent.name, d.name
@@ -88,11 +129,20 @@ def main():
         meta = yaml.safe_load(meta_path.read_text(encoding="utf-8")) or {}
         i = len(knihy)
         rows = [r for r in read_tsv(d / "precteno.tsv") if len(r) >= 8]
+        mista = {}  # (snimek, datum) -> village keys, to file an interpretation under its entry's villages
         for r in rows:
-            precteno.append([i] + (r + [""])[:9])
+            r = (r + [""])[:9]
+            precteno.append([i] + r)
+            for klic, nazev in obce_zapisu(r[3]).items():
+                obec(klic)["nazvy"].add(nazev)
+                obec(klic)["precteno"].append((i, r))
+                mista.setdefault((r[0], r[1]), set()).add(klic)
         for r in read_tsv(d / "vyklad.tsv"):
             if len(r) >= 7:
-                vyklad.append([i] + (r + [""])[:8])
+                r = (r + [""])[:8]
+                vyklad.append([i] + r)
+                for klic in sorted(mista.get((r[0], r[1]), ())):
+                    obec(klic)["vyklad"].append((i, r))
         stranky = [s for p in sorted(d.glob("stranky*.tsv")) for s in read_tsv(p)]
         ocr = meta.get("ocr") or []
         if isinstance(ocr, dict):
@@ -120,10 +170,26 @@ def main():
     dump("knihy.json", knihy)
     dump("precteno.json", precteno)
     dump("vyklad.json", vyklad)
+    (out / "data" / "obce").mkdir()
+    seznam = {}
+    for klic in sorted(obce):
+        o = obce[klic]
+        nazvy = sorted(o["nazvy"])
+        dump(f"obce/{klic}.json", {
+            "obec": klic, "nazvy": nazvy,
+            "knihy": {knihy[i]["id"]: {k: knihy[i][k] for k in KNIHA_OBCE if knihy[i][k]}
+                      for i in sorted({i for i, _ in o["precteno"] + o["vyklad"]})},
+            "precteno": [{"kniha": knihy[i]["id"], **{k: v for k, v in zip(SLOUPCE_PRECTENO, r) if v}}
+                         for i, r in o["precteno"]],
+            "vyklad": [{"kniha": knihy[i]["id"], **{k: v for k, v in zip(SLOUPCE_VYKLADU, r) if v}}
+                       for i, r in o["vyklad"]],
+        })
+        seznam[klic] = {"nazvy": nazvy, "zapisu": len(o["precteno"]), "vykladu": len(o["vyklad"])}
+    dump("obce.json", seznam)
     shutil.copy(REPO / "web" / "index.html", out / "index.html")
     shutil.copytree(REPO / "knihy", out / "knihy", ignore=shutil.ignore_patterns("testy"))
     (out / ".nojekyll").write_text("", encoding="utf-8")
-    print(f"{out}: {len(knihy)} knih, {len(precteno)} přečtených zápisů, {len(vyklad)} výkladů")
+    print(f"{out}: {len(knihy)} knih, {len(precteno)} přečtených zápisů, {len(vyklad)} výkladů, {len(obce)} obcí")
 
 
 if __name__ == "__main__":
