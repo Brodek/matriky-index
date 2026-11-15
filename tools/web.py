@@ -5,7 +5,8 @@
 Writes <out>/index.html (copied from web/index.html), <out>/data/knihy.json (one entry per book), <out>/data/precteno.json
 and <out>/data/vyklad.json (all eye-read entries and interpretations, rows referring to a book by its position in
 knihy.json), <out>/data/obce/<obec>.json (one village's eye-read entries and interpretations with their books, so a
-search by village need not download precteno.json) with the list of villages <out>/data/obce.json, and copies knihy/ so
+search by village need not download precteno.json) with the list of villages <out>/data/obce.json (with vyskyty: archive
+and parish of the books the entries come from, since villages of one name share a file), and copies knihy/ so
 the page can load a book's OCR and corrections on demand. Run by the GitHub Action
 .github/workflows/pages.yml on every push to main; locally: python tools/web.py && python -m http.server -d _site.
 """
@@ -184,7 +185,21 @@ def main():
             "vyklad": [{"kniha": knihy[i]["id"], **{k: v for k, v in zip(SLOUPCE_VYKLADU, r) if v}}
                        for i, r in o["vyklad"]],
         })
+        # Several villages of one name (Slatina u Kadova and on Moravia) share the file: list where its entries come
+        # from, one item per archive and parish of the books (the parish without its villages in parentheses, at most 60
+        # characters; the full one is in the village's file).
+        vyskyty = {}
+        for i, _ in o["precteno"]:
+            k = knihy[i]
+            farnost = re.sub(r"\s*\(.*$", "", k["farnost"]).strip() or k["nazev"]
+            misto = (k["archiv"], farnost if len(farnost) <= 60 else farnost[:59].rstrip() + "…")
+            v = vyskyty.setdefault(misto, {"archiv": misto[0], "farnost": misto[1], "knihy": set(), "zapisu": 0})
+            v["knihy"].add(k["id"])
+            v["zapisu"] += 1
         seznam[klic] = {"nazvy": nazvy, "zapisu": len(o["precteno"]), "vykladu": len(o["vyklad"])}
+        if len(vyskyty) > 1:  # only where entries come from more than one parish: there a mix-up is possible
+            seznam[klic]["vyskyty"] = [{**v, "knihy": len(v["knihy"])}
+                                       for v in sorted(vyskyty.values(), key=lambda v: (-v["zapisu"], v["farnost"]))]
     dump("obce.json", seznam)
     shutil.copy(REPO / "web" / "index.html", out / "index.html")
     shutil.copytree(REPO / "knihy", out / "knihy", ignore=shutil.ignore_patterns("testy"))

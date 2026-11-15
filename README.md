@@ -22,8 +22,11 @@ malý soubor s jejími přečtenými zápisy a výklady i s knihami, ve kterých
 [data/obce/damnikov.json](https://pe-pan.github.io/matriky-index/data/obce/damnikov.json). Název souboru je obec ze
 sloupce `obec` bez čísla domu, bez diakritiky, malými písmeny, mezery jako pomlčky (`panska-ves`). Seznam obcí s počty
 zápisů a s tvary, jak stojí v indexu (staré tvary i s dnešním názvem v závorce, např. `Weselcz (Oselce)`), je v
-[data/obce.json](https://pe-pan.github.io/matriky-index/data/obce.json); obec hledejte i v jeho poli `nazvy`. Zápisy bez
-obce a strojový text (OCR) v souborech obcí nejsou.
+[data/obce.json](https://pe-pan.github.io/matriky-index/data/obce.json); obec hledejte i v jeho poli `nazvy`. Soubor je
+jen podle jména, takže stejnojmenné obce (Slatina u Kadova i na Moravě, různé Petrovice) sdílí jeden. U obce se zápisy
+z víc farností proto `obce.json` uvádí `vyskyty` (archiv, farnost, počet knih a zápisů) a v souboru obce má každá kniha
+v `knihy` svou farnost: svou obec vyberte podle farnosti. Zápisy bez obce a strojový text (OCR) v souborech obcí
+nejsou.
 
 Co v indexu je (knihy, rozsah OCR, počty přečtených zápisů): [PREHLED.md](PREHLED.md), po každé změně dat v `main` ho
 přegeneruje GitHub Action (`tools/prehled.py`).
