@@ -184,7 +184,7 @@ def main():
                 print(json.dumps({"kniha": where, **c}, ensure_ascii=False))
             else:
                 print(f"{where}\točima {c['ocima']}\tvýklad {c['vyklad']}\tOCR {c['ocr']}")
-    print(f"{hits} zásahů" + (f" v {len(per_book)} knihách" if per_book else ""), file=sys.stderr)
+    print(f"{hits} zásahů" + (f" v {len(per_book)} knihách" if args.souhrn and per_book else ""), file=sys.stderr)
 
 
 if __name__ == "__main__":
