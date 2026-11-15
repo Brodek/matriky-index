@@ -1,0 +1,23 @@
+archiv: "vca"
+kniha: "sign-2152"
+nazev: "Chroustovice N 1778–1784, sign. 2152 (kód XJW35OGW)"
+druh: "matrika"
+farnost: "Chroustovice (Chroustovice, Městec, Stradouň, Turov, Holešovice, Opočno, Radhošť, Trusnov a další)"
+roky: "1778–4/1784"
+obsah: "N 1778–4/1784 chronologicky (snímky asi 4–36), dál rejstříky ke knihám fary; snímky 1–173; soubor = snímek; OCR ze šedotónových JPEG 2400 px"
+url: "https://aron.vychodoceskearchivy.cz/apu/d6e5796a-1694-4010-8c8a-c89ea6a32cf8"
+import:
+  prefix: "chroust2152"
+  delitel: 1
+ocr:
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "f5bd154e-889b-4c92-b7ff-eb4c18f110ac"
+  model: "Kurrent (German, Czech)"
+  nastaveni: "rozbor rozložení Handwritten layout, řádky Universal, jazykový model žádný"
+  datum: "2026-11-14"
+  export: "chroustovice-n-2152.pagexml.zip"
+  snimky: "1–173"
+  stranek: 173
+  radku: 85831
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
