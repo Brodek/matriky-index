@@ -115,6 +115,13 @@ zablokovala.
 PERO komolí vzácná příjmení (Plocar → „Klozara“, „Plogar“), proto volné hledání; prázdný výsledek nedokazuje, že jméno
 v knize není. Zásah se ověřuje na skenu (snímek a strana jsou ve výpisu).
 
+Běžné příjmení má stovky zásahů z celé republiky. Výpis zúží `--obec 'choce|slatin'` (sloupec `obec` nebo název,
+farnost a obsah knihy; bez diakritiky), `--archiv vca` a `--jen-ocima` (bez strojového textu); `--souhrn` vypíše jen
+počty po knihách, `--json` jeden objekt na zásah (pro skripty a AI asistenty). `--stary-pravopis` hledá i staré podoby
+(Příhoda → Przihoda, Wick místo Vick).
+
+    python tools/hledej.py prihoda --maxd 1 --stary-pravopis --obec choce
+
 ## Přidání knihy
 
 Celý postup (skeny podle archivu, nahrání do PERO, rozbor rozložení, volba modelu, export a import) je v
