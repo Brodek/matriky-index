@@ -5,6 +5,7 @@ is searched too).
 
     python tools/hledej.py <slovo> [--maxd 2] [--kniha KNIHA] [--kontext 1] [--skip REGEX]
                            [--obec REGEX] [--archiv ARCHIV] [--jen-ocima] [--stary-pravopis] [--souhrn] [--json]
+    python tools/hledej.py --rozpory [--obec REGEX] [--archiv ARCHIV] [--kniha KNIHA] [--json]
 
 Every OCR word (lower-case, without diacritics) is compared with <slovo> on its first len(<slovo>) characters by
 Levenshtein distance, because PERO garbles rare surnames (Plocar → „Klozara“, „Plogar“). An empty result does not prove
@@ -16,6 +17,10 @@ expression (case and diacritics ignored; OCR lines only by the book); --archiv k
 --jen-ocima skips the machine OCR text; --souhrn prints hit counts per book instead of the lines; --json prints one
 JSON object per hit. --stary-pravopis also searches the older spellings of the word (ř → rz, š → ss/sch,
 č → cz/tsch, ž → zs, v → w, j → g, í → y/ie, ý → y/i): Příhoda → przihoda, przyhoda…
+
+A hit on an entry read by several readers carries the state of the readings (tools/cteni.py): [shoda], or [rozpor]
+when they differ in names. --rozpory lists all entries whose readings differ, each reading on its own line, as a
+queue for whoever opens the scan anyway.
 """
 import argparse
 import csv
@@ -26,6 +31,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
+from cteni import kdo_cetl, stav
 from opravy import apply, ocr_files, read_tsv
 
 REPO = Path(__file__).resolve().parent.parent
@@ -75,10 +81,44 @@ def book_text(folder):
     return norm(" ".join(keep))
 
 
+def skupiny_cteni(rows):
+    """Řádky precteno.tsv po zápisech (snímek, datum, typ) se stavem jejich čtení: {klíč: (řádky, stav, čtenářů)}."""
+    skupiny = {}
+    for row in rows:
+        skupiny.setdefault((row["snimek"], row["datum"], row.get("typ", "")), []).append(row)
+    return {k: (g, *stav([(r.get("cetl") or "", r.get("osoby") or "") for r in g])) for k, g in skupiny.items()}
+
+
+def rozpory(args, place):
+    """Vypíše zápisy, jejichž čtení různými čtenáři se ve jménech liší."""
+    n = 0
+    for folder in sorted(p for p in REPO.glob("knihy/*/*") if p.is_dir()):
+        if (args.kniha and folder.name != args.kniha) or (args.archiv and folder.parent.name != args.archiv):
+            continue
+        where = f"{folder.parent.name}/{folder.name}"
+        book_place = book_text(folder) if place else ""
+        for (snimek, datum, typ), (g, st, ctenaru) in skupiny_cteni(read_tsv(folder / "precteno.tsv")).items():
+            if st != "rozpor":
+                continue
+            if place and not (place.search(norm(" ".join(r.get("obec") or "" for r in g))) or place.search(book_place)):
+                continue
+            n += 1
+            cteni = [{"ctenar": kdo_cetl(r.get("cetl") or "") or "správce indexu", "obec": r.get("obec") or "",
+                      "osoby": r.get("osoby") or "", "cetl": r.get("cetl") or ""} for r in g]
+            if args.json:
+                print(json.dumps({"kniha": where, "snimek": snimek, "datum": datum, "typ": typ, "ctenaru": ctenaru,
+                                  "cteni": cteni}, ensure_ascii=False))
+                continue
+            print(f"{where} snímek {snimek} {datum} {typ}: rozpor ({ctenaru} čtenáři)")
+            for c in cteni:
+                print(f"    {c['ctenar']}: {c['obec']} | {c['osoby']}")
+    print(f"{n} zápisů v rozporu", file=sys.stderr)
+
+
 def main():
     sys.stdout.reconfigure(encoding="utf-8")  # the Windows console defaults to cp1252
     parser = argparse.ArgumentParser()
-    parser.add_argument("slovo")
+    parser.add_argument("slovo", nargs="?")
     parser.add_argument("--maxd", type=int, default=2)
     parser.add_argument("--kniha", help="jen tato kniha (název adresáře, např. dnesice-01)")
     parser.add_argument("--kontext", type=int, default=1, help="kolik řádků nad a pod zásahem vypsat")
@@ -90,7 +130,14 @@ def main():
     parser.add_argument("--stary-pravopis", action="store_true", help="hledat i staré podoby slova (ř → rz, w místo v…)")
     parser.add_argument("--souhrn", action="store_true", help="místo řádků jen počty zásahů po knihách")
     parser.add_argument("--json", action="store_true", help="jeden objekt JSON na zásah")
+    parser.add_argument("--rozpory", action="store_true",
+                        help="místo hledání vypsat zápisy, jejichž čtení různými čtenáři se liší")
     args = parser.parse_args()
+    if args.rozpory:
+        rozpory(args, re.compile(norm(args.obec)) if args.obec else None)
+        return
+    if not args.slovo:
+        parser.error("chybí hledané slovo (nebo --rozpory)")
     targets = old_spellings(args.slovo) if args.stary_pravopis else [norm(args.slovo)]
     shortest = min(len(t) for t in targets)
     longest = max(len(t) for t in targets)
@@ -138,7 +185,10 @@ def main():
             vyklady.setdefault((v["snimek"], v["datum"]), []).append(v)
         entries = {}
         villages = {}
-        for row in read_tsv(folder / "precteno.tsv"):
+        rows = read_tsv(folder / "precteno.tsv")
+        stavy = {k: st for k, (_, st, _) in skupiny_cteni(rows).items()}
+        for row in rows:
+            st = stavy[(row["snimek"], row["datum"], row.get("typ", ""))]
             text = " | ".join(row.get(k, "") for k in ("datum", "typ", "obec", "osoby", "ostatni"))
             entries.setdefault((row["snimek"], row["datum"]), text)
             villages.setdefault((row["snimek"], row["datum"]), row.get("obec", ""))
@@ -147,7 +197,8 @@ def main():
             match = found(text)
             if match:
                 report(where, row["snimek"], "ocima", match,
-                       f"{where} snímek {row['snimek']} [očima]{note} [{match}] {text}", row.get("obec"))
+                       f"{where} snímek {row['snimek']} [očima]{f' [{st}]' if st else ''}{note} [{match}] {text}",
+                       row.get("obec"))
         for (snimek, datum), rows in vyklady.items():
             for v in rows:
                 match = found(v["spravne"])

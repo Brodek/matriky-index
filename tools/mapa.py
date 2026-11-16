@@ -20,7 +20,7 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from kontrola import ctenar  # noqa: E402
+from cteni import kdo_cetl  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 KNIHY = REPO / "knihy"
@@ -133,11 +133,6 @@ def kniha(archiv, d, meta):
             return None  # familiantské knihy a jiné než matriky
         return d.name, url, pred_zavorkou, farnost or pred_zavorkou.split(",")[0]
     return None
-
-
-def kdo_cetl(cetl):
-    """Člověk ze sloupce cetl; prázdné, když četl jen model (i „…, ověřil <model>“)."""
-    return " ".join(w for w in ctenar(cetl).split() if w != "ověřil")
 
 
 def snimek(text):

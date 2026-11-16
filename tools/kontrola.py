@@ -21,6 +21,10 @@ from pathlib import Path
 
 import yaml
 
+# Kontrola běží s -I (nástroje z main na datech pull requestu); sdílené funkce bere ze své vlastní složky.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from cteni import MODEL_EFFORT, PRODUKT, ctenar, kdo_cetl  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 KNIHY = ROOT / "knihy"
 HLAVICKY = {
@@ -36,13 +40,10 @@ JISTOTA = ("vysoká", "střední", "nízká")
 # Jazykový model se v cetl píše jako id/effort (claude-sonnet-5-5/xhigh), aby šlo zápisy přečtené slabším modelem
 # najít a přečíst znovu; samotné „Claude“ nebo „agent“ nestačí. Effort je sjednocení hodnot API Anthropicu, OpenAI,
 # Googlu a xAI, číslo je rozpočet na přemýšlení v tokenech (Gemini 2.5); „neuvedeno“ je pro nástroje, které effort
-# neukazují. Id modelu obsahuje číslici nebo pomlčku (o3, gpt-5.2, deepseek-reasoner), aby se nespletlo s jiným textem.
+# neukazují. Id modelu a effort rozpozná MODEL_EFFORT (cteni.py).
 EFFORT = ("none", "minimal", "low", "medium", "high", "xhigh", "max", "neuvedeno")
-MODEL_EFFORT = re.compile(r"\b(?=[a-z0-9.-]*[0-9-])[a-z][a-z0-9.]*(?:-[a-z0-9.]+)*/([a-z]+|[0-9]+)\b", re.I)
 JAZYKOVY_MODEL = re.compile(r"\b(claude|agent|opus|sonnet|haiku|gpt|chatgpt|codex|o[1-9]|gemini|grok|copilot|deepseek|"
                             r"mistral|llama|qwen|kimi|perplexity|llm)\b", re.I)
-# Produkt smí stát vedle id modelu, který v něm četl („Copilot gpt-4.1/neuvedeno“).
-PRODUKT = re.compile(r"\b(chatgpt|copilot|perplexity)\b", re.I)
 # Matriky narozených jsou veřejně přístupné po 100 letech, oddaných a zemřelých po 75 letech (zákon o matrikách
 # 301/2000 Sb., § 5a); soupisy obyvatel držíme stejně jako narozené. Mladší zápisy mohou týkat žijících lidí.
 LHUTA = {"N": 100, "S": 100, "O": 75, "Z": 75}
@@ -86,7 +87,7 @@ POSOUDIT = {
     "novy-ctenar": "jméno v cetl, které v indexu ještě není",
     "rok-mimo-knihu": "rok zápisu leží mimo roky knihy",
     "snimek-mimo-knihu": "snímek za posledním snímkem knihy",
-    "duplicita": "stejný zápis už v knize je",
+    "duplicita": "stejný zápis od téhož čtenáře už v knize je",
     "vyklad-v-osobach": "osoby nebo ostatni obsahují slovo výkladu (příbuzenství, ztotožnění)",
     "nizka-jistota": "velký podíl zápisů s nízkou jistotou",
     "slaby-model": "starý zápis čtený slabším modelem nebo s nízkým effortem",
@@ -451,14 +452,6 @@ def roky(text):
     return [int(r) for r in re.findall(r"(?<!\d)(1[0-9]{3}|20[0-9]{2})(?!\d)", str(text or ""))]
 
 
-def ctenar(cetl):
-    """Jméno člověka v cetl, bez modelu, data a poznámky v závorce („Jan Novák + claude-opus-5-5/xhigh 2026-11-05“
-    → „Jan Novák“); prázdné, když řádek četl jen model."""
-    t = re.sub(r"\([^)]*\)", " ", MODEL_EFFORT.sub(" ", cetl))
-    t = PRODUKT.sub(" ", re.sub(r"\d{4}(?:-\d{2}){0,2}", " ", t))
-    return " ".join(t.replace("+", " ").replace(",", " ").split())
-
-
 def tsv_radky(p):
     with open(p, encoding="utf-8", newline="") as f:
         return list(csv.reader(f, delimiter="\t"))
@@ -514,8 +507,9 @@ def posouzeni_pr(zaklad, zmeny, pridane, h):
             snimky = [int(s[0]) for p in d.glob("stranky*.tsv") for s in tsv_radky(p)[1:] if s and s[0].isdigit()]
             p = d / "precteno.tsv"
             nove = pridane.get(rel(p), set())
-            stare = {tuple(x.strip() for x in (s[0], s[1], s[2], s[4])) for i, s in enumerate(tsv_radky(p)[1:], start=2)
-                     if i not in nove and len(s) >= 5}
+            # Shodné čtení od jiného čtenáře je potvrzení zápisu, ne duplicita (cteni.py).
+            stare = {tuple(x.strip() for x in (s[0], s[1], s[2], s[4])) + (kdo_cetl(s[7]) if len(s) >= 8 else "",)
+                     for i, s in enumerate(tsv_radky(p)[1:], start=2) if i not in nove and len(s) >= 5}
             knihy[d] = (roky(meta.get("roky") if isinstance(meta, dict) else None), max(snimky, default=None), stare)
         roky_knihy, posledni, stare = knihy[d]
         jmeno = ctenar(cetl)
@@ -528,8 +522,8 @@ def posouzeni_pr(zaklad, zmeny, pridane, h):
             h.posud("rok-mimo-knihu", kde, f"datum {datum}, kniha {min(roky_knihy)}–{max(roky_knihy)}")
         if posledni and any(int(n) > posledni for n in re.findall(r"\d+", snimek)):
             h.posud("snimek-mimo-knihu", kde, f"snímek {snimek}, poslední snímek knihy {posledni}")
-        if tuple(x.strip() for x in (snimek, datum, typ, osoby)) in stare:
-            h.posud("duplicita", kde, f"zápis {snimek} {datum} {typ} se stejnými osobami už v knize je")
+        if tuple(x.strip() for x in (snimek, datum, typ, osoby)) + (kdo_cetl(cetl),) in stare:
+            h.posud("duplicita", kde, f"zápis {snimek} {datum} {typ} se stejnými osobami od téhož čtenáře už v knize je")
         if m := VYKLAD_SLOVA.search(f"{osoby} {ostatni}"):
             h.posud("vyklad-v-osobach", kde, f"„{m[0]}“ – je to v zápisu, nebo výklad?")
         if SLABY_MODEL.search(cetl) and roky_zapisu and min(roky_zapisu) < STARY_ZAPIS:

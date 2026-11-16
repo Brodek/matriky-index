@@ -14,19 +14,31 @@ Skeny se neukládají (lze je kdykoli stáhnout z archivu). Plné exporty z PERO
 **Prohlížení bez gitu: [pe-pan.github.io/matriky-index](https://pe-pan.github.io/matriky-index/)** – knihy podle oblasti a
 archivu, hledání v přečtených zápisech, strojový text stránek s opravami a výklady. Stránku (`web/index.html`) i její data
 vyrábí `python tools/web.py` (GitHub Action `pages.yml` po každém pushi do `main`; lokálně `python tools/web.py` a
-`python -m http.server -d _site`). U zápisu přečteného víckrát (stejný snímek, datum, typ a obec) ukazuje nejnovější čtení
+`python -m http.server -d _site`). U zápisu přečteného víckrát (stejný snímek, datum a typ) ukazuje nejnovější čtení
 a starší na rozkliknutí.
+
+**Víc čtení téhož zápisu.** Kdo zápis přečte znovu, protože ho pro svůj rodokmen stejně potřebuje, přidá svoje čtení
+jako další řádek (viz [CONTRIBUTING](CONTRIBUTING.md)). Zápis, který četlo víc lidí (různá jména ve sloupci `cetl`;
+řádky bez jména jsou správce indexu), má na webu, v souborech obcí i ve výpisu `hledej.py` stav: **shoda**, když jména
+jednoho čtení jsou všechna i ve druhém, nebo **rozpor**, když se čtení ve jménech liší – ten rozhodne sken. Jména se
+porovnávají bez diakritiky, se sjednoceným starým pravopisem a ženskými tvary a s latinskými a německými křestními
+jmény převedenými na česká (`tools/cteni.py`). `python tools/hledej.py --rozpory [--obec …]` vypíše všechny rozpory.
 
 Hledání podle obce (třeba z AI asistenta) nemusí stahovat celé `data/precteno.json` (několik MB): web má pro každou obec
 malý soubor s jejími přečtenými zápisy a výklady i s knihami, ve kterých stojí, např.
 [data/obce/damnikov.json](https://pe-pan.github.io/matriky-index/data/obce/damnikov.json). Název souboru je obec ze
 sloupce `obec` bez čísla domu, bez diakritiky, malými písmeny, mezery jako pomlčky (`panska-ves`). Seznam obcí s počty
 zápisů a s tvary, jak stojí v indexu (staré tvary i s dnešním názvem v závorce, např. `Weselcz (Oselce)`), je v
-[data/obce.json](https://pe-pan.github.io/matriky-index/data/obce.json); obec hledejte i v jeho poli `nazvy`. Soubor je
-jen podle jména, takže stejnojmenné obce (Slatina u Kadova i na Moravě, různé Petrovice) sdílí jeden. U obce se zápisy
-z víc farností proto `obce.json` uvádí `vyskyty` (archiv, farnost, počet knih a zápisů) a v souboru obce má každá kniha
-v `knihy` svou farnost: svou obec vyberte podle farnosti. Zápisy bez obce a strojový text (OCR) v souborech obcí
-nejsou.
+[data/obce.json](https://pe-pan.github.io/matriky-index/data/obce.json); obec hledejte i v jeho poli `nazvy`.
+
+Stejnojmenné obce (Slatina u Brna i u Kladna, různé Petrovice) rozlišuje okres: zná-li RÚIAN jméno ve víc okresech
+(`ciselniky/ruian_casti_obci.tsv`), jde zápis do souboru `<obec>-<okres>.json` (`slatina-brno-mesto`,
+`tis-rychnov-nad-kneznou`), když jeho farnost jeden z těch okresů jasně ukazuje: ze všech obcí knih téže farnosti
+převažuje ten okres. Ostatní zápisy, i obce, které RÚIAN nezná (zaniklé, staré a německé tvary, osady), zůstávají
+v souboru jen se jménem. Okres je v `obce.json` u obce v poli `okres`. Kde se v souboru můžou sejít různé obce (zápisy
+z víc farností, nebo jméno víceznačné a okres neurčený), uvádí `obce.json` i `vyskyty` (archiv, farnost, počet knih
+a zápisů) a v souboru obce má každá kniha v `knihy` svou farnost: svou obec vyberte podle farnosti. Zápisy bez obce
+a strojový text (OCR) v souborech obcí nejsou.
 
 Co v indexu je (knihy, rozsah OCR, počty přečtených zápisů): [PREHLED.md](PREHLED.md), po každé změně dat v `main` ho
 přegeneruje GitHub Action (`tools/prehled.py`).
@@ -74,17 +86,19 @@ knihy/<archiv>/<kniha>/
   opravy.tsv      opravy strojového čtení (viz Vrstvy a opravy)
   vyklad.tsv      chyby písaře doložené jinými zápisy (formát níže)
 knihy/testy/      pokusná OCR (výřezy)
+ciselniky/        části obcí z RÚIAN (okres stejnojmenných obcí pro web), převzato z Mapy matrik
 tools/
   kontrola.py     kontrola dat (formát, povinná pole, lhůty pro žijící lidi, doklady výkladů, u pull requestu i body
                   k posouzení); běží u každého pull requestu
   hledej.py       volné hledání slova ve všech knihách (precteno, výklady, OCR s opravami; Levenshtein na začátku slova)
+  cteni.py        kdo zápis četl a shoda nebo rozpor čtení různých čtenářů (pro kontrolu, web a hledej.py)
   pruhy.py        čtení skenů: rejstřík po svislých pruzích, kontrast vybledlé strany, mapa knihy z horních okrajů
   mapa.py         body pro Mapu matrik ze zápisů N/O/Z (bez jmen); posílá je workflow mapa.yml po každé změně dat
   opravy.py       přidání opravy strojového čtení do opravy.tsv
   vyklad.py       přidání výkladu (chyby písaře) do vyklad.tsv
   pero_import.py  převod exportu z PERO do knihy/…
   prehled.py      vygeneruje PREHLED.md
-  web.py          vyrobí webovou stránku indexu do _site/ (GitHub Pages)
+  web.py          vyrobí webovou stránku indexu do _site/ (GitHub Pages), i soubory po obcích s okresem podle RÚIAN
   pero/           balik.py (skeny do balíků ≤ 9,4 MB), pero.js (nahrávání a export ve stránce PERO) – viz PERO.md
   scan/           stahování skenů: pfl.py (Porta fontium podle snímku, i pozemkové knihy a urbáře adresou knihy; pf_snimky.py = snimky.tsv knihy), ebget.py (eBadatelna SOA Praha), zget.py + rzip.py (VČA Zámrsk; vcakniha.py = celá kniha pro PERO),
                   zayt.py, books.py, bfilter.py (zayt.org), mza.py (Acta Publica, MZA Brno), zaopava.py (ZA Opava, cesty
@@ -132,6 +146,12 @@ počty po knihách, `--json` jeden objekt na zásah (pro skripty a AI asistenty)
 (Příhoda → Przihoda, Wick místo Vick).
 
     python tools/hledej.py Příhoda --maxd 1 --stary-pravopis --obec choce
+
+Zásah v zápisu, který četlo víc lidí, nese stav jejich čtení (`[shoda]`, `[rozpor]`). Bez slova vypíše
+`--rozpory` všechny zápisy, jejichž čtení se liší, každé čtení na vlastním řádku (filtry `--obec`, `--archiv`,
+`--kniha` a `--json` platí i tady): fronta pro toho, kdo ten snímek stejně otevírá.
+
+    python tools/hledej.py --rozpory --obec choce
 
 ## Přidání knihy
 

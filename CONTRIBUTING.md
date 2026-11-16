@@ -43,6 +43,9 @@ ani do sloupců `osoby` a `ostatni`, a nic o žijících lidech.
 - **Jen přidávat.** Řádky se nemažou ani nepřepisují – cizí ani vlastní, které už jsou v `main`. Nesouhlasíte se čtením
   nebo jste ho zpřesnili? Přidejte nový řádek k témuž zápisu nebo opravu do `opravy.tsv`; čtení zůstanou vedle sebe a
   rozhodne sken.
+- **Vlastní čtení zápisu, který už v indexu je, pošlete taky**, když jste ho přečetli ze snímku sami (třeba proto, že
+  jde o vašeho přímého předka): i shodné čtení od jiného čtenáře je cenné, potvrzuje zápis. Index z něj pozná shodu
+  nebo rozpor (viz [README](README.md#index-matrik)). Jen kvůli ověření ale snímky znovu nestahujte.
 - **`PREHLED.md` neměňte.** Po sloučení ho z dat v `main` přegeneruje GitHub Action; v pull requestech by se hádal.
 - **Žijící lidé.** Matriky narozených jsou veřejné po 100 letech, oddaných a zemřelých po 75 letech (zákon o matrikách
   301/2000 Sb.); stejnou lhůtu držíme u sčítání lidu. Mladší zápisy kontrola odmítne.

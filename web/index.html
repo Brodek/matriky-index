@@ -42,6 +42,8 @@ details.archiv > summary { font-weight: 500; }
 ul.books { list-style: none; margin: 0 0 8px 14px; padding: 0; }
 ul.books li { padding: 3px 0; border-bottom: 1px dotted var(--line); }
 .badge { display: inline-block; font-size: 12px; padding: 0 6px; border-radius: 10px; background: var(--accent-bg); color: var(--accent); margin-left: 4px; white-space: nowrap; }
+.badge.shoda { background: var(--fix); color: var(--fix-line); }
+.badge.rozpor { background: var(--warn); color: #fff; }
 .tablewrap { overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; font-size: 14px; }
 th, td { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: 1px solid var(--line); }
@@ -148,6 +150,15 @@ function groupEntries(rows) {
   return [...groups.values()].map(g => g.sort((a, b) => cetlDatum(b.r[8]).localeCompare(cetlDatum(a.r[8])) || b.order - a.order).map(x => x.r));
 }
 
+// State of an entry read by several readers (r[10], r[11] from tools/cteni.py): shoda, or rozpor to be settled by the scan.
+function stavBadge(r) {
+  if (!r[10]) return "";
+  const ctenari = `${r[11]} ${r[11] < 5 ? "čtenáři" : "čtenářů"}`;
+  return r[10] === "rozpor"
+    ? `<br><span class="badge rozpor" title="Čtení různých čtenářů se liší ve jménech – rozhodne sken">rozpor (${ctenari})</span>`
+    : `<br><span class="badge shoda" title="Čtení různých čtenářů se ve jménech shodují">shoda (${ctenari})</span>`;
+}
+
 function vykladyFor(bookIdx, snimek, datum) {
   return VYKLAD.filter(v => v[0] === bookIdx && v[1] === snimek && v[2] === datum);
 }
@@ -165,7 +176,7 @@ function entryRows(rows, query, showBook) {
     return `<tr>${showBook ? `<td><a href="#kniha/${esc(kniha.id)}">${esc(kniha.nazev)}</a><div class="small muted">${esc(kniha.archiv_nazev)}</div></td>` : ""}
       <td>${linkSnimek(kniha, snimek)}</td><td>${esc(datum)}</td><td class="typ" title="${esc(TYP[typ] || typ)}">${esc(typ)}</td>
       <td>${highlight(obec, query)}</td><td class="osoby">${highlight(osoby, query)}${vyk}</td>
-      <td class="ostatni">${highlight(ostatni, query)}${verze}</td><td class="small">${esc(jistota)}<br><span class="muted">${esc(cetl)}</span></td></tr>`;
+      <td class="ostatni">${highlight(ostatni, query)}${verze}</td><td class="small">${esc(jistota)}<br><span class="muted">${esc(cetl)}</span>${stavBadge(g[0])}</td></tr>`;
   }).join("");
   return `<div class="tablewrap"><table>${head}${body}</table></div>`;
 }
@@ -187,7 +198,7 @@ function home() {
         const k = KNIHY[i];
         const meta = [k.farnost && k.farnost !== k.nazev ? k.farnost : "", k.roky].filter(Boolean).join(", ");
         return `<li data-k="${i}"><a href="#kniha/${esc(k.id)}">${esc(k.nazev)}</a> ${meta ? `<span class="small muted">${esc(meta)}</span>` : ""}
-          ${k.precteno ? `<span class="badge">${num(k.precteno)} přečteno</span>` : ""}${k.ocr_stran ? `<span class="badge">OCR ${num(k.ocr_stran)} str.</span>` : ""}${k.vyklad ? `<span class="badge">výklady ${k.vyklad}</span>` : ""}</li>`;
+          ${k.precteno ? `<span class="badge">${num(k.precteno)} přečteno</span>` : ""}${k.ocr_stran ? `<span class="badge">OCR ${num(k.ocr_stran)} str.</span>` : ""}${k.vyklad ? `<span class="badge">výklady ${k.vyklad}</span>` : ""}${k.rozpory ? `<span class="badge rozpor">rozpory ${k.rozpory}</span>` : ""}</li>`;
       }).join("");
       return `<details class="archiv"><summary>${esc(archiv)} <span class="muted small">(${idx.length})</span></summary><ul class="books">${items}</ul></details>`;
     }).join("");
