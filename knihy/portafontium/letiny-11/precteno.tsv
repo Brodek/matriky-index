@@ -1,3 +1,23 @@
 snimek	datum	typ	obec	osoby	ostatni	jistota	cetl	odkaz
 52	1790–1797	J	Libákovice	rejstřík Z, písmeno P (pravá strana): 1793 Libákovice 24 Plotzerowa Anna; 1793 Libákovice 17 Plotzar Jakub; 1794 Libákovice 17 Plotzar Martin [?]	jen řádky Plotzar; čísla stran matriky (15x) nečtena	střední	claude-opus-5-5/xhigh 2026-11-06	
 53	1799–1808	J	Libákovice	rejstřík Z, písmeno P: 1805 Libákovice 17 Plotzar Mathes, str. 160	jen řádky Plotzar	střední	claude-opus-5-5/xhigh 2026-11-06	
+52R	1793	J	Libákovice 24	zemřelá: Anna Plotzarowa	rejstřík Z, písmeno P; řádek „24. | Libakowitz | Plotzarowa Anna | 156“ (rok podle záhlaví 1793); doplněna strana matriky 156	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+52R	1793	J	Libákovice 17	zemřelý: Jakub Plotzar	rejstřík Z, písmeno P; řádek „17. | Libakowitz | Plotzar Jakub | 156“ (rok podle záhlaví 1793)	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+52R	1794	J	Libákovice 17	zemřelý: Ma[r?]tin[?] Plotzar	rejstřík Z, písmeno P; řádek „17 | Libakowitz | Plotzar Ma[r?]tinni[?] | 157“ (rok podle záhlaví 1794); křestní jméno nejisté, snad Martin	střední	claude-opus-5-5/xhigh 2026-11-16	
+53R	1806	J	Libákovice 17	zemřelá: Veronica Plotzar	rejstřík Z, písmeno P; řádek „17 | Libakowitz | Plotzar Veronica | 161“ (rok podle záhlaví 1806)	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+53	1799–1808	J			rejstřík Z, písmeno P 1799–1808 prohlédnut řádek po řádku (obě strany): Plotzar jen 1805 Mathes (str. 160) a 1806 Veronica (str. 161), obojí Libákovice 17; Libákovice 24 ani Lorenz Plotzar není; záhlaví let 1798 a 1803 chybí	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+54R	1814	J	Libákovice 24	zemřelý: Wawřinec Plo[c?]er	rejstřík Z, písmeno P; řádek „24. | Libákowic. | Plo[c?]er Wawřinec | 1814. | 166.“; zápis v matrice (Letiny 05, sn. 190R, fol. 166) má datum 28. 1. 1815 – rok v rejstříku je o rok nižší	vysoká (příjmení: písmeno c a samohláska nejisté)	claude-opus-5-5/xhigh 2026-11-16	
+54	1808–1818	J			rejstřík Z, písmeno P 1808–1818 prohlédnut řádek po řádku (obě strany): Plocar jen 1814 Libákovice 24 Wawřinec (str. 166); sloupce: č. domu, obec, jméno, rok, strana	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+55L	1818	J	Libákovice 24	zemřelá: Lidmila Plo[c?]erowá	rejstřík Z, písmeno P; řádek „24. | Libákowic | Plo[c?]erowá Lidmila | 1818. | 167.“; zápis v matrice Letiny 05, sn. 191R (24. 8. 1818)	vysoká (příjmení: písmeno c nejisté)	claude-opus-5-5/xhigh 2026-11-16	
+55L	1819	J	Libákovice 24	zemřelý: Josef Plocar	rejstřík Z, písmeno P; řádek „24. | Libákowic. | Plocar Josef. | 1819. | 168.“	vysoká (strana 168 trochu nejistá)	claude-opus-5-5/xhigh 2026-11-16	
+55R	1826	J	Libákovice 24	zemřelý: Frantissek Plocar	rejstřík Z, písmeno P; řádek „24. | Libákowic. | Plocar Frantissek | 1826. | 170.“	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+55R	1829	J	Libákovice 24	zemřelý: Jan Plocar	rejstřík Z, písmeno P; řádek „24. | Libákowic. | Plocar Jan | 1829. | 171.“	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+55R	1829	J	Libákovice 24	zemřelá: Anna Plocarowá	rejstřík Z, písmeno P; řádek „24. | Libákowic. | Plocarowá Anna | 1829. | 171.“	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+55R	1830	J	Libákovice 24	zemřelý: Jan Plocar	rejstřík Z, písmeno P; řádek „24. | Libákowic. | Plocar Jan | 1830. | 171.“	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+55R	1830	J	Libákovice 17	zemřelý: Jan Plocar	rejstřík Z, písmeno P; řádek „17. | Libákowic. | Plocar Jan | 1830. | 171.“	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+55R	1830	J	Libákovice 24	zemřelá: Terezye Plocarowá	rejstřík Z, písmeno P; řádek „24. | Libákowic. | Plocarowá Terezye | 1830. | 171.“	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+55R	1832	J	Libákovice 24	zemřelý: Wawřinec Plocar	rejstřík Z, písmeno P; řádek „24 | Libákowic. | Plocar Wawřinec | 1832. | 171.“ (světlejší inkoust)	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+55	1818–1835	J			rejstřík Z, písmeno P 1818–1835 prohlédnut řádek po řádku (obě strany): Plocar jen řádky Libákovice 24 a 17 zapsané zvlášť (1818–1832)	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+56	1835–1854	J			rejstřík Z, písmeno P 1835–1854 prohlédnut řádek po řádku (obě strany): Plocar/Plozer/Plotzer není	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+57	1854–1876	J			rejstřík Z, písmeno P 1854–1876 prohlédnut řádek po řádku (obě strany): Plocar/Plozer/Plotzer není	vysoká	claude-opus-5-5/xhigh 2026-11-16	
+58L	1876–1883	J			rejstřík Z, písmeno P 1876–1883 (konec písmene, pravá strana prázdná) prohlédnut řádek po řádku: Plocar/Plozer/Plotzer není; sn. 59 začíná písmeno R	vysoká	claude-opus-5-5/xhigh 2026-11-16	
