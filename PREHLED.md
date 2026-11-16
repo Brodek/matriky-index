@@ -2,9 +2,9 @@
 
 Stav k 16. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **953 knih** (matrika 878, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, kmenové listiny (Musterlisten) 1, urbář 1, kronika 1)
+- **958 knih** (matrika 883, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, kmenové listiny (Musterlisten) 1, urbář 1, kronika 1)
 - **9 195 stran** převedených strojově (PERO OCR), **1 760 659 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **23 531 zápisů přečtených očima**: narození 10720, sňatky 8735, úmrtí 3288, převody gruntů 49, soupisy 193, jiné 517
+- **23 537 zápisů přečtených očima**: narození 10722, sňatky 8739, úmrtí 3288, převody gruntů 49, soupisy 193, jiné 517
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -629,7 +629,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Nezabudice 16 – rejstříky N 1784–1938, O 1784–1946, Z 1784–1939, písmena P–Z (eBadatelna 9774)](https://ebadatelna.soapraha.cz/d/9774/) | matrika | 1784–1946 |  |  | 2 (J 2) |
 | [Nezabudice 17 (9775, Z Nezabudice a Malá Buková 1784–1934)](https://ebadatelna.soapraha.cz/d/9775/) | matrika |  |  |  | 1 (Z 1) |
 
-## SOA Třeboň – DigiArchiv (141)
+## SOA Třeboň – DigiArchiv (145)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -673,6 +673,10 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Čížová O 1800–1834 (kniha 14, DigiArchiv 3038)](https://digi.ceskearchivy.cz/3038) | matrika |  |  |  | 1 (O 1) |
 | [Dub 10 1784-1821](https://digi.ceskearchivy.cz/3376) | matrika |  |  |  | 1 (O 1) |
 | [Dub 11 1784-1882](https://digi.ceskearchivy.cz/3377) | matrika |  |  |  | 1 (N 1) |
+| [Horní Slatina 4, narození 1806–1829](https://digi.ceskearchivy.cz/3714) | matrika | 1806–1829 |  |  | 1 (N 1) |
+| [Horní Slatina 5, narození 1830–1854](https://digi.ceskearchivy.cz/3715) | matrika | 1830–1854 |  |  | 1 (N 1) |
+| [Horní Slatina 7, oddaní 1784–1826](https://digi.ceskearchivy.cz/3717) | matrika | 1784–1826 |  |  | 1 (O 1) |
+| [Horní Slatina 8, oddaní 1827–1877](https://digi.ceskearchivy.cz/3718) | matrika | 1827–1877 |  |  | 2 (O 2) |
 | [Chřešťovice 3 1751-1777](https://digi.ceskearchivy.cz/4165) | matrika | 1751–1777 |  |  | 3 (N 3) |
 | [Chřešťovice 11 1784-1818](https://digi.ceskearchivy.cz/4173) | matrika | 1784–1818 |  |  | 1 (O 1) |
 | [Chyšky 6 1796-1815](https://digi.ceskearchivy.cz/4255) | matrika |  |  |  | 1 (N 1) |
@@ -814,7 +818,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Smíchov – sv. Filip a Jakub, SM N21 (1879–1882)](https://katalog.ahmp.cz/pragapublica/permalink?xid=F4C9890E8A954B20B26FD49C2562CCB0) | matrika |  |  |  | 1 (N 1) |
 | [Žižkov, sv. Prokop, ŽKP Z4 (1906–1915)](https://katalog.ahmp.cz/pragapublica/permalink?xid=F88B2F66CDCE438E9CBB66DA29BBF7CC) | matrika |  |  |  | 4 (J 2 Z 2) |
 
-## Moravský zemský archiv – Acta Publica (53)
+## Moravský zemský archiv – Acta Publica (54)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -826,6 +830,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Dyjákovice (fara), N, O, Z 1723–1750, kniha č. 13537 (Acta Publica id 1123)](https://www.mza.cz/actapublica/matrika/detail/1123) | matrika | 1723–1750 |  |  | 1 (Z 1) |
 | [Novosedly (fara), O 1877–1942, kniha č. 3108 (Acta Publica id 11817)](https://www.mza.cz/actapublica/matrika/detail/11817) | matrika | 1877–1942 |  |  | 3 (O 3) |
 | [Bítov O 1874–1949, kniha 13407, Acta Publica id 12350 (část Vysočany 1878–1900 = sn. 54–67)](https://www.mza.cz/actapublica/matrika/detail/12350) | matrika |  |  |  | 2 (O 2) |
+| [Častohostice, oddaní 1888–1949](https://www.mza.cz/actapublica/matrika/detail/13314) | matrika | 1888–1949 |  |  | 1 (O 1) |
 | [Hostim (Hösting) N 1821–1885, Acta Publica id 1384 (jen obec Hostim)](https://www.mza.cz/actapublica/matrika/detail/1384) | matrika |  |  |  | 3 (J 1 N 2) |
 | [Hrušovany nad Jevišovkou (fara), N, O, Z Hrušovany, Hrabětice, Šanov 1727–1770, kniha č. 13867 (Acta Publica id 1480)](https://www.mza.cz/actapublica/matrika/detail/1480) | matrika | 1727–1770 |  |  | 3 (N 2 O 1) |
 | [Hrušovany nad Jevišovkou (fara), N, O, Z Hrušovany, Hrabětice, Šanov 1771–1784, kniha č. 13868 (Acta Publica id 1481)](https://www.mza.cz/actapublica/matrika/detail/1481) | matrika | 1771–1784 |  |  | 2 (N 1 O 1) |
@@ -892,16 +897,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Pěší pluk č. 15 (hrabě Fabris), Musterlisten 1785–1788, Kriegsarchiv Wien Fasz. 858–859 (FamilySearch DGS 007606421)](https://www.familysearch.org/search/film/007606421) | kmenové listiny (Musterlisten) | 1785–1788 |  |  | 2 (J 2) |
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
-
-## ndk (5)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
 
 ## zaopava (90)
 
@@ -1010,6 +1005,16 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+
+## ndk (5)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
 
 ## nacr (10)
 
