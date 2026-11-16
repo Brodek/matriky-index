@@ -1,6 +1,21 @@
 archiv: "vca"
 kniha: "e62c8364"
 nazev: "Sbírka matrik Východočeského kraje, sign.: 136-3 (poř.č. 9201), 1688-1707 – Přepychy NOZ, index NO"
-obsah: "NO 1688–1706 po obcích: Přepychy + Vyhnanice + Zádolí + Záhornice (sn. 2–55, fol. 1v = sn. 6 rok 1688, sn. 12 = 1692–1693), rejstřík Přepych po písmenech příjmení (rok, příjmení a jméno, list) sn. 56–60, Opočno a okolí od sn. 61 (1688), dál Bolehošť, Mokré, Čánka, Křivice s vlastními rejstříky; fol. 187–190 opisy N 1659–1669, fol. 191–193 zlomek Z; snímek = pořadí snímku v ARON"
+obsah: "N 1688–1706 po obcích: Přepychy + Vyhnanice + Zádolí + Záhornice (sn. 2–31; fol. 1v = sn. 6 rok 1688, sn. 12 = 1692–1693, 14 = 1693–1694, 18 = 1696, 22 = 1698–1699, 26 = 1700–1701, 30 = 1703, 31 = 1706), rejstřík N Přepych po písmenech příjmení (rok, příjmení a jméno, list) sn. 32–44, O Přepych 1688–1706 sn. 45–55 (46 = 1689–1690, 50 = 1696–1697, 53 = 1701–1702, 55 = 1706), rejstřík O (jen ženichové) sn. 55–60, Opočno a okolí od sn. 61 (1688), dál Bolehošť, Mokré, Čánka, Křivice s vlastními rejstříky; fol. 187–190 opisy N 1659–1669, fol. 191–193 zlomek Z; snímek = pořadí snímku v ARON"
 url: "https://aron.vychodoceskearchivy.cz/apu/e62c8364-6077-4140-a3fc-379e309dfb9f"
 poznamka: "jen jednotlivé stránky"
+import:
+  prefix: "prepychy1363"
+  delitel: 1
+ocr:
+- soubor: "ocr-transkribus-czech-m1.tsv"
+  nastroj: "Transkribus (app.transkribus.org), Process with AI – Text Recognition"
+  dokument: "20321722, 20321882"
+  model: "Transkribus Czech Handwriting M1 (model 263129)"
+  nastaveni: "rozbor rozložení automaticky, jazykový model žádný; nahráno 2400 px šedotónově"
+  datum: "2026-11-16"
+  export: "export_job_32019271.zip"
+  snimky: "42–55"
+  stranek: 14
+  radku: 941
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky-transkribus-czech-m1.tsv); text je strojový, nekontrolovaný"
