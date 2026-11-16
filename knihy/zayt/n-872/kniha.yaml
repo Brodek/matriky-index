@@ -5,3 +5,18 @@ farnost: "Kostelec nad Černými lesy (rabinát; oddíly podle obcí – Konojed
 roky: "1841–1859"
 obsah: "zápisy sn. 4–64 po oddílech obcí (záhlaví nahoře na pravé straně), oddíl Swojschitz sn. 61 (posty 21–27, 1855–1857) a pokračování fol. 44 = sn. 49 (posty 27–29, 1858–1859); rejstřík podle křestních jmen (Seite/Post) sn. 65–83; sn. 84 závěrečná doložka s pečetí; Seite v rejstříku = snímek − 5 (Seite 44 = sn. 49, 47 = sn. 52), Alois „55/26“ je ale na sn. 61; sn. 52 má přes stránku průsvitnou fólii"
 url: "https://zayt.org/collections/jewish-registers-1784-1949/n-872"
+import:
+  prefix: "n872"
+  delitel: 1
+ocr:
+- soubor: "ocr-pero.tsv"
+  nastroj: "PERO OCR (pero-ocr.fit.vutbr.cz)"
+  dokument: "e0b2bddd-8c0d-4082-8a09-7598743d8536"
+  model: "Kurrent (German, Czech)"
+  nastaveni: "rozbor rozložení Handwritten layout, řádky Universal, jazykový model žádný; zayt úroveň o1, šedotónově, šířka nejvýš 2400 px"
+  datum: "2026-11-16"
+  export: "zayt-n-872.pagexml.zip"
+  snimky: "1–84"
+  stranek: 84
+  radku: 19100
+  poznamka: "souřadnice v pixelech nahraného obrázku (viz stranky.tsv); text je strojový, nekontrolovaný"
