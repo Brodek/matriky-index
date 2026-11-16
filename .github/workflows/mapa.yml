@@ -3,8 +3,8 @@
 # a `by: matriky-index` z účtu pe-pan slučuje sama; ubývající body nebo smazanou knihu dá správci mapy.
 # Dokud je pull request otevřený, další běh jen přepíše jeho větev a popis.
 #
-# Token: secret MAPA_TOKEN = klasický token účtu pe-pan s oprávněními public_repo (push do forku, pull request do mapy)
-# a workflow (větev ve forku stojí na main mapy, jejíž změny workflow push nese s sebou).
+# Token: secret MAPA_TOKEN = klasický token účtu pe-pan s oprávněním workflow (větev ve forku stojí na main mapy,
+# jejíž změny workflow push nese s sebou); GitHub k němu povinně přidá celé repo.
 # Bez něj se převod jen přeskočí.
 name: Převod do Mapy matrik
 on:
