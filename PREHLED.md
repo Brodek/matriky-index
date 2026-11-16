@@ -2,9 +2,9 @@
 
 Stav k 16. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **959 knih** (matrika 884, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, kmenové listiny (Musterlisten) 1, urbář 1, kronika 1)
-- **9 228 stran** převedených strojově (PERO OCR), **1 763 063 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **23 613 zápisů přečtených očima**: narození 10725, sňatky 8763, úmrtí 3311, převody gruntů 49, soupisy 193, jiné 543
+- **965 knih** (matrika 890, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, kmenové listiny (Musterlisten) 1, urbář 1, kronika 1)
+- **9 312 stran** převedených strojově (PERO OCR), **1 782 163 řádků** strojového textu – nekontrolovaný, slouží k hledání
+- **23 806 zápisů přečtených očima**: narození 10824, sňatky 8795, úmrtí 3341, převody gruntů 49, soupisy 193, jiné 575
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -144,7 +144,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
 | [Sbírka matrik Východočeského kraje, sign.: 1300 (poř.č. 6456), 1735-8.1763](https://aron.vychodoceskearchivy.cz/apu/0042c435-fb11-4c74-88c1-b3cf903e16a9) | matrika |  |  |  | 1 (N 1) |
-| [Sbírka matrik Východočeského kraje, sign.: 117-14 (poř.č. 8109), 1771-1787 – římskokatolický index NAROZENÝCH, ZEMŘELÝCH, ODDANÝCH, farnost Nový Hrádek (Borová, Dlouhé, Nový Hrádek, Rzy, Sněžné, Tis) + filiální obvod Slavoňov](https://aron.vychodoceskearchivy.cz/apu/01a73cb2-72e9-482f-988f-10ca2e8ecd79) | matrika | 1771–1787 |  |  | 22 (J 22) |
+| [Sbírka matrik Východočeského kraje, sign.: 117-14 (poř.č. 8109), 1771-1787 – římskokatolický index NAROZENÝCH, ZEMŘELÝCH, ODDANÝCH, farnost Nový Hrádek (Borová, Dlouhé, Nový Hrádek, Rzy, Sněžné, Tis) + filiální obvod Slavoňov](https://aron.vychodoceskearchivy.cz/apu/01a73cb2-72e9-482f-988f-10ca2e8ecd79) | matrika | 1771–1787 |  |  | 26 (J 26) |
 | [Sbírka matrik Východočeského kraje, sign.: 14-3 (poř.č. 710), 1822-6.1854](https://aron.vychodoceskearchivy.cz/apu/02418c37-d8cc-4e29-81f9-8599e7c1eee2) | matrika |  |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 1261 (poř.č. 2131), 1653-1806 – index NAROZENÝCH fary Dolní Újezd u Litomyšle](https://aron.vychodoceskearchivy.cz/apu/03d4e19c-51ae-4043-8451-062e520fae10) | matrika |  |  |  | 3 (J 3) |
 | [Okresní úřad Hradec Králové I, poř. č.: 76, 1869-1870 – Dolní Polánky](https://aron.vychodoceskearchivy.cz/apu/04844753-7658-4a91-8b7e-f7c2fffe98a9) | sčítání lidu | 1869–1870 |  |  | 1 (S 1) |
@@ -233,7 +233,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 3059 (poř.č. 12277), 1838-3.1875 – římskokatolická matrika NAROZENÝCH, Vilémov](https://aron.vychodoceskearchivy.cz/apu/5c27970d-ffb5-4d1b-87f5-4d59d56625ad) | matrika | 1838–1875 |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 120-6 (poř.č. 8235), 1784-1810](https://aron.vychodoceskearchivy.cz/apu/5d66da06-2037-485d-99d3-b2700b882058) | matrika |  |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 171-3 (poř.č. 12180), 1784-1842 – Velký Uhřínov N (Velký Uhřínov 1784–1842, ostatní obce farnosti jen 1784–1797)](https://aron.vychodoceskearchivy.cz/apu/5d82c88b-3a14-4c48-a1ac-bc9b3cace57a) | matrika |  |  |  | 21 (J 5 N 16) |
-| [Sbírka matrik Východočeského kraje, sign.: 14-2764 (poř.č. 721), 1784-1812 – římskokatolický index NAROZENÝCH, farnost (Bačetín, Bystré, Janov, Kounov, Ohnišov, Sudín)](https://aron.vychodoceskearchivy.cz/apu/5ef280e6-0894-42c2-8196-c11657d7e741) | matrika |  |  |  | 218 (N 218) |
+| [Sbírka matrik Východočeského kraje, sign.: 14-2764 (poř.č. 721), 1784-1812 – římskokatolický index NAROZENÝCH, farnost (Bačetín, Bystré, Janov, Kounov, Ohnišov, Sudín)](https://aron.vychodoceskearchivy.cz/apu/5ef280e6-0894-42c2-8196-c11657d7e741) | matrika |  |  |  | 242 (J 1 N 241) |
 | [Sbírka matrik Východočeského kraje, sign.: 5459 – rejstřík N Pohora + Lezník 1851–1896 (kód KZDCWBOV)](https://aron.vychodoceskearchivy.cz/apu/5f3dc1ae-0ef3-4675-9b5b-d39449f883cf) | matrika | 1851–1896 |  |  | 1 (J 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 90-3998 (poř.č. 6327), 1837-1897 – římskokatolická matrika NAROZENÝCH, Radostovice, Panská Ves (6.1837-7.1897) fol. 68 (Radostovice) a 24 (Panská Ves) pamětní zápisy o připojení těchto obcí k farnosti Lično 1876](https://aron.vychodoceskearchivy.cz/apu/5fe17429-9fe8-4639-b8c7-f09b611a61a4) | matrika | 1837–1897 |  |  | 11 (N 11) |
 | [Sbírka matrik Východočeského kraje, sign.: 53-30 (poř.č. 3689), 1807-1834](https://aron.vychodoceskearchivy.cz/apu/61031db2-a939-491d-870f-9ffbbc5525ab) | matrika | 1807–1834 |  |  | 1 (N 1) |
@@ -242,12 +242,12 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 315 (poř.č. 10265), 1785-1807](https://aron.vychodoceskearchivy.cz/apu/647f50d9-32d0-4266-9d3b-6a018db185c8) | matrika | 1785–1807 |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 25-1 (poř.č. 1680), 1784-1808 – římskokatolická matrika NAROZENÝCH, Dobré (5.1784-5.1808), Hlinné (6.1784-5.1808), Kamenice (6.1784-5.1808), Lomy (9.1784-5.1808), Netřeba (5.1784-1.1808), Rovné (5.1784-5.1808), Dolní Spáleniště (5.1784-5.1808), Osečnice (6.1784-5.1808), Žákovec (8.1784-6.1808)](https://aron.vychodoceskearchivy.cz/apu/65d06501-6982-4cdb-91e3-372f62214101) | matrika |  |  |  | 110 (J 4 N 106) |
 | [Sbírka matrik Východočeského kraje, sign.: 1086 – N/Z/O Damníkov 1784–1843 (kód TKPEKAOI)](https://aron.vychodoceskearchivy.cz/apu/65fbc7f7-7f99-4ae3-8b8d-198838955b7e) | matrika | 1784–1843 |  |  | 1 (O 1) |
-| [Sbírka matrik Východočeského kraje, sign.: 14-6 (poř.č. 718), 1785-1812 – římskokatolická matrika ZEMŘELÝCH, Bystré (do 9.1812), Bačetín (do 10.1812), Janov (do 10.1812), Kounov (1787-9.1812), Sudín (do 1811), Ohnišov (do 5.1811)](https://aron.vychodoceskearchivy.cz/apu/665704bb-460e-400b-bf4d-5528d61377a6) | matrika | 1785–1812 |  |  | 12 (J 1 Z 11) |
+| [Sbírka matrik Východočeského kraje, sign.: 14-6 (poř.č. 718), 1785-1812 – římskokatolická matrika ZEMŘELÝCH, Bystré (do 9.1812), Bačetín (do 10.1812), Janov (do 10.1812), Kounov (1787-9.1812), Sudín (do 1811), Ohnišov (do 5.1811)](https://aron.vychodoceskearchivy.cz/apu/665704bb-460e-400b-bf4d-5528d61377a6) | matrika | 1785–1812 |  |  | 32 (J 1 Z 31) |
 | [Sbírka matrik Východočeského kraje, sign.: 21-14 (poř.č. 1237), 1758-1794](https://aron.vychodoceskearchivy.cz/apu/66ff6b7a-9e60-4b3d-9e53-7af6c48f89d8) | matrika | 1758–1794 |  |  | 3 (N 1 O 2) |
 | [Sbírka matrik Východočeského kraje, sign.: 84-7142 (poř.č. 5836), 1839-1910](https://aron.vychodoceskearchivy.cz/apu/69ccb8ca-d584-4a81-b0f3-1984748b69e9) | matrika | 1839–1910 |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 100-2 (poř.č. 6922), 1789-1799 – římskokatolická matrika NAROZENÝCH, Metličany (10.1790-3.1799), Sloupno (9.1789-4.1799), Prasek (9.1789-4.1799), Zdechovice (11.1789-4.1799), Humburky (9.1789-4.1799), Králíky (10.1789-3.1799), Řehoty (5.1791-2.1799)](https://aron.vychodoceskearchivy.cz/apu/6a5d08b0-3d4b-46f2-a846-ceb5b01cbf40) | matrika | 1789–1799 |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 47-4 (poř.č. 3316), 1748-4.1784](https://aron.vychodoceskearchivy.cz/apu/706c273b-47af-46c7-ac56-87dd20690518) | matrika |  |  |  | 4 (N 4) |
-| [Sbírka matrik Východočeského kraje, sign.: 117-13 (poř.č. 8108), 1721-1771 – římskokatolický index NAROZENÝCH, ZEMŘELÝCH, ODDANÝCH, farnost Nový Hrádek (Borová, Bydlo, Dlouhé, Frymburk, Krahulčí, Nový Hrádek, Rzy, Sněžné, Tis) + filiální obvod Slavoňov](https://aron.vychodoceskearchivy.cz/apu/71a9158c-c5d0-4288-956b-12e2dbfc4ad9) | matrika | 1721–1771 |  |  | 45 (J 45) |
+| [Sbírka matrik Východočeského kraje, sign.: 117-13 (poř.č. 8108), 1721-1771 – římskokatolický index NAROZENÝCH, ZEMŘELÝCH, ODDANÝCH, farnost Nový Hrádek (Borová, Bydlo, Dlouhé, Frymburk, Krahulčí, Nový Hrádek, Rzy, Sněžné, Tis) + filiální obvod Slavoňov](https://aron.vychodoceskearchivy.cz/apu/71a9158c-c5d0-4288-956b-12e2dbfc4ad9) | matrika | 1721–1771 |  |  | 46 (J 46) |
 | [Sbírka matrik Východočeského kraje, sign.: 3815 (poř.č. 9516), 5.1841-3.1897](https://aron.vychodoceskearchivy.cz/apu/7222708d-9e19-4c41-a22d-b1e04af4f04a) | matrika |  |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 1304 (poř.č. 6460), 6.1802-1816](https://aron.vychodoceskearchivy.cz/apu/73276359-181b-4c04-849d-5afbe5f038bd) | matrika |  |  |  | 2 (N 2) |
 | [Sbírka matrik Východočeského kraje, sign.: 90-3999 (poř.č. 6339), 1876-1897 – římskokatolická matrika ZEMŘELÝCH, Radostovice (5.1876-11.1895), Panská Ves (2.1876-1.1897) fol. 2 pamětní zápis o připojení obcí Panská Ves a Radostovice k farnosti Lično a jejich matrikách 1876](https://aron.vychodoceskearchivy.cz/apu/73bc70f9-d582-4a86-975a-e6ce5636c61b) | matrika | 1876–1897 |  |  | 1 (Z 1) |
@@ -275,7 +275,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 1254 – Dolní Újezd N 1837–1856 (kód 5YPLQV5T)](https://aron.vychodoceskearchivy.cz/apu/8428b8b9-a0d9-40f8-8112-c0308f34c7d3) | matrika | 1837–1856 |  |  | 2 (N 2) |
 | [8692ebc2](https://aron.vychodoceskearchivy.cz/apu/8692ebc2-0690-4dff-a3ef-8f033b27a838/dao/8692ebc2-0690-4dff-a3ef-8f033b27a838/file/8996e797-c7f4-4027-96c1-3c1140157fc8) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 1350 – Morašice N 1839–1862 (kód 6JOH5RFC)](https://aron.vychodoceskearchivy.cz/apu/88d073fd-e7a0-4814-81db-08c16ed41d68) | matrika | 1839–1862 |  |  | 3 (N 3) |
-| [Sbírka matrik Východočeského kraje, sign.: 117-2 (poř.č. 8087), 1771-1787 – Nový Hrádek NZO (farnost Nový Hrádek a filiální obvod Slavoňov)](https://aron.vychodoceskearchivy.cz/apu/8964843b-907d-4651-a5c7-9f15b886fc49) | matrika | 1771–1787 | 276 | 99396 | 503 (J 2 N 103 O 395 Z 3) |
+| [Sbírka matrik Východočeského kraje, sign.: 117-2 (poř.č. 8087), 1771-1787 – Nový Hrádek NZO (farnost Nový Hrádek a filiální obvod Slavoňov)](https://aron.vychodoceskearchivy.cz/apu/8964843b-907d-4651-a5c7-9f15b886fc49) | matrika | 1771–1787 | 276 | 99396 | 539 (J 3 N 131 O 396 Z 9) |
 | [Sbírka matrik Východočeského kraje, sign.: 53-7387 (poř.č. 3707), 1886-1909](https://aron.vychodoceskearchivy.cz/apu/8ac2ce16-fabd-42e4-b7d0-dc0d84ae6999) | matrika | 1886–1909 |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 660 (poř.č. 3234), 10.1785-11.1867](https://aron.vychodoceskearchivy.cz/apu/8b7e2077-0101-4369-bf32-694f8e6861db) | matrika | 1785–1867 |  |  | 3 (O 3) |
 | [Sbírka matrik Východočeského kraje, sign.: 117-1 (poř.č. 8086), 1721-1771 – Nový Hrádek NZO (farnost Nový Hrádek a filiální obvod Slavoňov)](https://aron.vychodoceskearchivy.cz/apu/8df4dc98-f935-4dda-87d2-15cfcb26dd4a) | matrika | 1721–1771 | 319 | 39444 | 172 (J 2 N 65 O 48 Z 57) |
@@ -331,7 +331,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Sbírka matrik Východočeského kraje, sign.: 9776 (poř.č. 9492), 1871-1921](https://aron.vychodoceskearchivy.cz/apu/bd48710b-534f-42a5-b8d9-69d8f28710b1) | matrika |  |  |  | 2 (N 2) |
 | [Sbírka matrik Východočeského kraje, sign.: 26-12 (poř.č. 1756), 1806-1843](https://aron.vychodoceskearchivy.cz/apu/be1a4e7b-0ad8-4683-97ba-c516976dffe9) | matrika |  |  |  | 6 (Z 6) |
 | [Sbírka matrik Východočeského kraje, sign.: 53-4177 (poř.č. 3785), 1836-1874](https://aron.vychodoceskearchivy.cz/apu/be1b9eca-d210-4946-8a16-b29d97c43c84) | matrika | 1836–1874 |  |  | 2 (Z 2) |
-| [Sbírka matrik Východočeského kraje, sign.: 14-7 (poř.č. 719), 1811-1863](https://aron.vychodoceskearchivy.cz/apu/be25d5ce-337a-4599-8853-3f218ea1d3ca) | matrika |  |  |  | 25 (J 2 Z 23) |
+| [Sbírka matrik Východočeského kraje, sign.: 14-7 (poř.č. 719), 1811-1863](https://aron.vychodoceskearchivy.cz/apu/be25d5ce-337a-4599-8853-3f218ea1d3ca) | matrika |  |  |  | 30 (J 3 Z 27) |
 | [Sbírka matrik Východočeského kraje, sign.: 164-8 (poř.č. 11449), 1803-1866 – římskokatolická matrika NAROZENÝCH, Mitrov (1803-1862), Nepasice (1803-6.1843), Horní Polánky (1803-1863), Jeníkovice (7.1837-4.1841), Dolní Polánky (1803-1862), Štěnkov (1803-2.1851), Stráňka (1803-1861), Krňovice (9.1864-5.1866)](https://aron.vychodoceskearchivy.cz/apu/c012411e-8a60-42e2-99fc-d8eb184dd5d2) | matrika | 1803–1866 |  |  | 3 (N 3) |
 | [Sbírka matrik Východočeského kraje, sign.: 20-3 (poř.č. 1069), 1765-1784](https://aron.vychodoceskearchivy.cz/apu/c02439ab-8e58-40f4-93ba-da0195aa62ca) | matrika | 1765–1784 |  |  | 2 (N 2) |
 | [Sbírka matrik Východočeského kraje, sign.: 24-8 (poř.č. 1639), 11.1784-1851 – Jedlová v Orlických horách O](https://aron.vychodoceskearchivy.cz/apu/c1d4cdf0-3d26-49bd-a142-4daa67f45a4a) | matrika |  |  |  | 2 (O 2) |
@@ -401,18 +401,18 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Okresní úřad Rychnov nad Kněžnou I, inv. č.: 2281, 1890 – Petrovice - Velké Petrovice čp. 1 - 48 obydlená obecní kůlna čp. 0](https://aron.vychodoceskearchivy.cz/apu/f77dadc3-d324-4fc6-a48b-dd253a057052) | sčítání lidu | 1890 |  |  | 1 (S 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 171-2797 (poř.č. 12181), 1784-1837 – Velký Uhřínov O](https://aron.vychodoceskearchivy.cz/apu/f7a85f10-ccc5-41dc-9d4c-b19a8cf97643) | matrika | 1784–1837 | 39 | 9110 | 8 (O 8) |
 | [Sbírka matrik Východočeského kraje, sign.: 181-3503 (poř.č. 12669), 1851-1894 – římskokatolická matrika ODDANÝCH, římskokatolický index ODDANÝCH, Vysoké Veselí (3.1851-10.1894), Veselská Lhota (2.1851-10.1894), Velešice (9.1851-11.1893), Hrobičany (do 11.1894), Sběř (do 5.1894), Volanice (10.1851-5.1894)](https://aron.vychodoceskearchivy.cz/apu/f806a3d0-3902-4d7b-8f09-ebaf8bdebb46) | matrika | 1851–1894 |  |  | 1 (O 1) |
-| [Sbírka matrik Východočeského kraje, sign.: 14-2 (poř.č. 709), 1799-1827](https://aron.vychodoceskearchivy.cz/apu/f8150aa3-5756-4adf-9229-49146d4763b9) | matrika |  |  |  | 14 (N 14) |
+| [Sbírka matrik Východočeského kraje, sign.: 14-2 (poř.č. 709), 1799-1827](https://aron.vychodoceskearchivy.cz/apu/f8150aa3-5756-4adf-9229-49146d4763b9) | matrika |  |  |  | 17 (J 1 N 16) |
 | [Sbírka matrik Východočeského kraje, sign.: 162-5 (poř.č. 11267), 1812-1872](https://aron.vychodoceskearchivy.cz/apu/f816fc1e-f00f-4609-819e-02e11e8765a7) | matrika |  |  |  | 6 (N 2 O 2 Z 2) |
 | [Sbírka matrik Východočeského kraje, sign.: 1301 (poř.č. 6457), 9.1763-4.1784](https://aron.vychodoceskearchivy.cz/apu/f83d2c6d-bf83-4193-bf20-d8ddc9c9e774) | matrika |  |  |  | 9 (N 9) |
 | [Sbírka matrik Východočeského kraje, sign.: 1335 (poř.č. 6525), 1622-1784 – index NAROZENÝCH fary Litomyšl, příjmení H–P](https://aron.vychodoceskearchivy.cz/apu/f8794015-cb81-4aa1-abb5-e55b8d76dc7b) | matrika |  |  |  | 2 (J 2) |
 | [Sbírka matrik Východočeského kraje, sign.: 136-7 (poř.č. 9209), 1796-1843 – římskokatolická matrika NAROZENÝCH, římskokatolický index NAROZENÝCH, Křivice (1796-10.1843), Bolehošťská Lhota (1796-1839), Nová Ves (1796-1842), Vyhnanice (1812-4.1838) fol. 184 mrtvě narození 1829, 1834](https://aron.vychodoceskearchivy.cz/apu/f8b90cf5-b859-4275-9465-1c4b63483e93) | matrika | 1796–1843 |  |  | 4 (N 4) |
-| [Sbírka matrik Východočeského kraje, sign.: 14-4 (poř.č. 714), 1785-1826 – Bystré O (Bystré, Bačetín, Janov, Kounov, Sudín, Ohnišov)](https://aron.vychodoceskearchivy.cz/apu/f9ac826b-d61c-4270-b416-f20a88bb1417) | matrika | 1785–1826 | 126 | 19738 | 30 (J 4 O 26) |
+| [Sbírka matrik Východočeského kraje, sign.: 14-4 (poř.č. 714), 1785-1826 – Bystré O (Bystré, Bačetín, Janov, Kounov, Sudín, Ohnišov)](https://aron.vychodoceskearchivy.cz/apu/f9ac826b-d61c-4270-b416-f20a88bb1417) | matrika | 1785–1826 | 126 | 19738 | 63 (J 10 O 53) |
 | [Sbírka matrik Východočeského kraje, sign.: M-11 1671 (poř.č. 7382), 1843-1854](https://aron.vychodoceskearchivy.cz/apu/fa7c9344-e737-49c3-942b-19a3d7897155) | matrika |  |  |  | 1 (N 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 25-9 (poř.č. 1735), 1817-1839 – římskokatolický index ZEMŘELÝCH, farnost (Dobré, Dolní Spáleniště, Hlinné, Chmeliště, Kamenice, Lomy, Netřeba, Osečnice, Petrovice, Rovenské Šediviny, Rovné, Sekyrka, Skutina, Žákovec, Živina)](https://aron.vychodoceskearchivy.cz/apu/fc356355-b0f8-4ae1-a868-9cfae86db423) | matrika |  |  |  | 36 (Z 36) |
 | [Sbírka matrik Východočeského kraje, sign.: 53-1 (poř.č. 3643), 1751-1784](https://aron.vychodoceskearchivy.cz/apu/fdbcf250-e756-4b60-a6e7-0a5c15a4c50e) | matrika | 1751–1784 |  |  | 1 (O 1) |
 | [Sbírka matrik Východočeského kraje, sign.: 165-3962 (poř.č. 11636), 1829-1876 – římskokatolická matrika NAROZENÝCH, Albrechtice nad Orlicí (1829-4.1876), Štěpánovsko (1829-1875), Nová Ves (1829-4.1876)](https://aron.vychodoceskearchivy.cz/apu/fe8f9155-104c-4fc2-9122-841895dd5113) | matrika | 1829–1876 |  |  | 1 (N 1) |
-| [Sbírka matrik Východočeského kraje, sign.: 14-1 (poř.č. 708), 1784-1799](https://aron.vychodoceskearchivy.cz/apu/ff03e2c0-8943-480b-af44-4661b9256755) | matrika |  |  |  | 27 (J 2 N 25) |
-| [Sbírka matrik Východočeského kraje, sign.: 14-2765 (poř.č. 724), 1785-1812 – římskokatolický index ZEMŘELÝCH, farnost (Bačetín, Bystré, Janov, Kounov, Ohnišov, Sudín)](https://aron.vychodoceskearchivy.cz/apu/ffcc1f51-2ef4-46e6-a08e-ed8f523c237e) | matrika |  |  |  | 15 (J 4 Z 11) |
+| [Sbírka matrik Východočeského kraje, sign.: 14-1 (poř.č. 708), 1784-1799](https://aron.vychodoceskearchivy.cz/apu/ff03e2c0-8943-480b-af44-4661b9256755) | matrika |  |  |  | 31 (J 2 N 29) |
+| [Sbírka matrik Východočeského kraje, sign.: 14-2765 (poř.č. 724), 1785-1812 – římskokatolický index ZEMŘELÝCH, farnost (Bačetín, Bystré, Janov, Kounov, Ohnišov, Sudín)](https://aron.vychodoceskearchivy.cz/apu/ffcc1f51-2ef4-46e6-a08e-ed8f523c237e) | matrika |  |  |  | 18 (J 7 Z 11) |
 | [Opočno N, Z, O 1723–1797, sign. 120-1 (kód VCACWBOV)](https://aron.vychodoceskearchivy.cz/apu/1215ac03-cbfc-4b1c-9f7f-0a0ebf8f4f45) | matrika |  |  |  | 4 (O 4) |
 | [Opočno O 1784–1834 (Pohoří, Puličky, Semechnice, Trnov), sign. 120-11 (kód 5JZN4DBO)](https://aron.vychodoceskearchivy.cz/apu/ab67b4df-8c81-4421-97bc-508551f5366d) | matrika |  |  |  | 6 (O 6) |
 | [Opočno, rejstřík oddaných 1723–1797, sign. 120-15 (kód L2A5OAAQ)](https://storage.vychodoceskearchivy.cz/matriky/L/CZ_215000010_00190_L2A5OAAQ_sign-120-15.zip) | matrika |  |  |  | 2 (J 2) |
@@ -431,7 +431,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Litomyšl Z 1864–1881, sign. 5411 (kód 6J44UBOZ)](https://aron.vychodoceskearchivy.cz/apu/26fa22af-989b-4af5-b291-69e9797c9606) | matrika |  |  |  | 10 (Z 10) |
 | [Litomyšl, index Z 1864–1906, sign. 7492 (kód LRIQXP2E)](https://aron.vychodoceskearchivy.cz/apu/06a51ee1-4891-4871-b054-cd9370536c0b) | matrika | 1864–1906 | 229 | 85754 | 5 (J 5) |
 
-## Národní archiv – židovské matriky a familianti (zayt.org) (66)
+## Národní archiv – židovské matriky a familianti (zayt.org) (72)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -439,11 +439,15 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | familianti-54 | matrika |  |  |  | 8 (J 8) |
 | familianti-55 | matrika |  |  |  | 2 (J 2) |
 | familianti-60 | matrika |  |  |  | 2 (J 2) |
-| [Familiantská kniha Kouřimský kraj HBF IX/IIB (Chvatěruby, Církvice, Kostelec n. L., Jemniště, Jankov, Panenské Břežany, Komorní Hrádek, Kounice)](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/74) | matrika | 1811–1848 |  |  | 2 (J 2) |
-| [Familiantská kniha Kouřimský kraj HBF IX/IX (Řimovice, Sázava, Kostelec nad Černými lesy)](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/83) | matrika | 1811–1848 | 50 | 5002 | 18 (J 18) |
+| [Familiantská kniha Kouřimský kraj HBF IX/IIB (Chvatěruby, Církvice, Kostelec n. L., Jemniště, Jankov, Panenské Břežany, Komorní Hrádek, Kounice)](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/74) | matrika | 1811–1848 |  |  | 6 (J 6) |
+| [Familiantská kniha Kouřimský kraj HBF IX/IIIA (Kouřim, Klecany, Kojetice, Kolín, Kunratice u Prahy, Hlaváčova Lhota, Třebovle a Molitorov)](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/75) | matrika | 1811–1848 |  |  | 1 (J 1) |
+| [Familiantská kniha Kouřimský kraj HBF IX/IIIB (Libeň, I. část)](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/76) | matrika | 1811–1848 |  |  | 1 (J 1) |
+| [Familiantská kniha Kouřimský kraj HBF IX/VIII (Nusle a Vršovice, Obříství, Pakoměřice, Petrovice, Pyšely, Počernice, Velké Popovice, Předboř a Strančice, Průhonice, Radim, Rataje nad Sázavou)](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/82) | matrika | 1811–1848 |  |  | 3 (J 3) |
+| [Familiantská kniha Kouřimský kraj HBF IX/IX (Řimovice, Sázava, Kostelec nad Černými lesy)](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/83) | matrika | 1811–1848 | 50 | 5002 | 22 (J 22) |
 | [Familiantská kniha Kouřimský kraj HBF IX/X (Škvorec, Štiřín, Střížkov, Svojšice, Čakovice, Tvoršovice, Vestec)](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/84) | matrika | 1811–1848 |  |  | 3 (J 3) |
 | [Hradecký kraj, sig. HBF VI/I](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/48) | matrika |  |  |  | 2 (J 2) |
 | [Familiantská kniha Kouřimského kraje, sv. HBF IX/IIA (NA, Familiantské knihy, inv. č. 73), statek Chvaly](https://zayt.org/collections/jewish-familiant-books-1811-1848-redux/73) | matrika |  |  |  | 1 (J 1) |
+| [Mnichovo Hradiště (Münchengrätz), židovská matrika N 1820–1838 (NA HBMa inv. 1284)](https://zayt.org/collections/jewish-registers-1784-1949/n-1284) | matrika | 1820–1838 |  |  | 14 (N 14) |
 | [inv. č. 1843 (Rychnov nad Kněžnou N 1840–1876, Litt. B)](https://zayt.org/collections/jewish-registers-1784-1949/n-1843) | matrika |  |  |  | 1 (N 1) |
 | [inv. č. 1844 (Rychnov nad Kněžnou N 1874–1939)](https://zayt.org/collections/jewish-registers-1784-1949/n-1844) | matrika |  |  |  | 1 (N 1) |
 | [Uhlířské Janovice, židovská matrika N 1808–1839 (NA inv. 2264)](https://zayt.org/collections/jewish-registers-1784-1949/n-2264) | matrika | 1808–1839 | 18 | 3839 |  |
@@ -455,11 +459,11 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Kolín, židovská matrika N 1788–1821 (NA inv. 821)](https://zayt.org/collections/jewish-registers-1784-1949/n-821) | matrika | 1788–1821 | 34 | 7894 | 2 (N 2) |
 | [Kolín, židovská matrika N 1822–1839 (NA inv. 822)](https://zayt.org/collections/jewish-registers-1784-1949/n-822) | matrika | 1822–1839 | 22 | 6199 | 6 (N 6) |
 | [Kolín, židovská matrika N 1842–1864 (NA HBMa inv. 824)](https://zayt.org/collections/jewish-registers-1784-1949/n-824) | matrika | 1842–1864 |  |  | 2 (J 2) |
-| [Kostelec nad Černými lesy, židovská matrika N 1841–1859 (NA HBMa inv. 872)](https://zayt.org/collections/jewish-registers-1784-1949/n-872) | matrika | 1841–1859 |  |  | 11 (J 5 N 6) |
+| [Kostelec nad Černými lesy, židovská matrika N 1841–1859 (NA HBMa inv. 872)](https://zayt.org/collections/jewish-registers-1784-1949/n-872) | matrika | 1841–1859 | 84 | 19100 | 35 (J 5 N 30) |
 | [inv. č. 166 (Doudleby nad Orlicí)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-166) | matrika |  |  |  | 1 (N 1) |
 | [inv. č. 178 (FÚ Dříteč, N 1845–1873, O 1849–1850)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-178) | matrika |  |  |  | 1 (O 1) |
 | [Uhlířské Janovice, rejstřík židovských matrik NOZ 1808–1839 (strojopis, NA inv. 2265)](https://zayt.org/collections/jewish-registers-1784-1949/noz-2265) | matrika |  |  |  | 3 (J 3) |
-| [Hrusice, židovská kontrolní matrika NOZ (O 1847–1856)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-241) | matrika | 1847–1856 |  |  | 4 (O 4) |
+| [Hrusice, židovská kontrolní matrika NOZ (O 1847–1856)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-241) | matrika | 1847–1856 |  |  | 6 (N 2 O 4) |
 | noz-2435 | matrika |  |  |  | 23 (J 2 Z 21) |
 | [Zájezdec, Přestavlky, Hroubovice – rejstříky NOZ 1789–1839 (NA HBMa inv. 2436)](https://zayt.org/collections/jewish-registers-1784-1949/noz-2436) | matrika | 1789–1839 |  |  | 7 (J 7) |
 | [Zájezdec, Přestavlky – rejstříky NOZ 1839–1895 (NA HBMa inv. 2437)](https://zayt.org/collections/jewish-registers-1784-1949/noz-2437) | matrika | 1839–1895 |  |  | 12 (J 12) |
@@ -473,6 +477,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Nebovidy, židovská kontrolní matrika NOZ (NA inv. 535)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-535) | matrika | 1788–1863 | 24 | 4058 | 15 (J 4 N 6 O 4 Z 1) |
 | [Nebužely, židovská kontrolní matrika NOZ (NA inv. 536)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-536) | matrika | 1778–1864 | 14 | 5991 | 1 (N 1) |
 | [inv. č. 580 (Chlumec nad Cidlinou, Z 1902–1923)](https://zayt.org/collections/jewish-registers-1784-1949/noz-580) | matrika |  |  |  | 1 (Z 1) |
+| [Popovičky, židovská kontrolní matrika NOZ (N 1844–1852, O 1840–1849, Z 1842–1850; NA inv. 631)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-631) | matrika | 1840–1852 |  |  | 4 (N 2 O 2) |
 | [Přistoupim, židovská kontrolní matrika NOZ (NA inv. 726)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-726) | matrika | 1803–1840 | 19 | 3335 | 17 (J 3 N 8 O 2 Z 4) |
 | [Přistoupim, židovská kontrolní matrika NOZ (NA inv. 727)](https://zayt.org/collections/jewish-control-registers-1780-1911/noz-727) | matrika | 1840–1858 | 12 | 2799 | 7 (J 2 N 3 Z 2) |
 | [inv. č. 873 (Kostelec nad Černými Lesy, NOZ 1896–1943), duplikát matriky zemřelých](https://zayt.org/collections/jewish-registers-1784-1949/noz-873) | matrika |  |  |  | 1 (Z 1) |
@@ -488,9 +493,10 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Praha-Libeň, židovská matrika O 1833–1849 (NA HBMa inv. 2745)](https://zayt.org/collections/jewish-registers-1784-1949/o-2745) | matrika | 1833–1849 | 14 | 3300 | 4 (O 4) |
 | [Doudleby O (inv. 341)](https://zayt.org/collections/jewish-registers-1784-1949/o-341) | matrika |  |  |  | 1 (O 1) |
 | [Heřmanův Městec, židovská matrika O (NA inv. 406), duplikát 1839–1850](https://zayt.org/collections/jewish-registers-1784-1949/o-406) | matrika | 1839–1850 | 30 | 4761 |  |
+| [FÚ Mnichovo Hradiště, židovská kontrolní matrika oddaných 1839–1852 s rejstříkem (NA inv. 517)](https://zayt.org/collections/jewish-control-registers-1780-1911/o-517) | matrika | 1839–1852 |  |  | 2 (J 1 O 1) |
 | [Kolín, židovská kontrolní matrika O 1848–1849](https://zayt.org/collections/jewish-control-registers-1780-1911/o-829) | matrika | 1848–1849 |  |  | 72 (O 72) |
 | [Kolín, židovská matrika O 1850–1895 s rejstříkem (NA inv. 830)](https://zayt.org/collections/jewish-registers-1784-1949/o-830) | matrika | 1850–1895 | 77 | 14262 | 16 (J 10 O 6) |
-| [Uhlířské Janovice, židovská kontrolní matrika O 1839–1861 (NA inv. 953)](https://zayt.org/collections/jewish-control-registers-1780-1911/o-953) | matrika | 1839–1861 |  |  | 6 (J 2 O 4) |
+| [Uhlířské Janovice, židovská kontrolní matrika O 1839–1861 (NA inv. 953)](https://zayt.org/collections/jewish-control-registers-1780-1911/o-953) | matrika | 1839–1861 |  |  | 7 (J 2 O 5) |
 | [Hroubovice, rejstřík oddaných a zemřelých 1840–1895 (NA inv. 531)](https://zayt.org/collections/jewish-registers-1784-1949/oz-531) | matrika | 1840–1895 |  |  | 2 (J 2) |
 | [Přestavlky, židovská matrika Z 1839–1856 (NA HBMa inv. 1721)](https://zayt.org/collections/jewish-registers-1784-1949/z-1721) | matrika | 1839–1856 |  |  | 10 (Z 10) |
 | [inv. č. 1847 (Rychnov nad Kněžnou Z 1874–1940)](https://zayt.org/collections/jewish-registers-1784-1949/z-1847) | matrika |  |  |  | 1 (Z 1) |
@@ -899,18 +905,30 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hostim 1857 (SOkA Třebíč, OÚ Moravské Budějovice, MB0059)](https://www.familysearch.org/search/film/101738007) | sčítání lidu |  |  |  | 1 (S 1) |
 | [Hostim 1869 (SOkA Třebíč, OÚ Moravské Budějovice, MB0451)](https://www.familysearch.org/search/film/101758376) | sčítání lidu |  |  |  | 2 (S 2) |
 
-## cuzk (8)
+## nacr (10)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
-| [Pulice (Gross Pulitz a Klein Pulitz), indikační skica 1840, Hradecký kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=HRA372018400) | indikační skica stabilního katastru | 1840 |  |  | 4 (K 4) |
-| [Libákovice (Libaken), indikační skica 1838, Klatovský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KLA222018380) | indikační skica stabilního katastru | 1838 |  |  | 5 (K 5) |
-| [Svojšice (Swoischitz) s Novou Vsí (Neudorf), indikační skica 1841, Kouřimský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KRM398018410) | indikační skica stabilního katastru | 1841 |  |  | 5 (K 5) |
-| [Malý Bor (Klein Bor), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA043018370) | indikační skica stabilního katastru | 1837 |  |  | 1 (K 1) |
-| [Malé Hydčice, indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA188018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
-| [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
-| [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
-| [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
+| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
+| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
+| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1340, N 1866–1873 (s indexem; duplikát, Tom VIII–XI)](https://vademecum.nacr.cz/vademecum/permalink?xid=e0c4568a-a325-4d10-b8d8-64c1dfb403df) | matrika | 1866–1873 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1341, N 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=26db411b-4bc5-467e-b248-3b48c7ba5f05) | matrika | 1874–1901 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
+| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
+| [Náchod, inv. č. 1352, Z 1900–1902, 1905–1949 (index 1905–1912)](https://vademecum.nacr.cz/vademecum/permalink?xid=07f0ee74-aa22-4e76-b5e4-046e37da47fd) | matrika | 1900–1902, 1905–1949 |  |  | 2 (Z 2) |
+
+## ndk (5)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
 
 ## zaopava (90)
 
@@ -1007,27 +1025,15 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Dubicko (fara), N, I-N Bohuslavice, Dubicko, Hrabová, Třeština 1850–1898, sign. Zá IV 7, inv. č. 8382](https://digi.archives.cz/da/permalink/be97f934-f13c-102f-8255-0050568c0263) | matrika | 1850–1898 |  |  | 7 (N 7) |
 | [Dubicko (fara), O, I-O Bohuslavice, Brníčko, Dubicko, Hrabová, Kolšov, Lesnice, Strupšín, Třeština 1784–1809, sign. Zá IV 9, inv. č. 8384](https://digi.archives.cz/da/permalink/be97aa74-f13c-102f-8255-0050568c0263) | matrika | 1784–1809 |  |  | 1 (O 1) |
 
-## ndk (5)
+## cuzk (8)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
-| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
-
-## nacr (10)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [inv. č. 1408 (Nový Bydžov N)](https://vademecum.nacr.cz/vademecum/permalink?xid=425dc3e2-2075-478d-890b-833ced1107cd) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 1547 (Plzeň, narození 1901–1915)](https://vademecum.nacr.cz/vademecum/permalink?xid=65bd0468-79cf-4bbc-8ec9-e5cd3bacb1f6) | matrika |  |  |  | 1 (N 1) |
-| [inv. č. 2677 (Praha, oddaní 1881)](https://vademecum.nacr.cz/vademecum/permalink?xid=c96bd90d-00c8-49b1-9919-82a9c516939f) | matrika |  |  |  | 1 (O 1) |
-| [inv. č. 2709 (Praha, oddaní 1913)](https://vademecum.nacr.cz/vademecum/permalink?xid=d8b27e9f-a023-4520-9d52-4ce2158cf3f1) | matrika |  |  |  | 2 (O 2) |
-| [inv. č. 2713 (Praha, oddaní 1917)](https://vademecum.nacr.cz/vademecum/permalink?xid=dd5e2abb-1aa6-4b1c-b1b2-fef16f57a3a3) | matrika |  |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1340, N 1866–1873 (s indexem; duplikát, Tom VIII–XI)](https://vademecum.nacr.cz/vademecum/permalink?xid=e0c4568a-a325-4d10-b8d8-64c1dfb403df) | matrika | 1866–1873 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1341, N 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=26db411b-4bc5-467e-b248-3b48c7ba5f05) | matrika | 1874–1901 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1342, N 1900–1940, 1942–1949 (index pro roky 1901–1904)](https://vademecum.nacr.cz/vademecum/permalink?xid=f410698d-1da7-4eef-bd85-c72d9d5442fb) | matrika | 1900–1940 |  |  | 1 (N 1) |
-| [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
-| [Náchod, inv. č. 1352, Z 1900–1902, 1905–1949 (index 1905–1912)](https://vademecum.nacr.cz/vademecum/permalink?xid=07f0ee74-aa22-4e76-b5e4-046e37da47fd) | matrika | 1900–1902, 1905–1949 |  |  | 2 (Z 2) |
+| [Pulice (Gross Pulitz a Klein Pulitz), indikační skica 1840, Hradecký kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=HRA372018400) | indikační skica stabilního katastru | 1840 |  |  | 4 (K 4) |
+| [Libákovice (Libaken), indikační skica 1838, Klatovský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KLA222018380) | indikační skica stabilního katastru | 1838 |  |  | 5 (K 5) |
+| [Svojšice (Swoischitz) s Novou Vsí (Neudorf), indikační skica 1841, Kouřimský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=KRM398018410) | indikační skica stabilního katastru | 1841 |  |  | 5 (K 5) |
+| [Malý Bor (Klein Bor), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA043018370) | indikační skica stabilního katastru | 1837 |  |  | 1 (K 1) |
+| [Malé Hydčice, indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA188018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
+| [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
+| [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+| [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
