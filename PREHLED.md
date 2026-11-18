@@ -2,9 +2,9 @@
 
 Stav k 18. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **984 knih** (matrika 909, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, kmenové listiny (Musterlisten) 1, urbář 1, kronika 1)
+- **988 knih** (matrika 913, sčítání lidu 29, pozemková kniha 19, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, kmenové listiny (Musterlisten) 1, urbář 1, kronika 1)
 - **9 312 stran** převedených strojově (PERO OCR), **1 782 163 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **25 815 zápisů přečtených očima**: narození 11823, sňatky 8803, úmrtí 4294, převody gruntů 49, soupisy 193, jiné 624
+- **25 819 zápisů přečtených očima**: narození 11823, sňatky 8803, úmrtí 4296, převody gruntů 49, soupisy 193, jiné 626
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -520,7 +520,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Hroubovice (FÚ Luže), židovská kontrolní matrika Z (NA inv. 481)](https://zayt.org/collections/jewish-control-registers-1780-1911/z-481) | matrika | 1840–1873 | 50 | 7731 | 24 (J 2 Z 22) |
 | [Kolín, židovská matrika Z 1847–1865 (NA HBMa inv. 835)](https://zayt.org/collections/jewish-registers-1784-1949/z-835) | matrika | 1847–1865 |  |  | 1 (J 1) |
 
-## SOA Praha – eBadatelna (126)
+## SOA Praha – eBadatelna (130)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -540,7 +540,11 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Petrovice-RA 09 (Petrovice, Příčina, Řeřichy, Žďár: N 1827–1865)](https://ebadatelna.soapraha.cz/d/11250/) | matrika | 1827–1865 |  |  | 4 (N 4) |
 | [Petrovice-RA 14 (Petrovice, Příčina, Senec, Zavidov, Žďár: Z 1832–1865)](https://ebadatelna.soapraha.cz/d/11255/) | matrika | 1832–1865 |  |  | 3 (Z 3) |
 | [Petrovice-RA 21 (Příčina, Žďár: N 1874–1892, O 1874–1899, Z 1876–1915)](https://ebadatelna.soapraha.cz/d/11266/) | matrika | 1874–1915 |  |  | 5 (N 2 O 1 Z 2) |
+| [Říčany 22 – Z 1807–1898 Tehov, Všestary, Menčice, Světice (Kniha zemřelých)](https://ebadatelna.soapraha.cz/d/11418/) | matrika | 1807–1898 |  |  | 1 (Z 1) |
+| [Říčany 15 – Z 1785–1807 (Kniha zemřelých)](https://ebadatelna.soapraha.cz/d/11424/) | matrika | 1785–1807 |  |  | 1 (J 1) |
 | [Říčany 10 – N 1807–1851 Tehov, Všestary, Světice, Menčice (Kniha narozených)](https://ebadatelna.soapraha.cz/d/11429/) | matrika | 1807–1851 |  |  | 6 (J 1 N 5) |
+| [Říčany 06 – N 1784–1807 (Kniha pokřtěných)](https://ebadatelna.soapraha.cz/d/11433/) | matrika | 1784–1807 |  |  | 1 (J 1) |
+| [Říčany 03 – N, O, Z 1753–1784](https://ebadatelna.soapraha.cz/d/11436/) | matrika | 1753–1784 |  |  | 1 (Z 1) |
 | [Sedlec-BN 26, N 1871–1894, Ni 1871–1894](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/11679) | matrika |  |  |  | 1 (N 1) |
 | [Sedlec-BN 18, O 1807–1843](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/11700) | matrika |  |  |  | 1 (O 1) |
 | [Sedlec-BN 13, N 1834–1854](https://ebadatelna.soapraha.cz/pages/MatrikaPage/matrikaId/11705) | matrika |  |  |  | 1 (N 1) |
@@ -952,16 +956,6 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 
-## ndk (5)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
-
 ## zaopava (90)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -1056,3 +1050,13 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Dubicko (fara), N, I-N Bohuslavice, Dubicko, Hrabová, Třeština 1810–1849, sign. Zá IV 5, inv. č. 8380](https://digi.archives.cz/da/permalink/be97a79a-f13c-102f-8255-0050568c0263) | matrika | 1810–1849 |  |  | 3 (N 3) |
 | [Dubicko (fara), N, I-N Bohuslavice, Dubicko, Hrabová, Třeština 1850–1898, sign. Zá IV 7, inv. č. 8382](https://digi.archives.cz/da/permalink/be97f934-f13c-102f-8255-0050568c0263) | matrika | 1850–1898 |  |  | 7 (N 7) |
 | [Dubicko (fara), O, I-O Bohuslavice, Brníčko, Dubicko, Hrabová, Kolšov, Lesnice, Strupšín, Třeština 1784–1809, sign. Zá IV 9, inv. č. 8384](https://digi.archives.cz/da/permalink/be97aa74-f13c-102f-8255-0050568c0263) | matrika | 1784–1809 |  |  | 1 (O 1) |
+
+## ndk (5)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
