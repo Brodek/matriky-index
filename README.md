@@ -112,7 +112,8 @@ matrik, ne číslo souboru obrázku – soubory mají mezery i vložené listy, 
 `mza` (Acta Publica, kniha = id z adresy matrika/detail/<id>), `ahmp`, `familysearch` (kniha = číslo DGS),
 `zaopava`, `konskripce` (policejní přihlášky NA), `cuzk` (indikační skici stabilního katastru, kniha = id rastru
 z adresy ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=<id>; čtou se v prohlížeči archivu map ČÚZK),
-`ndk` (Národní digitální knihovna, noviny; kniha = titul a ročník, snímek = strana ročníku).
+`ndk` (Národní digitální knihovna, noviny; kniha = titul a ročník, snímek = strana ročníku), `zob` (fotodokumentace
+židovských hřbitovů Židovské obce Brno, cemeteries.zob.cz; kniha = hřbitov, snímek = číslo hrobu, řádek = náhrobek typu Z).
 
 ## Ohleduplnost k archivům
 
