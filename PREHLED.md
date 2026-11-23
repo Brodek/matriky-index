@@ -2,9 +2,9 @@
 
 Stav k 23. 11. 2026 (generuje `python tools/prehled.py`).
 
-- **1147 knih** (matrika 1060, sčítání lidu 36, pozemková kniha 23, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, kmenové listiny (Musterlisten) 1, urbář 1, kronika 1, náhrobky 1)
+- **1148 knih** (matrika 1061, sčítání lidu 36, pozemková kniha 23, policejní přihlášky 9, indikační skica stabilního katastru 8, berní rula 3, noviny 2, soupis poddaných 2, kmenové listiny (Musterlisten) 1, urbář 1, kronika 1, náhrobky 1)
 - **9 312 stran** převedených strojově (PERO OCR), **1 782 163 řádků** strojového textu – nekontrolovaný, slouží k hledání
-- **47 970 zápisů přečtených očima**: narození 18075, sňatky 8915, úmrtí 19652, převody gruntů 61, soupisy 203, jiné 1035
+- **51 174 zápisů přečtených očima**: narození 18075, sňatky 8915, úmrtí 22850, převody gruntů 61, soupisy 203, jiné 1041
 
 Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečtené člověkem nebo modelem se zdrojem a jistotou (N narození, O sňatky, Z úmrtí, P převody gruntů, S soupisy, J jiné). Skeny v indexu nejsou – odkaz vede na portál archivu.
 
@@ -937,7 +937,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Bavorov 33C 1784-1948](https://digi.ceskearchivy.cz/9116) | matrika |  |  |  | 1 (Z 1) |
 | [Matrika zemřelých České Budějovice – sv. Mikuláš, kniha 111B (1939–1949)](https://digi.ceskearchivy.cz/9512) | matrika |  |  |  | 1 (Z 1) |
 
-## Archiv hlavního města Prahy (51)
+## Archiv hlavního města Prahy (52)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
 |---|---|---|--:|--:|---|
@@ -980,6 +980,7 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Matrika Košíře N6 (1896–1904)](https://katalog.ahmp.cz/pragapublica/permalink?xid=B8FCBD8B46524A2B85BD7BE16C92DECE) | matrika |  |  |  | 1 (N 1) |
 | [UH N5O5Z5, Uhříněves – Všech svatých, N+O+Z 1735–1747 (křty chronologicky, sn. 73 = I 1745; oddaní asi od sn. 104)](https://katalog.ahmp.cz/pragapublica/permalink?xid=BDA0EB4A6C564E7AA0FE21C95528465A&scan=1) | matrika |  |  |  | 2 (N 2) |
 | [UH O9, Uhříněves – Všech svatých, O 1784–1807 (řazeno po obcích)](https://katalog.ahmp.cz/pragapublica/permalink?xid=D3AADB635EA54564A48A7AAE80E3231F) | matrika |  |  |  | 2 (O 2) |
+| [Praha Nové Město – sv. Jindřich, JCH Z12, zemřelí 1771–1784](https://katalog.ahmp.cz/pragapublica/permalink?xid=DA3417109E3D42EEA9CD4B986FF6A34C) | matrika | 1771–1784 |  |  | 3204 (J 6 Z 3198) |
 | [MB Z5, nemocnice Milosrdných bratří (Praha I), Z 1869–1899](https://katalog.ahmp.cz/pragapublica/permalink?xid=DADDBCE4DF754119BA67E4B0D2C69FD4) | matrika |  |  |  | 1 (Z 1) |
 | [UH N10, Uhříněves – Všech svatých, N 1808–1827](https://katalog.ahmp.cz/pragapublica/permalink?xid=DDCD4BCDBCE44DD58BBC7E62009CCAAC) | matrika |  |  |  | 2 (N 2) |
 | [Praha Nové Město – sv. Jindřich, JCH N10, křty 1721–1741](https://katalog.ahmp.cz/pragapublica/permalink?xid=DFA52D3D0C26477FACE0F985E5AAEA76) | matrika | 1721–1741 |  |  | 6077 (J 49 N 6028) |
@@ -1096,6 +1097,16 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Náchod, inv. č. 1346, O 1874–1901 (s indexem)](https://vademecum.nacr.cz/vademecum/permalink?xid=60877a01-5f64-4055-94ee-a872b7df10bb) | matrika | 1874–1901 |  |  | 1 (O 1) |
 | [Náchod, inv. č. 1352, Z 1900–1902, 1905–1949 (index 1905–1912)](https://vademecum.nacr.cz/vademecum/permalink?xid=07f0ee74-aa22-4e76-b5e4-046e37da47fd) | matrika | 1900–1902, 1905–1949 |  |  | 2 (Z 2) |
 
+## ndk (5)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
+| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
+| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
+| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
+
 ## cuzk (8)
 
 | kniha | druh | roky | OCR stran | OCR řádků | očima |
@@ -1108,6 +1119,12 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Defurovy Lažany (Laschan Desfours), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA330018370) | indikační skica stabilního katastru | 1837 |  |  | 4 (K 4) |
 | [Maňovice (Maniowitz), indikační skica 1837, Prácheňský kraj; ves na zvláštním listu ve větším měřítku (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA380018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
 | [Dol (u Sedlic), indikační skica 1837, Prácheňský kraj (Národní archiv, fond Stabilní katastr)](https://ags.cuzk.gov.cz/archiv/openmap.html?typ=skicic&idrastru=PRA426018370) | indikační skica stabilního katastru | 1837 |  |  | 3 (K 3) |
+
+## zob (1)
+
+| kniha | druh | roky | OCR stran | OCR řádků | očima |
+|---|---|---|--:|--:|---|
+| [Židovský hřbitov Batelov – fotodokumentace náhrobků „Batelov Steinová 2012“ (Židovská obec Brno)](https://cemeteries.zob.cz/batelov) | náhrobky | 1748?–1935 |  |  | 440 (Z 440) |
 
 ## zaopava (95)
 
@@ -1208,19 +1225,3 @@ Sloupce: *OCR* = strany a řádky strojového textu, *očima* = zápisy přečte
 | [Dubicko (fara), N, I-N Bohuslavice, Dubicko, Hrabová, Třeština 1810–1849, sign. Zá IV 5, inv. č. 8380](https://digi.archives.cz/da/permalink/be97a79a-f13c-102f-8255-0050568c0263) | matrika | 1810–1849 |  |  | 3 (N 3) |
 | [Dubicko (fara), N, I-N Bohuslavice, Dubicko, Hrabová, Třeština 1850–1898, sign. Zá IV 7, inv. č. 8382](https://digi.archives.cz/da/permalink/be97f934-f13c-102f-8255-0050568c0263) | matrika | 1850–1898 |  |  | 7 (N 7) |
 | [Dubicko (fara), O, I-O Bohuslavice, Brníčko, Dubicko, Hrabová, Kolšov, Lesnice, Strupšín, Třeština 1784–1809, sign. Zá IV 9, inv. č. 8384](https://digi.archives.cz/da/permalink/be97aa74-f13c-102f-8255-0050568c0263) | matrika | 1784–1809 |  |  | 1 (O 1) |
-
-## zob (1)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Židovský hřbitov Batelov – fotodokumentace náhrobků „Batelov Steinová 2012“ (Židovská obec Brno)](https://cemeteries.zob.cz/batelov) | náhrobky | 1748?–1935 |  |  | 440 (Z 440) |
-
-## ndk (5)
-
-| kniha | druh | roky | OCR stran | OCR řádků | očima |
-|---|---|---|--:|--:|---|
-| [Berní rula 12, Kraj Hradecký, díl I (edice V. Pešák, Praha 1951)](https://ndk.cz/uuid/uuid:a01e9e00-451f-11e2-9b88-005056827e51) | berní rula | 1654 |  |  | 5 (S 5) |
-| [Berní rula 27, Kraj Prácheňský, díl I (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:b8718900-451e-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 58 (S 58) |
-| [Berní rula 28, Kraj Prácheňský, díl II (edice A. Haas, Praha 1954)](https://ndk.cz/uuid/uuid:0b4b7220-4520-11e2-b246-005056827e52) | berní rula | 1654 |  |  | 79 (S 79) |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 16 (1804)](https://ndk.cz/view/uuid:b1942b3d-435d-11dd-b505-00145e5790ea) | noviny | 1804 | 24 | 1840 |  |
-| [Kraméryusowy Cýs. k. Pražské Posstowské Nowiny, ročník 17 (1805)](https://ndk.cz/view/uuid:b1942b3e-435d-11dd-b505-00145e5790ea) | noviny | 1805 | 52 | 3940 |  |
