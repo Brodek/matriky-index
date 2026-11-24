@@ -29,6 +29,12 @@ def ctenar(cetl):
     return " ".join(t.replace("+", " ").replace(",", " ").split())
 
 
+def lide_v_cetl(cetl):
+    """Všichni lidé v cetl: čtenář i ten, kdo čtení ověřil („Brodek + claude-opus-5-5/medium 2026-11-18, ověřil
+    claude-opus-5-5/medium 2026-11-23“ → [„Brodek“]); bez modelů, dat a slova „ověřil“."""
+    return [j for j in (ctenar(c).strip(" ;") for c in re.split(r"\bověřil", cetl)) if j]
+
+
 def kdo_cetl(cetl):
     """Čtenář zápisu: člověk z cetl před „ověřil“ („Vlastimil Machek ověřil pe-pan“ → „Vlastimil Machek“); prázdné
     pro správce indexu (řádek bez jména, který četl jen model, nebo „pe-pan“)."""

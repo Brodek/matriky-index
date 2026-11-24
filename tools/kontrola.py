@@ -23,7 +23,7 @@ import yaml
 
 # Kontrola běží s -I (nástroje z main na datech pull requestu); sdílené funkce bere ze své vlastní složky.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from cteni import MODEL_EFFORT, PRODUKT, ctenar, kdo_cetl  # noqa: E402
+from cteni import MODEL_EFFORT, PRODUKT, ctenar, kdo_cetl, lide_v_cetl  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 KNIHY = ROOT / "knihy"
@@ -494,7 +494,8 @@ def posouzeni_pr(zaklad, zmeny, pridane, h):
     znami = set()
     for p in KNIHY.glob("*/*/precteno.tsv"):
         nove = pridane.get(rel(p), set())
-        znami.update(ctenar(r[7]) for i, r in enumerate(tsv_radky(p)[1:], start=2) if i not in nove and len(r) >= 8)
+        znami.update(j for i, r in enumerate(tsv_radky(p)[1:], start=2) if i not in nove and len(r) >= 8
+                     for j in lide_v_cetl(r[7]))
     nahlaseni, knihy, nizka = set(), {}, 0
     for d, kde, r in zapisy_pr:
         snimek, datum, typ, _, osoby, ostatni, jistota, cetl = r[:8]
@@ -512,10 +513,10 @@ def posouzeni_pr(zaklad, zmeny, pridane, h):
                      for i, s in enumerate(tsv_radky(p)[1:], start=2) if i not in nove and len(s) >= 5}
             knihy[d] = (roky(meta.get("roky") if isinstance(meta, dict) else None), max(snimky, default=None), stare)
         roky_knihy, posledni, stare = knihy[d]
-        jmeno = ctenar(cetl)
-        if jmeno and jmeno not in znami and jmeno not in nahlaseni:
-            nahlaseni.add(jmeno)
-            h.posud("novy-ctenar", kde, f"„{jmeno}“ v indexu ještě nečetl")
+        for jmeno in lide_v_cetl(cetl):
+            if jmeno not in znami and jmeno not in nahlaseni:
+                nahlaseni.add(jmeno)
+                h.posud("novy-ctenar", kde, f"„{jmeno}“ v indexu ještě nečetl")
         roky_zapisu = roky(datum)
         if roky_knihy and roky_zapisu and (min(roky_zapisu) < min(roky_knihy) - 1 or
                                            max(roky_zapisu) > max(roky_knihy) + 1):
